@@ -1,0 +1,13 @@
+<header class="header">
+	<img src="img/bandicoot-sm.jpg" alt="Ryan Dudek" class="header--image" />
+	<h1 class="header--name">Ryan Dudek</h1>
+	<h2 class="header--whatido">Keeping it Awesome</h2>
+
+	<nav class="site-navigation">
+		<ul class="site-navigation--list">
+			<li class="site-navigation--list__item"><a href="index.html" {% if activeNav == "about" %}class="site-navigation--list__current"{% endif %}>About</a></li>
+			<li class="site-navigation--list__item"><a href="snippets.html" {% if activeNav == "snippets" %}class="site-navigation--list__current"{% endif %}>Snippets</a></li>
+			<li class="site-navigation--list__item"><a href="resume.html" {% if activeNav == "resume" %}class="site-navigation--list__current"{% endif %}>Resume</a></li>
+		</ul>
+	</nav>
+</header>

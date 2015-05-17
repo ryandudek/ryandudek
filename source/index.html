@@ -1,0 +1,40 @@
+{% set activeNav = "about" %}
+{% extends 'templates/base.html' %}
+
+
+{% block content %}
+
+	<div class="about--greeting">
+		<h1>Hello,
+			<span>my name is Ryan Dudek.</span>
+		</h1>
+		<p>I once had convinced a boss of mine that my middle name was Effin. At first he thought I said <em>Elvin</em>, but I told him I was <em>AWESOME</em> and not an <em>ELF</em> (no offense to elves or elf lovers). That is a true story. I am a front end web developer, which is to say, I make the internets (at least this is how I explain it to my mom).</p>
+	</div>
+
+	<div class="about--photos">
+		<h3>This is me:</h3>
+		<img src="/img/track.jpg" alt="Photo of Ryan" />
+
+		<h3>And this is also me:</h3>
+		<img src="img/bandicoot.jpg" alt="Photo of Ryan not riding bikes well" />
+
+		<h3>But most importantly, I can make myself look like this if you'd wish:</h3>
+		<img src="img/bossman.jpg" alt="Incredible!" />
+	</div>
+
+	<div class="about--currently">
+		<h2>Currently</h2>
+		<p>I am a Senior Front End Web Developer (aka <span class="bold">Vice President of Keeping it Awesome</span>) at <a href="http://epam.com" target="_blank">Epam Systems</a> in Conshochocken, PA. Outside of work, I am a very active person and I drink way too much coffee (also known as never drinking enough coffee). You can find me riding and racing bicycles, hiking, camping, making fun of myself, and (shittily) photoshopping pictures of my friends/family/coworkers. I like video games, but I never have enough time to play them. I'm not great at social networking, but you can read <a href="https://twitter.com/kelpiuscycling" target="_blank">my tweets about bike racing</a> or look at <a href="https://instagram.com/ryaneffindudek" target="_blank">my pictures of mostly bike races and coffee</a> if you're into that.</p>
+	</div>
+
+	<div class="about--signature">
+		<h3>So long, and thanks for all the fish,</h3>
+		<div class="welp-cya-later">
+			<img src="img/mission.jpg" alt="Mission Accomplished" /> 
+			<p class="signature">Ryan Dudek
+			<a href="tel:+12025576454">202.557.6454</a>
+			ryandudek [AT] gmail [dot] com</p>
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,11 +1,5 @@
 node_modules
 .sass-cache/
 .DS_Store
-build
-dist
-public/css/*
-build.zip
-production.zip
-production/*
 ryandudek.sublime-project
 ryandudek.sublime-workspace

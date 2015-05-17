@@ -1,0 +1,79 @@
+{% set activeNav = "resume" %}
+{% extends 'templates/base.html' %}
+
+
+{% block content %}
+
+	<div class="page--title">
+		<h1>Resume</h1>
+	</div>
+
+	<div class="page--content resume--content">
+		<h2 class="resume--section-title">Professional Experience</h2>
+
+		<div class="resume--job">
+			<h3 class="resume--employer">Epam Systems (formerly Empathy Lab)</h3>
+			<p class="resume--additional-info"><a href="http://www.epam.com/empathylab" target="_blank">http://www.epam.com/empathylab</a> - 2010 - Present</p>
+			<h4 class="resume--job-title">Front End Web Developer</h4>
+			<p class="resume--job-description">Create semantic mark up in a variety of languages, use CSS and table-less design to lay out web designs, build and maintain site content in a variety of solutions, strategize development with other members of a team.</p>
+		</div>
+
+		<div class="resume--job">
+			<h3 class="resume--employer">Home Front Communications</h3>
+			<p class="resume--additional-info">http://www.homefront.tv - 2007 - 2010</p>
+			<h4 class="resume--job-title">Front End Web Developer</h4>
+			<p class="resume--job-description">Create semantic XHTML and PHP mark up, use strict CSS and table-less design to lay out web designs, build and maintain Drupal content management systems for clients.</p>
+		</div>
+		
+		<div class="resume--job">
+			<h3 class="resume--employer">Screenmatter</h3>
+			<p class="resume--additional-info">http://www.screenmatter.com - 2007</p>
+			<h4 class="resume--job-title">Freelance Front End Developer</h4>
+			<p class="resume--job-description">Create semantic XHTML and ASP.NET mark up, work within guidelines of excellent search engine optimization, use strict CSS and table-less design to lay out web designs.</p>
+		</div>
+		
+		<div class="resume--job">
+			<h3 class="resume--employer">US News &amp; World Report</h3>
+			<p class="resume--additional-info">http://www.usnews.com - 2006 - 2007</p>
+			<h4 class="resume--job-title">Associate Producer - New Media</h4> 
+			<p class="resume--job-description">Post content to website, compress video and audio for streaming, record, cut and master audio.</p>
+		</div>
+		
+		<div class="resume--job">
+			<h3 class="resume--employer">Aestheticom</h3>
+			<p class="resume--additional-info">http://www.aestheti.com - 2006</p>
+			<h4 class="resume--job-title">Intern</h4>
+			<p class="resume--job-description">Motion graphics and video editing</p>
+		</div>
+		
+		<div class="resume--job">
+			<h3 class="resume--employer">E4 Films and Digital Icons Productions</h3>
+			<p class="resume--additional-info">2004 - 2006</p>
+			<p class="resume--job-description">Video production clubs at The Art Institute of Philadelphia</p>
+		</div>
+
+		<h2 class="resume--section-title">Technical Skills</h2>
+		<p class="resume--skills">HTML, CSS, Stylus, SASS/SCSS, LESS, jQuery, JavaScript, Grunt, Gulp, User Experience</p>
+
+		<h2 class="resume--section-title">Education</h2>
+		<h3 class="resume--degree">Bachelor's of Science in Digital Media Production</h3>
+		<h4 class="resume--school">The Art Institute of Philadelphia, Philadelphia, PA</h4>
+		<p class="resume--school-details">Date of Graduation - June 2006<br />
+			Grade Point Average: 3.7<br />
+			Presidential Scholarship Recipient<br />
+			Consecutively Recieved Dean's List Award<br />
+			Multiple Best of Quarter Awards<br />
+			Digital Media Production Club: 2004-2005
+		</p>
+	</div>
+
+	<div class="page--signature resume--signature">
+		<div class="welp-cya-later">
+			<img src="img/bandicoot-sm.jpg" alt="Bad at riding bikes" /> 
+			<p class="signature">Ryan Dudek
+			<a href="tel:+12025576454">202.557.6454</a>
+			ryandudek [AT] gmail [dot] com</p>
+		</div>
+	</div>
+
+{% endblock %}

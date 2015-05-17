@@ -6,10 +6,11 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     connect = require('gulp-connect'),
     clean = require('gulp-clean'),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    swig = require('gulp-swig');
 
 gulp.task('stylus', function () {
-    gulp.src(['./styl/**/*.styl', '!styl/**/_*'])
+    gulp.src(['./source/styl/**/*.styl', '!styl/**/_*'])
         .pipe(stylus({
             compress: true,
             use: [nib(), jeet(), rupture()]}))
@@ -17,20 +18,22 @@ gulp.task('stylus', function () {
         .pipe(connect.reload());
 });
 
-gulp.task('html', function () {
-    gulp.src('**/*.html')
-      .pipe(connect.reload());
+gulp.task('swig', function() {
+    gulp.src('./source/*.html')
+        .pipe(swig())
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('js', function () {
-    gulp.src('./js/*.js')
-      .pipe(connect.reload());
+    gulp.src('./source/js/*.js')
+        .pipe(connect.reload())
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('watch', function () {
-    gulp.watch(['./styl/**/*.styl'], ['stylus']);
-    gulp.watch(['./**/*.html'], ['html']);
-    gulp.watch(['./js/*.js'], ['js']);
+    gulp.watch(['./source/styl/**/*.styl'], ['stylus']);
+    gulp.watch(['./source/**/*.html'], ['swig']);
+    gulp.watch(['./source/js/*.js'], ['js']);
 });
 
 gulp.task('connect', function() {
