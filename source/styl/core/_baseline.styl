@@ -143,14 +143,12 @@ nav,
 section
     display: block
 
-html
-    max-width: 100%
-    overflow-x: hidden
-    width: 100%
-
+html,
 body
-    line-height: 1
+    background: $footerBGColor
+    line-height: 1.25
     max-width: 100%
+    min-height: 100%
     overflow-x: hidden
     width: 100%
 
@@ -198,8 +196,22 @@ select:focus,
 button:focus
     outline: none
 
-h1, h2, h3, h4, h5, h6
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    font-family: $LatoBlack
     font-weight: normal
     
-em
+em,
+.italic
+    font-family: $LatoItalic
+    font-style: normal
+    
+strong,
+.bol
+
+    font-family: $LatoBold
     font-style: normal
