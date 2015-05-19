@@ -1,0 +1,85 @@
+.site-navigation
+	background: $navBGColor
+	color: $navFontColor
+	margin: 0 -20px 25px
+	padding: 10px 0 0
+	width: auto
+		
+.site-navigation--list
+	font-size: 0
+	
+.site-navigation--list__item
+	display: inline-block
+	text-align: center
+	vertical-align: top
+	width: 34%
+	
+	&:first-child
+		text-align: left
+		width: 33%
+		
+		.site-navigation--link
+			padding-left: 20px
+		
+	&:last-child
+		text-align: right
+		width: 33%
+		
+		.site-navigation--link
+			padding-right: 20px
+
+.site-navigation--link
+	display: block
+	font-family: $LatoBold
+	fontSize(18px)
+	line-height: 1.4
+	padding: 10px 0 6px
+	position: relative
+	text-decoration: none
+	
+.site-navigation--link__current
+	font-family: $LatoBoldItalic
+	text-decoration: underline
+	
++above(41.25em)
+	.site-navigation
+		padding: 0 0 0 20px
+		top: 15px
+		z-index: 10
+		
+	.site-navigation--list__item
+		display: block
+		text-align: left
+		width: 150px
+		
+		&:first-child
+			width: 150px
+			
+			.site-navigation--link
+				padding-left: 0
+			
+			.site-navigation--link__current
+				padding-left: 5px
+		
+		&:last-child
+			text-align: left
+			width: 150px
+			
+			.site-navigation--link
+				padding-left: 0
+				padding-right: 0
+			
+			.site-navigation--link__current
+				padding-left: 5px
+				
+	.site-navigation--link
+		border-radius: 0
+		fontSize(18px)
+		line-height: 1.4
+		display: block
+		padding: 10px 0 6px 0
+		width: 150px
+			
+	.site-navigation--link__current
+		border-left: 5px solid $navActiveFontColor
+		padding-left: 5px

@@ -10,16 +10,16 @@
 
 
 html
-    font-family: sans-serif
     font-size: 100%
     -ms-text-size-adjust: 100%
     -webkit-text-size-adjust: 100%
 
 body
-    font-family $Lato, Helvetica, Arial, sans-serif
+    font-family $Lato
     -webkit-font-smoothing: antialiased
     font-weight: normal
     margin: 0
+    overflow-x: hidden
     
 div,
 span,
@@ -123,10 +123,9 @@ textarea,
 keygen,
 select,
 button
-    font-family: $Lato, Helvetica, Arial, sans-serif
+    font-family: $Raleway
     -webkit-font-smoothing: antialiased
 
-a,
 span
     font-family: inherit
 
@@ -145,16 +144,24 @@ section
 
 html,
 body
-    background: $footerBGColor
+    background: $bodyBGColor
+    color: $bodyFontColor
     line-height: 1.25
     max-width: 100%
     min-height: 100%
     overflow-x: hidden
     width: 100%
 
-ol,
 ul
-    list-style: none
+    margin-left 25px
+
+li
+    fontSize(18px)
+    margin-bottom: 0.5em
+    
+p
+    fontSize(18px)
+    margin-bottom: 0.9em
 
 blockquote,
 q
@@ -183,7 +190,9 @@ hr,
 
 a
     color: $link-color
-    text-decoration: none
+    font-family: inherit
+    text-decoration: underline
+    text-shadow: 1px 0px 5px rgba(0,0,0,0.35)
 
 img
     border: none
@@ -196,14 +205,26 @@ select:focus,
 button:focus
     outline: none
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
-    font-family: $LatoBlack
+h1
+    font-family: $LatoBold
+    fontSize(34px)
     font-weight: normal
+    margin-bottom: 0.5em
+h2
+    font-family: $LatoBold
+    fontSize(28px)
+    font-weight: normal
+    margin-bottom: 0.5em
+h3
+    font-family: $LatoBold
+    fontSize(24px)
+    font-weight: normal
+    margin-bottom: 0.3em
+h4
+    font-family: $LatoBold
+    fontSize(18px)
+    font-weight: normal
+    margin-bottom: 0.3em
     
 em,
 .italic
@@ -211,7 +232,7 @@ em,
     font-style: normal
     
 strong,
-.bol
+.bold
 
     font-family: $LatoBold
     font-style: normal

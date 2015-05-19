@@ -1,9 +1,13 @@
 .footer
-	background: $footerBGColor
+	background: linear-gradient(top, $footerBGTransparent, $footerBGColor)
 	color: $footerFontColor
 	margin: 0
 	padding: 25px 20px
+	text-align: center
 	width: auto
+
+.footer--nav-header
+	fontSize(22px)
 	
 .footer-link
 	color: $footerLinkColor
@@ -19,9 +23,9 @@
 	display: inline-block
 	font-size: 100%
 	max-width: 65px
-	padding: 0 0 0 1.5%
-	width: 25%
+	padding: 0 0.5%
+	width: 20%
 	
-	&:first-child
-		padding: 0
-	
++above(30em)
+	.footer--nav-header
+		fontSize(34px)

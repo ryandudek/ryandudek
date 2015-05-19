@@ -1,0 +1,80 @@
+.about--photos
+	margin-bottom: 25px
+	overflow: hidden
+			
+	img
+		margin: 0 auto
+
+.about--currently
+	position: relative
+
+.about--currently__img
+	margin: 0 auto 25px
+	
+.about--so-long
+	margin-bottom: 25px
+	
++above(35em)
+	.about--currently
+		min-height: 375px
+		padding-right: 225px
+		
+	.about--currently__img
+		margin: 40px 0 0
+		position: absolute
+		right: 0
+		top: 0
+		width: 200px
+		
+	.about--so-long
+		white-space: nowrap
+		
+	
++above(47.5em)
+	.about--photos__photo
+		display: block
+		float: left
+		margin: 0 0 0 2.5%
+		width: 47.5%
+		
+		&:first-child
+			margin-left: 0
+		
+		&:last-child
+			clear: both
+			float: none
+			margin: 0
+			padding: 25px 0 0
+			width: 100%
+	
+	.about--currently
+		min-height: 375px
+		padding-right: 275px
+		
+	.about--currently__img
+		width: 250px
+
++above(62.5em)
+	.about--photos__photo
+		display: block
+		float: left
+		margin: 0 0 0 2%
+		width: 32%
+		
+		&:first-child
+			margin-left: 0
+			width: 31%
+		
+		&:last-child
+			clear: right
+			float: right
+			margin: 0
+			padding: 0
+			width: 31%
+	
+	.about--currently
+		min-height: 425px
+		padding-right: 325px
+		
+	.about--currently__img
+		width: 300px
