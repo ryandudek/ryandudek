@@ -27,7 +27,7 @@ gulp.task('swig', function() {
 gulp.task('js', function () {
     gulp.src('./source/js/*.js')
         .pipe(connect.reload())
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('./js/'));
 });
 
 gulp.task('watch', function () {
