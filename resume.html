@@ -11,36 +11,39 @@
         <!-- <script type="text/javascript" src="js/vendor/modernizr.js"></script> -->
 	</head>
 	<body>
-		<div class="page-wrapper">
-            <header class="header">
-	<img src="img/bandicoot-sm.jpg" alt="Ryan Dudek" class="header--image" />
-	<h1 class="header--name">Ryan Dudek</h1>
-	<h2 class="header--whatido">Keeping it Awesome</h2>
-
-	<nav class="site-navigation">
-		<ul class="site-navigation--list">
-			<li class="site-navigation--list__item"><a href="index.html" >About</a></li>
-			<li class="site-navigation--list__item"><a href="snippets.html" >Snippets</a></li>
-			<li class="site-navigation--list__item"><a href="resume.html" class="site-navigation--list__current">Resume</a></li>
-		</ul>
-	</nav>
+        <header class="header">
+	<h1 class="header--name">Ryan <i class="header--image icon icon--coffee"></i> Dudek</h1>
 </header>
+		<div class="page-wrapper">
+            <section class="site-navigation fixedsticky">
+	<ul class="site-navigation--list">
+		<li class="site-navigation--list__item">
+			<a href="index.html" class="site-navigation--link ">About</a>
+		</li><li class="site-navigation--list__item">
+			<a href="snippets.html" class="site-navigation--link ">Snippets</a>
+		</li><li class="site-navigation--list__item">
+			<a href="resume.html" class="site-navigation--link site-navigation--link__current">Resume</a>
+		</li>
+	</ul>
+</section>
 
             <div id="main" class="page-content" role="main">
                 
-
 	<div class="page--title">
 		<h1>Resume</h1>
 	</div>
 
 	<div class="page--content resume--content">
+		<h2 class="resume--section-title">Technical Skills</h2>
+		<p class="resume--skills">HTML, CSS [including: Stylus, SASS/SCSS, LESS], jQuery, JavaScript, Grunt, Gulp, User Experience, Responsive Web Design, Prototyping</p>
+
 		<h2 class="resume--section-title">Professional Experience</h2>
 
 		<div class="resume--job">
 			<h3 class="resume--employer">Epam Systems (formerly Empathy Lab)</h3>
 			<p class="resume--additional-info"><a href="http://www.epam.com/empathylab" target="_blank">http://www.epam.com/empathylab</a> - 2010 - Present</p>
-			<h4 class="resume--job-title">Front End Web Developer</h4>
-			<p class="resume--job-description">Create semantic mark up in a variety of languages, use CSS and table-less design to lay out web designs, build and maintain site content in a variety of solutions, strategize development with other members of a team.</p>
+			<h4 class="resume--job-title">Senior Front End Web Developer</h4>
+			<p class="resume--job-description">Collaborating with clients and coworkers to produce web applications for many clients including: NBC, Liberty Global, Edmunds, Vertical Screen, Tessco, TJ Maxx, DirecTV, and The American Red Cross. Provided solutions to user experience and design issues. Rapidly built prototypes for sales pitches and for client presentations. Provided solutions for accessibility and multi-lingual issues in designs.</p>
 		</div>
 
 		<div class="resume--job">
@@ -66,7 +69,7 @@
 		
 		<div class="resume--job">
 			<h3 class="resume--employer">Aestheticom</h3>
-			<p class="resume--additional-info"><a href="http://www.aestheti.com" target="_blank">http://www.aestheti.com</a> - 2006</p>
+			<p class="resume--additional-info">2006</p>
 			<h4 class="resume--job-title">Intern</h4>
 			<p class="resume--job-description">Motion graphics and video editing</p>
 		</div>
@@ -76,9 +79,6 @@
 			<p class="resume--additional-info">2004 - 2006</p>
 			<p class="resume--job-description">Video production clubs at The Art Institute of Philadelphia</p>
 		</div>
-
-		<h2 class="resume--section-title">Technical Skills</h2>
-		<p class="resume--skills">HTML, CSS, Stylus, SASS/SCSS, LESS, jQuery, JavaScript, Grunt, Gulp, User Experience</p>
 
 		<h2 class="resume--section-title">Education</h2>
 		<h3 class="resume--degree">Bachelor's of Science in Digital Media Production</h3>
@@ -94,13 +94,9 @@
 
 	<div class="page--signature resume--signature">
 		<div class="welp-cya-later">
-			<img src="img/bandicoot-sm.jpg" alt="Bad at riding bikes" /> 
-			<p class="signature">Ryan Dudek
-			<a href="tel:+12025576454">202.557.6454</a>
-			ryandudek [AT] gmail [dot] com</p>
+			<img src="img/bandicoot-sm.jpg" alt="Bad at riding bikes" />
 		</div>
 	</div>
-
 
             </div>
 
@@ -110,6 +106,7 @@
 	<h1 class="footer--nav-header">Find me on the internets:</h1>
 	<nav class="footer--nav">
 		<ul class="footer--nav-list">
+			<li class="footer--nav-list__item"><a href="mailto:ryandudek@gmail.com" target="_blank" class="icon icon--email">email</a></li>
 			<li class="footer--nav-list__item"><a href="https://github.com/ryandudek/" target="_blank" class="icon icon--github">github</a></li>
 			<li class="footer--nav-list__item"><a href="https://instagram.com/ryaneffindudek" target="_blank" class="icon icon--instagram">instagram</a></li>
 			<li class="footer--nav-list__item"><a href="https://twitter.com/kelpiuscycling" target="_blank" class="icon icon--twitter">twitter</a></li>
@@ -117,5 +114,10 @@
 		</ul>
 	</nav>
 </footer>
+        <div class="overlay"></div>
+
+        <script src="/js/jquery.js"></script>
+        <script src="/js/fixedsticky.js"></script>
+        <script src="/js/main.js"></script>
 	</body>
 </html>

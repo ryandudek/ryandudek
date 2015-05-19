@@ -11,20 +11,21 @@
         <!-- <script type="text/javascript" src="js/vendor/modernizr.js"></script> -->
 	</head>
 	<body>
-		<div class="page-wrapper">
-            <header class="header">
-	<img src="img/bandicoot-sm.jpg" alt="Ryan Dudek" class="header--image" />
-	<h1 class="header--name">Ryan Dudek</h1>
-	<h2 class="header--whatido">Keeping it Awesome</h2>
-
-	<nav class="site-navigation">
-		<ul class="site-navigation--list">
-			<li class="site-navigation--list__item"><a href="index.html" class="site-navigation--list__current">About</a></li>
-			<li class="site-navigation--list__item"><a href="snippets.html" >Snippets</a></li>
-			<li class="site-navigation--list__item"><a href="resume.html" >Resume</a></li>
-		</ul>
-	</nav>
+        <header class="header">
+	<h1 class="header--name">Ryan <i class="header--image icon icon--coffee"></i> Dudek</h1>
 </header>
+		<div class="page-wrapper">
+            <section class="site-navigation fixedsticky">
+	<ul class="site-navigation--list">
+		<li class="site-navigation--list__item">
+			<a href="index.html" class="site-navigation--link site-navigation--link__current">About</a>
+		</li><li class="site-navigation--list__item">
+			<a href="snippets.html" class="site-navigation--link ">Snippets</a>
+		</li><li class="site-navigation--list__item">
+			<a href="resume.html" class="site-navigation--link ">Resume</a>
+		</li>
+	</ul>
+</section>
 
             <div id="main" class="page-content" role="main">
                 
@@ -37,29 +38,29 @@
 	</div>
 
 	<div class="about--photos">
-		<h3>This is me:</h3>
-		<img src="./img/ryan_dudek.jpg" alt="All of the thumbs are UP" />
+		<div class="about--photos__photo">
+			<h3>This is me:</h3>
+			<img src="/img/ryan_dudek.jpg" alt="All of the thumbs are UP" />
+		</div>
 
-		<h3>And this is also me:</h3>
-		<img src="img/bandicoot.jpg" alt="Photo of Ryan not riding bikes well" />
+		<div class="about--photos__photo">
+			<h3>And this is also me:</h3>
+			<img src="/img/bandicoot-sm.jpg" alt="Photo of Ryan not riding bikes well" />
+		</div>
 
-		<h3>But most importantly, I can make myself look like this if you'd wish:</h3>
-		<img src="img/bossman.jpg" alt="Incredible!" />
+		<div class="about--photos__photo">
+			<h3>And I clean up nicely:</h3>
+			<img src="/img/bossman.jpg" alt="Incredible!" />
+		</div>
 	</div>
 
 	<div class="about--currently">
 		<h2>Currently</h2>
 		<p>I am a Senior Front End Web Developer (aka <span class="bold">Vice President of Keeping it Awesome</span>) at <a href="http://epam.com" target="_blank">Epam Systems</a> in Conshochocken, PA. Outside of work, I am a very active person and I drink way too much coffee (also known as never drinking enough coffee). You can find me riding and racing bicycles, hiking, camping, making fun of myself, and (shittily) photoshopping pictures of my friends/family/coworkers. I like video games, but I never have enough time to play them. I'm not great at social networking, but you can read <a href="https://twitter.com/kelpiuscycling" target="_blank">my tweets about bike racing</a> or look at <a href="https://instagram.com/ryaneffindudek" target="_blank">my pictures of mostly bike races and coffee</a> if you're into that.</p>
-	</div>
 
-	<div class="about--signature">
-		<h3>So long, and thanks for all the fish,</h3>
-		<div class="welp-cya-later">
-			<img src="img/mission.jpg" alt="Mission Accomplished" /> 
-			<p class="signature">Ryan Dudek
-			<a href="tel:+12025576454">202.557.6454</a>
-			ryandudek [AT] gmail [dot] com</p>
-		</div>
+		<h3 class="about--so-long">So long, and thanks for all the fish,</h3>
+
+		<img src="/img/mission.jpg" alt="Mission Accomplished" class="about--currently__img" />
 	</div>
 
 
@@ -71,6 +72,7 @@
 	<h1 class="footer--nav-header">Find me on the internets:</h1>
 	<nav class="footer--nav">
 		<ul class="footer--nav-list">
+			<li class="footer--nav-list__item"><a href="mailto:ryandudek@gmail.com" target="_blank" class="icon icon--email">email</a></li>
 			<li class="footer--nav-list__item"><a href="https://github.com/ryandudek/" target="_blank" class="icon icon--github">github</a></li>
 			<li class="footer--nav-list__item"><a href="https://instagram.com/ryaneffindudek" target="_blank" class="icon icon--instagram">instagram</a></li>
 			<li class="footer--nav-list__item"><a href="https://twitter.com/kelpiuscycling" target="_blank" class="icon icon--twitter">twitter</a></li>
@@ -78,5 +80,10 @@
 		</ul>
 	</nav>
 </footer>
+        <div class="overlay"></div>
+
+        <script src="/js/jquery.js"></script>
+        <script src="/js/fixedsticky.js"></script>
+        <script src="/js/main.js"></script>
 	</body>
 </html>

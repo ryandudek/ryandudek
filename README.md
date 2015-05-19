@@ -2,12 +2,12 @@
 I once had convinced a boss of mine that my middle name was Effin. At first he thought I said _Elvin_, but I told him I was _AWESOME_ and not an _ELF_ (no offense to elves or elf lovers). That is a true story. I am a front end web developer, which is to say, I make the internets (at least this is how I explain it to my mom).
 
 ### This is me:
-![alt text](https://raw.githubusercontent.com/ryandudek/ryandudek.github.io/master/img/track.jpg "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/ryandudek/ryandudek.github.io/master/img/ryan_dudek.jpg "Logo Title Text 1")
 
 ### And this is also me:
-![alt text](https://raw.githubusercontent.com/ryandudek/ryandudek.github.io/master/img/dccx.jpg "Riding bikes")
+![alt text](https://raw.githubusercontent.com/ryandudek/ryandudek.github.io/master/img/bandicoot-sm.jpg "Riding bikes")
 
-### But most importantly, I can make myself look like this if you'd wish:
+### I also clean up nicely:
 ![alt text](https://raw.githubusercontent.com/ryandudek/ryandudek.github.io/master/img/bossman.jpg "Incredible!")
 
 ## Currently

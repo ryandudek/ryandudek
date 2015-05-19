@@ -11,8 +11,9 @@
         <!-- <script type="text/javascript" src="js/vendor/modernizr.js"></script> -->
 	</head>
 	<body>
+        {% include "../modules/header.html" %}
 		<div class="page-wrapper">
-            {% include "../modules/header.html" %}
+            {% include "../modules/site-navigation.html" %}
 
             <div id="main" class="page-content" role="main">
                 {% block content %}
@@ -22,5 +23,10 @@
         </div>
 
         {% include "../modules/footer.html" %}
+        <div class="overlay"></div>
+
+        <script src="/js/jquery.js"></script>
+        <script src="/js/fixedsticky.js"></script>
+        <script src="/js/main.js"></script>
 	</body>
 </html>
