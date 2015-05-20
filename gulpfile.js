@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     clean = require('gulp-clean'),
     runSequence = require('run-sequence'),
-    swig = require('gulp-swig');
+    swig = require('gulp-swig'),
+    uglify = require('gulp-uglify');
 
 gulp.task('stylus', function () {
     gulp.src(['./source/styl/**/*.styl', '!styl/**/_*'])
@@ -36,6 +37,12 @@ gulp.task('watch', function () {
     gulp.watch(['./source/js/*.js'], ['js']);
 });
 
+gulp.task('compress', function() {
+  return gulp.src('./source/js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./js'));
+});
+
 gulp.task('connect', function() {
     connect.server({
         root: [__dirname],
@@ -46,5 +53,6 @@ gulp.task('connect', function() {
 gulp.task('default', [
     'stylus',
     'connect',
-    'watch'
+    'watch',
+    'compress'
 ]);
