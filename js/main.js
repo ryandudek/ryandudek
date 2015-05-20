@@ -1,1 +1,3 @@
-$(function(){$(".fixedsticky").fixedsticky()});
+$(function() {
+	$('.fixedsticky').fixedsticky();
+});
