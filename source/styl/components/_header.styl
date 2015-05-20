@@ -9,10 +9,11 @@
 	width: auto
 	
 .header--image
-	display: none
+	display: inline-block
+	width: 4px
 	
 .header--name
-	font-family: $NixieOne
+	font-family: $Homestead
 	fontSize(32px)
 	letter-spacing: -2px
 	line-height: 1
@@ -21,29 +22,40 @@
 	text-align: center
 	text-transform: uppercase
 	
+	a
+		color: $bodyFontColor
+	
 +above(19em)
 	.header--name
 		fontSize(38px)
 	
 	.header--image
 		display: inline-block
-		height: 100px
-		margin: -12px -2px 0
+		height: 75px
+		margin: -12px 2px 0
 		vertical-align: middle
-		width: 67px
+		width: 51px
 
 +above(21.25em)
 	.header--name
 		fontSize(42px)
 	
 	.header--image
-		height: 75px
-		width: 51px
+		height: 100px
+		width: 67px
 		
-+above(40em)
++above(26.25em)
 	.header--name
-		fontSize(48px)
+		fontSize(52px)
+		
++above(33em)
+	.header--name
+		fontSize(62px)
 		
 	.header--image
 		height: 120px
 		width: 81px
+		
++above(40em)
+	.header--name
+		fontSize(72px)
