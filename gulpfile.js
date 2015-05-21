@@ -51,6 +51,9 @@ gulp.task('copyfiles', function() {
    gulp.src('./CNAME')
    .pipe(gulp.dest('./build'));
 
+   gulp.src('./README.md')
+   .pipe(gulp.dest('./build'));
+
    gulp.src('./img/**/*')
    .pipe(gulp.dest('./build/img'));
 });
@@ -64,7 +67,9 @@ gulp.task('connect', function() {
 
 gulp.task('deploy', function() {
   return gulp.src('./build/**/*')
-    .pipe(ghPages());
+    .pipe(ghPages({
+        branch: 'master'
+    }));
 });
 
 gulp.task('default', [
