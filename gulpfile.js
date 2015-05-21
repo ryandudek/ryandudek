@@ -16,20 +16,20 @@ gulp.task('stylus', function () {
         .pipe(stylus({
             compress: true,
             use: [nib(), jeet(), rupture()]}))
-        .pipe(gulp.dest('./build/css'))
+        .pipe(gulp.dest('./dev/css'))
         .pipe(connect.reload());
 });
 
 gulp.task('swig', function() {
     gulp.src('./*.html')
         .pipe(swig())
-        .pipe(gulp.dest('./build/'));
+        .pipe(gulp.dest('./dev/'));
 });
 
 gulp.task('compressjs', function() {
   return gulp.src('./js/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./build/js'));
+    .pipe(gulp.dest('./dev/js'));
 });
 
 gulp.task('watch', function () {
@@ -40,35 +40,36 @@ gulp.task('watch', function () {
 
 gulp.task('copyfiles', function() {
    gulp.src('./fonts/**/*.{ttf,woff,eof,svg}')
-   .pipe(gulp.dest('./build/fonts'));
+   .pipe(gulp.dest('./dev/fonts'));
 
    gulp.src('./resources/*')
-   .pipe(gulp.dest('./build/resources'));
+   .pipe(gulp.dest('./dev/resources'));
 
    gulp.src('./favicon.ico')
-   .pipe(gulp.dest('./build'));
+   .pipe(gulp.dest('./dev'));
 
    gulp.src('./CNAME')
-   .pipe(gulp.dest('./build'));
+   .pipe(gulp.dest('./dev'));
 
    gulp.src('./README.md')
-   .pipe(gulp.dest('./build'));
+   .pipe(gulp.dest('./dev'));
 
    gulp.src('./img/**/*')
-   .pipe(gulp.dest('./build/img'));
+   .pipe(gulp.dest('./dev/img'));
 });
 
 gulp.task('connect', function() {
     connect.server({
-        root: 'build',
+        root: 'dev',
         livereload: true
     });
 });
 
 gulp.task('deploy', function() {
-  return gulp.src('./build/**/*')
+  return gulp.src('./dev/**/*')
     .pipe(ghPages({
-        branch: 'master'
+        branch: 'master',
+        force: true
     }));
 });
 

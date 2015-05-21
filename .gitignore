@@ -3,6 +3,6 @@ node_modules
 .publish
 npm-debug.log
 hi-res
-build
+dev
 ryandudek.sublime-project
 ryandudek.sublime-workspace
