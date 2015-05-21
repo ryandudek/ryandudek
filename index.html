@@ -1,34 +1,8 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<link rel="stylesheet" href="css/rynddk.css">
-        <title>Ryan Dudek - Keeping it Awesome</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="format-detection" content="telephone=no">
-        <script type="text/javascript" src="js/modernizr.js"></script>
-	</head>
-	<body>
-        <header class="header">
-	<h1 class="header--name"><a href="/">Ryan<i class="header--image icon icon--coffee"> </i>Dudek</a></h1>
-</header>
-		<div class="page-wrapper">
-            <section class="site-navigation fixedsticky">
-	<ul class="site-navigation--list">
-		<li class="site-navigation--list__item">
-			<a href="/" class="site-navigation--link site-navigation--link__current">About</a>
-		</li><li class="site-navigation--list__item">
-			<a href="snippets.html" class="site-navigation--link ">Snippets</a>
-		</li><li class="site-navigation--list__item">
-			<a href="resume.html" class="site-navigation--link ">Resume</a>
-		</li>
-	</ul>
-</section>
+{% set activeNav = "about" %}
+{% extends 'templates/base.html' %}
 
-            <div id="main" class="page-content" role="main">
-                
+
+{% block content %}
 
 	<div class="about--greeting">
 		<h1>Hello,
@@ -63,27 +37,4 @@
 		<img src="/img/mission.jpg" alt="Mission Accomplished" class="about--currently__img" />
 	</div>
 
-
-            </div>
-
-        </div>
-
-        <footer class="footer">
-	<h1 class="footer--nav-header">Find me on the internets:</h1>
-	<nav class="footer--nav">
-		<ul class="footer--nav-list">
-			<li class="footer--nav-list__item"><a href="mailto:ryandudek@gmail.com" target="_blank" class="icon icon--email">email</a></li>
-			<li class="footer--nav-list__item"><a href="https://github.com/ryandudek/" target="_blank" class="icon icon--github">github</a></li>
-			<li class="footer--nav-list__item"><a href="https://instagram.com/ryaneffindudek" target="_blank" class="icon icon--instagram">instagram</a></li>
-			<li class="footer--nav-list__item"><a href="https://twitter.com/kelpiuscycling" target="_blank" class="icon icon--twitter">twitter</a></li>
-			<li class="footer--nav-list__item"><a href="https://www.linkedin.com/in/ryandudek" target="_blank" class="icon icon--linkedin">linkedin</a></li>
-		</ul>
-	</nav>
-</footer>
-        <div class="overlay"></div>
-
-        <script src="/js/jquery.js"></script>
-        <script src="/js/fixedsticky.js"></script>
-        <script src="/js/main.js"></script>
-	</body>
-</html>
+{% endblock %}

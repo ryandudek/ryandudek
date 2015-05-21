@@ -1,34 +1,8 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<link rel="stylesheet" href="css/rynddk.css">
-        <title>Ryan Dudek - Keeping it Awesome</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="format-detection" content="telephone=no">
-        <script type="text/javascript" src="js/modernizr.js"></script>
-	</head>
-	<body>
-        <header class="header">
-	<h1 class="header--name"><a href="/">Ryan<i class="header--image icon icon--coffee"> </i>Dudek</a></h1>
-</header>
-		<div class="page-wrapper">
-            <section class="site-navigation fixedsticky">
-	<ul class="site-navigation--list">
-		<li class="site-navigation--list__item">
-			<a href="/" class="site-navigation--link ">About</a>
-		</li><li class="site-navigation--list__item">
-			<a href="snippets.html" class="site-navigation--link site-navigation--link__current">Snippets</a>
-		</li><li class="site-navigation--list__item">
-			<a href="resume.html" class="site-navigation--link ">Resume</a>
-		</li>
-	</ul>
-</section>
+{% set activeNav = "snippets" %}
+{% extends 'templates/base.html' %}
 
-            <div id="main" class="page-content" role="main">
-                
+
+{% block content %}
 	<div class="page--title">
 		<h1>Snippets</h1>
 	</div>
@@ -66,27 +40,4 @@
 		<h2 class="snippet--title"><a href="http://codepen.io/ryandudek/pen/jPrpXe" target="_blank">Ems and Rems</a></h2>
 		<p class="snippet--description">One day, while trying to explain the difference between ems and rems to my client, I decided that the best way to fully explain it was with a pen. Rather quickly, this became a topic of discussion in our office due to some communications issues between a group of off-shore developers and our design team. I gave a presentation to our design team featuring this pen and additionally helped them understand how they could talk about font sizes, leading, kerning, and tracking with developers and how to speak to these terms using their corresponding CSS properties.</p>
 	</div>
-
-            </div>
-
-        </div>
-
-        <footer class="footer">
-	<h1 class="footer--nav-header">Find me on the internets:</h1>
-	<nav class="footer--nav">
-		<ul class="footer--nav-list">
-			<li class="footer--nav-list__item"><a href="mailto:ryandudek@gmail.com" target="_blank" class="icon icon--email">email</a></li>
-			<li class="footer--nav-list__item"><a href="https://github.com/ryandudek/" target="_blank" class="icon icon--github">github</a></li>
-			<li class="footer--nav-list__item"><a href="https://instagram.com/ryaneffindudek" target="_blank" class="icon icon--instagram">instagram</a></li>
-			<li class="footer--nav-list__item"><a href="https://twitter.com/kelpiuscycling" target="_blank" class="icon icon--twitter">twitter</a></li>
-			<li class="footer--nav-list__item"><a href="https://www.linkedin.com/in/ryandudek" target="_blank" class="icon icon--linkedin">linkedin</a></li>
-		</ul>
-	</nav>
-</footer>
-        <div class="overlay"></div>
-
-        <script src="/js/jquery.js"></script>
-        <script src="/js/fixedsticky.js"></script>
-        <script src="/js/main.js"></script>
-	</body>
-</html>
+{% endblock %}

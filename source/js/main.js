@@ -1,3 +1,0 @@
-$(function() {
-	$('.fixedsticky').fixedsticky();
-});
