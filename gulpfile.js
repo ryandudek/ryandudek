@@ -26,22 +26,16 @@ gulp.task('swig', function() {
         .pipe(gulp.dest('./build/'));
 });
 
-gulp.task('js', function () {
-    gulp.src('./js/*.js')
-        .pipe(connect.reload())
-        .pipe(gulp.dest('./build/js/'));
+gulp.task('compressjs', function() {
+  return gulp.src('./js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/js'));
 });
 
 gulp.task('watch', function () {
     gulp.watch(['./styl/**/*.styl'], ['stylus']);
     gulp.watch(['./**/*.html'], ['swig']);
-    gulp.watch(['./js/*.js'], ['js']);
-});
-
-gulp.task('compress', function() {
-  return gulp.src('./js/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('./build/js'));
+    gulp.watch(['./js/*.js'], ['compressjs']);
 });
 
 gulp.task('copyfiles', function() {
