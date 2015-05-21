@@ -57,7 +57,7 @@ gulp.task('copyfiles', function() {
 
 gulp.task('connect', function() {
     connect.server({
-        root: [__dirname],
+        root: 'build',
         livereload: true
     });
 });
@@ -71,6 +71,5 @@ gulp.task('default', [
     'stylus',
     'connect',
     'watch',
-    'copyfiles',
-    'compress'
+    'copyfiles'
 ]);
