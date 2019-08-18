@@ -1,6 +1,5 @@
 node_modules
 .DS_Store
-.publish
 npm-debug.log
-hi-res
 dev
+dist
