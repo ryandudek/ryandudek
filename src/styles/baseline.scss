@@ -1,0 +1,127 @@
+@import '_variables';
+@import '_mixins';
+@import '_reset';
+@import '_fonts';
+
+html {
+    font-family: $Lato;
+}
+
+.rd {
+  	background: $bodyBGColor;
+  	color: $bodyFontColor;
+    margin: 0;
+  	overflow-x: hidden;
+    padding: 0;
+}
+
+.rd-content {
+  margin: 0 auto;
+  max-width: 76.25em;
+}
+
+hr,
+.hr {
+    background: $module-divider;
+    border: none;
+    display: block;
+    height: 1px;
+    margin: 30px auto;
+    padding: 0;
+    width: 100%;
+}
+
+a {
+    color: $link-color;
+    font-family: inherit;
+    text-decoration: underline;
+    text-shadow: 1px 0px 5px $linkShadow;
+}
+
+img {
+    border: none;
+    display: block;
+    max-width: 100%;
+    outline: none;
+}
+
+h1 {
+    @include font-size(32);
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    @include font-size(32);
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    @include font-size(24);
+    font-weight: 700;
+    margin-bottom: 0.3em;
+}
+
+h4 {
+    @include font-size(21);
+    font-weight: 700;
+    margin-bottom: 0.3em;
+}
+
+p,
+li {
+    @include font-size(18);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+}
+
+.rd-sr-only {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+em,
+.italic {
+    font-style: italic;
+}
+
+strong,
+.bold {
+    font-style: normal;
+    font-weight: 700;
+}
+
+.rd-print-only {
+    display: none;
+}
+
+@media print {
+    .rd-no-print {
+        display: none;
+    }
+
+    .rd-print-only {
+        display: block;
+    }
+
+    h2 {
+        @include font-size(20);
+    }
+
+    h3 {
+        @include font-size(16);
+    }
+
+    p,
+    li {
+        @include font-size(13);
+    }
+}

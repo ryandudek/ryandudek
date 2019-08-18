@@ -1,0 +1,92 @@
+.rd-header {
+    box-sizing: border-box;
+    color: $headerFontColor;
+    height: 60px;
+    position: relative;
+    z-index: 50;
+}
+
+.rd-title {
+    @include font-size(36);
+  	font-family: $Homestead;
+    font-weight: normal;
+  	letter-spacing: -2px;
+  	line-height: 1;
+  	margin: 0;
+    padding: 12px 0 0;
+  	text-align: center;
+  	text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.rd-chemex {
+    background-image: url('/img/icons/chemex.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    height: 32px;
+    margin: 0 4px;
+    vertical-align: middle;
+    width: 30px;
+}
+
+@media screen and (min-width: 40em) {
+    .rd-header {
+        height: 100px;
+    }
+
+    .rd-title {
+        @include font-size(48);
+    }
+
+    .rd-chemex {
+        height: 52px;
+        width: 45px;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .rd-header {
+        height: 125px;
+    }
+
+    .rd-title {
+        @include font-size(64);
+    }
+
+    .rd-chemex {
+        height: 60px;
+        width: 45px;
+    }
+}
+
+@media screen and (min-width: 100em) {
+    .rd-header {
+        height: 140px;
+    }
+
+    .rd-title {
+        @include font-size(64);
+    }
+
+    .rd-chemex {
+        height: 80px;
+        width: 65px;
+    }
+}
+
+@media print {
+    .rd-header {
+        height: auto;
+    }
+
+    .rd-title {
+        @include font-size(32);
+    }
+
+    .rd-chemex {
+        content: url('/img/icons/chemex.svg');
+        height: 52px;
+        width: 45px;
+    }
+}

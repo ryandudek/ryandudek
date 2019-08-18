@@ -1,0 +1,130 @@
+.rd-about {
+    box-sizing: border-box;
+    box-shadow: 2px 7px 30px rgba(0, 0, 0, 0.75) inset;
+    background-color: $aboutBGColor;
+    color: $aboutFontColor;
+    margin-top: -60px;
+    padding: 60px 0 50px;
+    position: relative;
+    z-index: 10;
+
+    a {
+        color: $aboutLinkColor;
+        font-family: inherit;
+        text-decoration: underline;
+        text-shadow: 1px 0px 5px $aboutLinkShadow;
+    }
+}
+
+.rd-about-container {
+    margin: 0 auto;
+    max-width: 64em;
+    padding: 0 25px;
+    z-index: 10;
+}
+
+.rd-about-image {
+    display: none;
+}
+
+.rd-underlay {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
+
+	&:after {
+		background: $aboutBGColor url('/img/bg/overlay.png') repeat 0 0;
+		bottom: 0;
+		content: "";
+		display: block;
+		height: 100%;
+		left: 0;
+		opacity: 0.1;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+  }
+}
+
+@media screen and (min-width: 40em) {
+    .rd-about {
+        margin-top: -100px;
+        padding-top: 100px;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .rd-about {
+        box-shadow: 2px 7px 65px rgba(0, 0, 0, 0.75) inset;
+        height: 100vh;
+    }
+
+    .rd-about-container {
+        align-items: baseline;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .rd-about-title {
+        @include font-size(32);
+    }
+
+    .rd-about-text {
+        @include font-size(21);
+    }
+
+    .rd-about-image {
+        bottom: 0;
+        display: block;
+        max-width: 100%;
+        position: absolute;
+        width: 27.5%;
+    }
+
+    .rd-about-content {
+        display: block;
+        margin-left: 40%;
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .rd-about {
+        margin-top: -125px;
+        padding-top: 125px;
+    }
+}
+
+@media screen and (min-width: 100em) {
+    .rd-about {
+        margin-top: -140px;
+        padding-top: 140px;
+    }
+}
+
+@media print {
+    .rd-about {
+        box-shadow: none;
+        margin: -10px 0 0;
+        padding: 0;
+        position: static;
+    }
+
+    .rd-about-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .rd-about-title {
+        @include font-size(20);
+    }
+
+    .rd-about-text {
+        @include font-size(14);
+    }
+}
