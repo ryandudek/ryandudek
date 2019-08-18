@@ -5,12 +5,13 @@
   "devDependencies": {
     "@11ty/eleventy": "0.8.3",
     "clean-css-cli": "4.3.0",
-    "concat": "1.0.3",
+    "copyfiles": "2.1.1",
     "imagemin-cli": "5.0.0",
     "markdown-it": "9.1.0",
     "markdown-it-anchor": "5.2.4",
     "node-sass": "4.12.0",
     "npm-run-all": "4.1.5",
+    "nunjucks": "3.2.0",
     "onchange": "6.0.0",
     "uglify-js": "3.6.0"
   },
@@ -23,22 +24,19 @@
     "url": "https://github.com/ryandudek/ryandudek.github.io/issues"
   },
   "homepage": "https://github.com/ryandudek/ryandudek.github.io#readme",
-  "dependencies": {},
+  "dependencies": {
+    "inline-svg": "^2.2.3"
+  },
   "scripts": {
-    "build": "npm run build:css && npm run build:js && npm run build:img",
-    "build:css": "npm run scss && npm run concat:css && npm run cssmin",
+    "build": "npm run build:css && npm run build:img npm run copy && eleventy --serve",
+    "build:css": "npm run scss && npm run cssmin",
     "build:img": "npm run imagemin",
-    "build:js": "npm run concat:js && npm run uglify",
-    "concat": "npm run concat:css && npm run concat:js",
-    "concat:css": "concat -o dist/css/styles.css dist/css/style.css assets/css/test.css",
-    "concat:js": "mkdir -p dist/js && concat -o dist/js/scripts.js assets/js/test1.js assets/js/test2.js",
-    "cssmin": "cleancss -o dist/css/styles.min.css dist/css/styles.css",
-    "imagemin": "imagemin --out-dir=dist/img assets/img/**/*.{png,jpg,gif}",
+    "copy": "copyfiles src/fonts -a dist/fonts",
+    "cssmin": "cleancss -o dist/css/styles.min.css dist/css/style.css",
+    "imagemin": "imagemin --out-dir=dist/img src/assets/img/**/*.{png,jpg,gif}",
     "scss": "node-sass -o dist/css src/styles/style.scss",
-    "uglify": "uglifyjs -o dist/js/scripts.min.js dist/js/scripts.js",
     "watch": "npm-run-all --parallel watch:*",
-    "watch:css": "onchange 'src/styles/*.scss' -- npm run build:css",
-    "watch:js": "onchange 'src/js/*.js' -- npm run build:js"
+    "watch:css": "onchange 'src/styles/*.scss' -- npm run build:css"
   },
   "keywords": [],
   "license": "ISC"
