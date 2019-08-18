@@ -1,0 +1,7 @@
+// Converts px to rems
+// Expects int
+// EX: .font-size(14)
+@mixin font-size($value) {
+    font-size: $value + px;
+    font-size: ($value/16) + rem;
+}

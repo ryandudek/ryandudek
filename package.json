@@ -3,22 +3,39 @@
   "version": "6.6.6",
   "description": "Ryan Dudek - Keeping it Awesome",
   "devDependencies": {
-    "gulp": "^3.8.10",
-    "gulp-clean": "^0.3.1",
-    "gulp-connect": "^2.2.0",
-    "gulp-stylus": "^2.0.x",
-    "gulp-watch": "^3.0.0",
-    "jeet": "^6.1.2",
-    "nib": "^1.0.4",
-    "rupture": "^0.4.0",
-    "run-sequence": "^1.0.2",
-    "gulp-swig": "latest",
-    "gulp-uglify": "1.2.0",
-    "gulp-gh-pages": "0.5.1"
+    "@11ty/eleventy": "0.8.3",
+    "clean-css-cli": "4.3.0",
+    "imagemin-cli": "5.0.0",
+    "markdown-it": "9.1.0",
+    "markdown-it-anchor": "5.2.4",
+    "node-sass": "4.12.0",
+    "npm-run-all": "4.1.5",
+    "nunjucks": "3.2.0",
+    "onchange": "6.0.0",
+    "uglify-js": "3.6.0"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ryandudek/ryandudek.github.io.git"
+    "url": "git+ssh://git@github.com/ryandudek/ryandudek.github.io.git"
   },
-  "author": "Ryan Dudek"
+  "author": "Ryan Dudek",
+  "bugs": {
+    "url": "https://github.com/ryandudek/ryandudek.github.io/issues"
+  },
+  "homepage": "https://github.com/ryandudek/ryandudek.github.io#readme",
+  "dependencies": {
+    "inline-svg": "^2.2.3"
+  },
+  "scripts": {
+    "build": "npm run build:css && npm run build:img && eleventy --serve",
+    "build:css": "npm run scss && npm run cssmin",
+    "build:img": "npm run imagemin",
+    "cssmin": "cleancss -o dist/css/styles.min.css dist/css/style.css",
+    "imagemin": "imagemin --out-dir=dist/img src/assets/img/**/*.{png,jpg,gif}",
+    "scss": "node-sass -o dist/css src/styles/style.scss",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:css": "onchange 'src/**/*.scss' -- npm run build:css"
+  },
+  "keywords": [],
+  "license": "ISC"
 }
