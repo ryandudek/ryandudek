@@ -27,14 +27,15 @@
     "inline-svg": "^2.2.3"
   },
   "scripts": {
-    "build": "npm run build:css && npm run build:img && eleventy --serve",
-    "build:css": "npm run scss && npm run cssmin",
-    "build:img": "npm run imagemin",
+    "build": "npx eleventy",
+    "dev": "npm run dev:css && npm run dev:img && eleventy --serve",
+    "dev:css": "npm run scss && npm run cssmin",
+    "dev:img": "npm run imagemin",
     "cssmin": "cleancss -o dist/css/styles.min.css dist/css/style.css",
     "imagemin": "imagemin --out-dir=dist/img src/assets/img/**/*.{png,jpg,gif}",
     "scss": "node-sass -o dist/css src/styles/style.scss",
     "watch": "npm-run-all --parallel watch:*",
-    "watch:css": "onchange 'src/**/*.scss' -- npm run build:css"
+    "watch:css": "onchange 'src/**/*.scss' -- npm run dev:css"
   },
   "keywords": [],
   "license": "ISC"

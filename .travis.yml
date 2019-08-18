@@ -3,8 +3,8 @@ node_js:
   - 12
 before_script:
   - npm install @11ty/eleventy -g
+script: eleventy --pathprefix="/"
 deploy:
-  fqdn: ryandudek.com
   local-dir: dist
   provider: pages
   skip_cleanup: true
@@ -12,3 +12,4 @@ deploy:
   keep_history: true
   on:
     branch: develop
+  fqdn: ryandudek.com
