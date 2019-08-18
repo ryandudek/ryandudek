@@ -1,8 +1,10 @@
 language: node_js
 node_js:
-  - 8
+  - 12
 before_script:
-  - npm install @11ty/eleventy -g && npm i
+  - npm install @11ty/eleventy -g
+script:
+  - npm run build
 deploy:
   fqdn: ryandudek.com
   local-dir: dist
