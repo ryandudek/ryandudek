@@ -1,6 +1,13 @@
 ---
-layout: layouts/layout.njk
-title: Keeping It Awesome
-content: content/about.njk
-supplement: content/resume.njk
+title: Ryan Dudek, Software Engineer - Keeping It Awesome
 ---
+
+{% extends "layouts/layout.njk" %}
+{% block header %}
+    {% include "components/header.njk" %}
+{% endblock %}
+
+{% block content %}
+    {% include "content/about.njk" %}
+    {% include "content/resume.njk" %}
+{% endblock %}
