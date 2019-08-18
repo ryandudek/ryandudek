@@ -1,21 +1,60 @@
-# Hello, my name is Ryan Dudek.
-I once had convinced a boss of mine that my middle name was Effin. At first he thought I said _Elvin_, but I told him I was _AWESOME_ and not an _ELF_ (no offense to elves or elf lovers). That is a true story. I am a front end web developer, which is to say, I make the internets (at least this is how I explain it to my mom).
+# About Me
 
-### This is me:
-![alt text](https://raw.githubusercontent.com/ryandudek/ryandudek.github.io/develop/img/ryan_dudek.jpg "Logo Title Text 1")
+## Greetings
 
-### And this is also me:
-![alt text](https://raw.githubusercontent.com/ryandudek/ryandudek.github.io/develop/img/bandicoot-sm.jpg "Riding bikes")
+I am Ryan Dudek, a software engineer based out of (not always) sunny Philadelphia. I am passionate about building awesome and accessible user experiences. I consider myself to be framework agnostic, but have experience with many different development platforms.
 
-### I also clean up nicely:
-![alt text](https://raw.githubusercontent.com/ryandudek/ryandudek.github.io/develop/img/bossman.jpg "Incredible!")
+Currently, I am a UX Tech Lead (aka _Vice President of Keeping it Awesome_) at [EY Design Studio PHL](http://studio.ey.com/) in Philadelphia, PA. If you are interested in learning more about me, check out my [resume](https://raw.githubusercontent.com/ryandudek/ryandudek.github.io/develop/resources/Ryan_Dudek-resume.pdf). When I am not online, I enjoy the great outdoors, coffee, art, photography, cooking, baking, reading, and being active. Ask me about my many fake business ventures that are run by my pseudonym - Randy Duke.
 
-## Currently
-I am a Front End Engineer (aka _Vice President of Keeping it Awesome_) at [Intuitive Company](http://intuitivecompany.com/) in Philadelphia, PA. Outside of work, I am a very active person and I drink way too much coffee (also known as never drinking enough coffee). You can find me riding and racing bicycles, hiking, camping, making fun of myself, and (shittily) [photoshopping pictures](http://badphotoslops.tumblr.com) of my friends/family/coworkers. I like video games, but I never have enough time to play them. I'm not great at social networking, but you can read [my tweets about bike racing](https://twitter.com/kelpiuscycling) or look at [my pictures of mostly bike races and coffee](https://instagram.com/ryaneffindudek) if you're into that.
-
-### So long, and thanks for all the fish,
-![alt text](https://raw.githubusercontent.com/ryandudek/ryandudek.github.io/develop/img/mission.jpg "Mission Accomplished")  
+So long, and thanks for all the fish,
 Ryan Dudek  
 202.557.6454  
-ryandudek@gmail.com  
-[resume](https://raw.githubusercontent.com/ryandudek/ryandudek.github.io/develop/resources/Ryan_Dudek-resume.pdf)
+ryandudek@gmail.com
+
+# Resume
+
+## Professional Experience
+
+  - **EY Design Studio PHL** _(formerly Intuitive Company)_  
+  2015 - Present [(studio.ey.com.com)](http://studio.ey.com.com)  
+  _UX Tech Lead_ (2018 - present)  
+  _Senior UX Developer_ (2015 - 2018)  
+  Collaborated in multi-disciplinary teams to design, create, and develop usable and accessible web and mobile applications. Lead development on and launched an in-house research application to deliver research to clients in a usable, beautiful, and dynamic way. Assisted in usability research efforts. Trained coworkers from a variety of disciplines how to test for and understand accessibility. Built internal applications and assisted in the creation of internal processes. Promoted the company and our work through presentations and meetups.
+  - **EPAM Systems** _(formerly Empathy Lab)_  
+  2010 - 2015 [(www.epam.com)](http://www.epam.com)  
+  _Senior Software Engineer_ (2014 - 2015)  
+  _Front End Web Developer_ (2010 - 2014)  
+  Collaborated with coworkers across disciplines to produce web applications for an assortment of clients across multiple business units. Provided solutions to user experience and interface design departments. Rapidly built prototypes for sales pitches and for client presentations. Provided solutions for accessible and multi-lingual issues in designs. Assisted in the development of a Responsive Web Design workflow across departments. Lead and participated in technical book discussion groups.
+  - **Home Front Communications**  
+  2007 - 2010 [(www.homefrontdc.com)](http://www.homefrontdc.com)  
+  _Front End Web Developer_  
+  Used semantic HTML and CSS to lay out web designs. Built and maintained Drupal content management systems for clients. Added site functionality with jQuery.
+  - **Screenmatter**  
+  2007 [(www.screenmatter.com)](http://www.screenmatter.com)  
+  _Freelance Front End Developer_  
+  Created semantic XHTML and ASP.NET markup. Worked within guidelines of excellent search engine optimization. Used strict CSS and to lay out web designs.
+  - **US News & World Report**  
+  2006 - 2007 [(www.usnews.com)](http://www.usnews.com)  
+  _Associate Producer - New Media_  
+  Posted content to website, compressed video and audio for streaming. Recorded, edited, and mastered audio.
+
+## Skills and Proficiencies
+
+  - HTML, CSS, Javascript
+  - API Development
+  - Accessibility
+  - User Experience
+  - Responsive Web Design
+  - Version Control
+  - Code Review
+  - Collaboration
+  - Build Tools
+
+## Get In Touch
+
+Ryan Dudek, Software Engineer  
+  - [ryandudek@gmail.com](mailto:ryandudek@gmail.com)
+  - [202.557.6454](tel:2025576454)
+  - [www.ryandudek.com](http://www.ryandudek.com)
+  - [twitter.com/ryaneffindudek](http://twitter.com/ryaneffindudek)
+  - [github.com/ryandudek](http://github.com/ryandudek)
