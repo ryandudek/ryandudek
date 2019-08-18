@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ryan Dudek, Software Engineer: {{title}}</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="About Ryan Dudek, a Philadelphia based software engineer.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+ </head>
+ <body class="rd">
+   <header class="rd-header">
+     <h1 class="rd-title">Ryan<span class="rd-chemex"> </span>Dudek</h1>
+   </header>
+  {{ content }}
+  {% if supplement %}
+    {{ supplement }}
+  {% endif %}
+  <div class="rd-overlay"></div>
+ </body>
+ </html>
