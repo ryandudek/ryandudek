@@ -6,7 +6,7 @@ I am Ryan Dudek, a software engineer based out of (not always) sunny Philadelphi
 
 Currently, I am a UX Tech Lead (aka _Vice President of Keeping it Awesome_) at [EY Design Studio PHL](http://studio.ey.com/) in Philadelphia, PA. If you are interested in learning more about me, check out my [resume](https://raw.githubusercontent.com/ryandudek/ryandudek.github.io/develop/resources/Ryan_Dudek-resume.pdf). When I am not online, I enjoy the great outdoors, coffee, art, photography, cooking, baking, reading, and being active. Ask me about my many fake business ventures that are run by my pseudonym - Randy Duke.
 
-So long, and thanks for all the fish,
+So long, and thanks for all the fish,  
 Ryan Dudek  
 202.557.6454  
 ryandudek@gmail.com
