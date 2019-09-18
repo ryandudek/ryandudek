@@ -4,7 +4,7 @@
   "description": "Ryan Dudek - Keeping it Awesome",
   "devDependencies": {
     "@11ty/eleventy": "0.8.3",
-    "clean-css-cli": "4.3.0",
+    "clean-css": "4.2.1",
     "imagemin-cli": "5.0.0",
     "markdown-it": "9.1.0",
     "markdown-it-anchor": "5.2.4",
@@ -24,16 +24,15 @@
   },
   "homepage": "https://github.com/ryandudek/ryandudek.github.io#readme",
   "dependencies": {
-    "inline-svg": "^2.2.3"
+    "inline-svg": "2.2.3"
   },
   "scripts": {
     "build": "npx eleventy",
     "dev": "npm run dev:css && npm run dev:img && eleventy --serve",
-    "dev:css": "npm run scss && npm run cssmin",
+    "dev:css": "npm run scss",
     "dev:img": "npm run imagemin",
-    "cssmin": "cleancss -o dist/css/styles.min.css dist/css/style.css",
     "imagemin": "imagemin --out-dir=dist/img src/assets/img/**/*.{png,jpg,gif}",
-    "scss": "node-sass -o dist/css src/styles/style.scss",
+    "scss": "node-sass -o src/_includes/css src/styles/style.scss",
     "watch": "npm-run-all --parallel watch:*",
     "watch:css": "onchange 'src/**/*.scss' -- npm run dev:css"
   },

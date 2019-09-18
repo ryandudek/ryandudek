@@ -8,7 +8,7 @@
 
 .rd-title {
     @include font-size(36);
-  	font-family: $Homestead;
+  	font-family: $Homestead, 'Helvetica', 'Arial';
     font-weight: normal;
   	letter-spacing: -2px;
   	line-height: 1;

@@ -1,0 +1,554 @@
+/*  -----------------------------------
+    Colors
+    ----------------------------------- */
+/*  -----------------------------------
+    Fonts
+    ----------------------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*  -----------------------------------
+    Custom Fonts
+    ----------------------------------- */
+@font-face {
+  font-family: 'Homestead';
+  src: url("../fonts/Homestead/Homestead-Display.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap; }
+
+html {
+  font-family: "Lato", "Helvetica", "Arial"; }
+
+.rd {
+  background: #fdfdfd;
+  color: #3c3c3c;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0; }
+
+.rd-content {
+  margin: 0 auto;
+  max-width: 76.25em; }
+
+hr,
+.hr {
+  background: #cccccc;
+  border: none;
+  display: block;
+  height: 1px;
+  margin: 30px auto;
+  padding: 0;
+  width: 100%; }
+
+a {
+  color: #00797b;
+  font-family: inherit;
+  text-decoration: underline;
+  text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.05); }
+
+img {
+  border: none;
+  display: block;
+  max-width: 100%;
+  outline: none; }
+
+h1 {
+  font-size: 32px;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5em; }
+
+h2 {
+  font-size: 32px;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5em; }
+
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3em; }
+
+h4 {
+  font-size: 21px;
+  font-size: 1.3125rem;
+  font-weight: 700;
+  margin-bottom: 0.3em; }
+
+p,
+li {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  margin-bottom: 1rem; }
+
+.rd-sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute; }
+
+em,
+.italic {
+  font-style: italic; }
+
+strong,
+.bold {
+  font-style: normal;
+  font-weight: 700; }
+
+.rd-print-only {
+  display: none; }
+
+@media (prefers-color-scheme: dark) {
+  .rd {
+    background: #3c3c3c;
+    color: #fdfdfd; }
+  a {
+    color: #84adaf; } }
+
+@media print {
+  .rd {
+    color: #3c3c3c; }
+  a {
+    color: #002e2f; }
+  .rd-no-print {
+    display: none; }
+  .rd-print-only {
+    display: block; }
+  h2 {
+    font-size: 20px;
+    font-size: 1.25rem; }
+  h3 {
+    font-size: 16px;
+    font-size: 1rem; }
+  p,
+  li {
+    font-size: 13px;
+    font-size: 0.8125rem; } }
+
+.rd-header {
+  box-sizing: border-box;
+  color: #00797b;
+  height: 60px;
+  position: relative;
+  z-index: 50; }
+
+.rd-title {
+  font-size: 36px;
+  font-size: 2.25rem;
+  font-family: "Homestead", "Helvetica", "Arial";
+  font-weight: normal;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin: 0;
+  padding: 12px 0 0;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle; }
+
+.rd-chemex {
+  background-image: url("/img/icons/chemex.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  height: 32px;
+  margin: 0 4px;
+  vertical-align: middle;
+  width: 30px; }
+
+@media screen and (min-width: 40em) {
+  .rd-header {
+    height: 100px; }
+  .rd-title {
+    font-size: 48px;
+    font-size: 3rem;
+    padding-top: 15px; }
+  .rd-chemex {
+    height: 52px;
+    width: 45px; } }
+
+@media screen and (min-width: 64em) {
+  .rd-header {
+    height: 125px; }
+  .rd-title {
+    font-size: 64px;
+    font-size: 4rem;
+    padding-top: 20px; }
+  .rd-chemex {
+    height: 60px;
+    width: 45px; } }
+
+@media screen and (min-width: 100em) {
+  .rd-header {
+    height: 140px; }
+  .rd-chemex {
+    height: 80px;
+    width: 65px; } }
+
+@media (prefers-color-scheme: dark) {
+  .rd-header {
+    color: #539091; }
+  .rd-chemex {
+    background-image: url("/img/icons-light/chemex.svg"); } }
+
+@media print {
+  .rd-header {
+    color: #00797b;
+    height: auto; }
+  .rd-title {
+    font-size: 32px;
+    font-size: 2rem;
+    padding: 0; }
+  .rd-chemex {
+    content: url("/img/icons/chemex.svg");
+    height: 52px;
+    width: 45px; } }
+
+.rd-about {
+  box-sizing: border-box;
+  box-shadow: 2px 7px 30px rgba(0, 0, 0, 0.75) inset;
+  background-color: #fdfdfd;
+  color: #3c3c3c;
+  margin-top: -60px;
+  padding: 60px 0 50px;
+  position: relative;
+  z-index: 10; }
+  .rd-about a {
+    color: #00797b;
+    font-family: inherit;
+    text-decoration: underline;
+    text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.05); }
+
+.rd-about-container {
+  margin: 0 auto;
+  max-width: 64em;
+  padding: 0 25px;
+  z-index: 10; }
+
+.rd-about-image {
+  display: none; }
+
+.rd-underlay {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1; }
+  .rd-underlay:after {
+    background: #fdfdfd url("/img/bg/overlay.png") repeat 0 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1; }
+
+@media screen and (min-width: 40em) {
+  .rd-about {
+    margin-top: -100px;
+    padding-top: 100px; } }
+
+@media screen and (min-width: 48em) {
+  .rd-about {
+    box-shadow: 2px 7px 65px rgba(0, 0, 0, 0.75) inset;
+    height: 100vh; }
+  .rd-about-container {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between; }
+  .rd-about-title {
+    font-size: 32px;
+    font-size: 2rem; }
+  .rd-about-text {
+    font-size: 21px;
+    font-size: 1.3125rem; }
+  .rd-about-image {
+    bottom: 0;
+    display: block;
+    height: 80vh;
+    left: auto;
+    margin-left: -380px;
+    position: absolute;
+    width: auto; }
+  .rd-about-content {
+    display: block;
+    margin-left: 40%;
+    width: 60%; } }
+
+@media screen and (min-width: 64em) {
+  .rd-about {
+    margin-top: -125px;
+    padding-top: 125px; } }
+
+@media screen and (min-width: 100em) {
+  .rd-about {
+    margin-top: -140px;
+    padding-top: 140px; } }
+
+@media (prefers-color-scheme: dark) {
+  .rd-about {
+    background-color: #3c3c3c;
+    color: #fdfdfd; }
+    .rd-about a {
+      color: #84adaf; } }
+
+@media print {
+  .rd-about {
+    box-shadow: none;
+    color: #3c3c3c;
+    margin: -10px 0 0;
+    padding: 0;
+    position: static; }
+    .rd-about a {
+      color: #3c3c3c; }
+  .rd-about-container {
+    margin: 0;
+    padding: 0; }
+  .rd-about-title {
+    font-size: 20px;
+    font-size: 1.25rem; }
+  .rd-about-text {
+    font-size: 14px;
+    font-size: 0.875rem; } }
+
+.rd-resume {
+  background-color: #fcfcfc;
+  padding: 25px;
+  position: relative; }
+
+.rd-resume-job {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem; }
+
+.rd-resume-company {
+  font-size: 21px;
+  font-size: 1.3125rem; }
+
+.rd-resume-company--aka {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #4d4d4d;
+  font-weight: normal;
+  font-style: italic; }
+
+.rd-resume-job-title {
+  font-weight: 700; }
+
+.rd-resume-job-text {
+  line-height: 1.3; }
+
+.rd-resume-job--detail {
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+.rd-resume-job-description {
+  font-size: 16px;
+  font-size: 1rem;
+  display: block;
+  line-height: 1.35;
+  padding-top: 3px; }
+
+.rd-resume-supplement-title {
+  margin-top: 40px; }
+  .rd-resume-supplement-title:first-child {
+    margin-top: 0; }
+
+.rd-resume-skills-item {
+  font-size: 16px;
+  font-size: 1rem;
+  display: block;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 5px; }
+
+.rd-resume-skill-description {
+  font-weight: 400;
+  font-style: italic; }
+
+.rd-resume-contact-name {
+  font-size: 16px;
+  font-size: 1rem;
+  display: block;
+  line-height: 1.1;
+  margin-bottom: 5px; }
+
+.rd-resume-highlight {
+  border-left: 2px solid #00797b;
+  color: #00797b;
+  display: inline-block;
+  line-height: 1.1;
+  margin-left: 4px;
+  padding-left: 5px; }
+
+.rd-resume-contact-list {
+  margin-top: 10px; }
+
+.rd-resume-contact-info {
+  margin: 0 0 8px; }
+
+.rd-resume-contact-link {
+  color: #3c3c3c;
+  height: 30px;
+  vertical-align: middle; }
+
+.rd-resume-icon {
+  display: inline-block;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+  width: 20px; }
+  .rd-resume-icon-email {
+    content: url("/img/icons/email.svg"); }
+  .rd-resume-icon-phone {
+    content: url("/img/icons/phone.svg"); }
+  .rd-resume-icon-web {
+    content: url("/img/icons/web.svg"); }
+  .rd-resume-icon-github {
+    content: url("/img/icons/github.svg"); }
+  .rd-resume-icon-linkedin {
+    content: url("/img/icons/linkedin.svg"); }
+  .rd-resume-icon-twitter {
+    content: url("/img/icons/twitter.svg"); }
+
+@media screen and (min-width: 48em) {
+  .rd-resume-container {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between; }
+  .rd-resume-content {
+    display: inline-block;
+    vertical-align: top;
+    width: 60%; }
+  .rd-resume-supplement {
+    display: inline-block;
+    margin-left: auto;
+    vertical-align: top;
+    width: 32.5%; } }
+
+@media (prefers-color-scheme: dark) {
+  .rd-resume-icon-email {
+    content: url("/img/icons-light/email.svg"); }
+  .rd-resume-icon-phone {
+    content: url("/img/icons-light/phone.svg"); }
+  .rd-resume-icon-web {
+    content: url("/img/icons-light/web.svg"); }
+  .rd-resume-icon-github {
+    content: url("/img/icons-light/github.svg"); }
+  .rd-resume-icon-linkedin {
+    content: url("/img/icons-light/linkedin.svg"); }
+  .rd-resume-icon-twitter {
+    content: url("/img/icons-light/twitter.svg"); }
+  .rd-resume {
+    background-color: #232323; }
+  .rd-resume-company--aka {
+    color: #fcfcfc; }
+  .rd-resume-highlight {
+    border-left: 2px solid #84adaf;
+    color: #84adaf; }
+  .rd-resume-contact-link {
+    color: #84adaf; } }
+
+@media print {
+  .rd-resume-icon-email {
+    content: url("/img/icons/email.svg"); }
+  .rd-resume-icon-phone {
+    content: url("/img/icons/phone.svg"); }
+  .rd-resume-icon-web {
+    content: url("/img/icons/web.svg"); }
+  .rd-resume-icon-github {
+    content: url("/img/icons/github.svg"); }
+  .rd-resume-icon-linkedin {
+    content: url("/img/icons/linkedin.svg"); }
+  .rd-resume-icon-twitter {
+    content: url("/img/icons/twitter.svg"); }
+  .rd-resume {
+    color: #3c3c3c;
+    padding: 0; }
+  .rd-resume-container {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between; }
+  .rd-resume-content {
+    display: inline-block;
+    vertical-align: top;
+    width: 66%; }
+  .rd-resume-supplement {
+    display: inline-block;
+    margin-left: auto;
+    vertical-align: top;
+    width: 30%; }
+  .rd-resume-company {
+    font-size: 16px;
+    font-size: 1rem; }
+  .rd-resume-job,
+  .rd-resume-job--detail,
+  .rd-resume-job-description {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.2;
+    padding: 0; }
+  .rd-resume-company--aka,
+  .rd-resume-job--detail {
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 1.2; }
+  .rd-resume-contact-name {
+    font-size: 14px;
+    font-size: 0.875rem; } }

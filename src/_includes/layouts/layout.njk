@@ -4,10 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="description" content="About Ryan Dudek, a Philadelphia based software engineer.">
+    {# <link rel="stylesheet" href="css/styles.min.css"> #}
+    <meta name="description" content="Ryan Dudek, a Philadelphia based software engineer.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <!-- capture the CSS content as a Nunjucks variable -->
+    {% set css %}
+        {% include "css/style.css" %}
+    {% endset %}
+    <!-- feed it through our cssmin filter to minify -->
+    <style>
+        {{ css | cssmin | safe }}
+    </style>
 </head>
 <body class="rd">
     {% block header %}
