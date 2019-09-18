@@ -4,7 +4,7 @@
 @import '_fonts';
 
 html {
-    font-family: $Lato;
+    font-family: $Lato, Helvetica, Arial;
 }
 
 .rd {
@@ -103,7 +103,26 @@ strong,
     display: none;
 }
 
+@media (prefers-color-scheme: dark) {
+    .rd {
+        background: $bodyFontColor;
+      	color: $bodyBGColor;
+    }
+
+    a {
+        color: $darkModeLink;
+    }
+}
+
 @media print {
+    .rd {
+        color: $bodyFontColor;
+    }
+
+    a {
+        color: darken($link-color, 15);
+    }
+
     .rd-no-print {
         display: none;
     }

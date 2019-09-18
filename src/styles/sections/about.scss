@@ -81,10 +81,11 @@
     .rd-about-image {
         bottom: 0;
         display: block;
-	left: 13%;
-        max-width: 100%;
+        height: 80vh;
+	    left: auto;
+        margin-left: -380px;
         position: absolute;
-        width: 27.5%;
+        width: auto;
     }
 
     .rd-about-content {
@@ -108,12 +109,28 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .rd-about {
+        background-color: $aboutFontColor;
+        color: $aboutBGColor;
+
+        a {
+            color: $aboutLinkDarkMode;
+        }
+    }
+}
+
 @media print {
     .rd-about {
         box-shadow: none;
+        color: $aboutFontColor;
         margin: -10px 0 0;
         padding: 0;
         position: static;
+
+        a {
+            color: $aboutFontColor;
+        }
     }
 
     .rd-about-container {

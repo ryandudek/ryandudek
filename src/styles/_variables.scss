@@ -7,13 +7,16 @@ $bodyFontColor: #3c3c3c;
 $lightText: #4d4d4d;
 $headerBGColor: transparent;
 $headerFontColor: #00797b;
+$headerFontColorDarkMode: #539091;
 $link-color: #00797b;
+$darkModeLink: #84adaf;
 $linkShadow: rgba(0,0,0,0.05);
 $module-divider: #cccccc;
 
 $aboutBGColor: $bodyBGColor;
 $aboutFontColor: $bodyFontColor;
 $aboutLinkColor: $link-color;
+$aboutLinkDarkMode: $darkModeLink;
 $aboutLinkShadow: $linkShadow;
 
 $resumeLinkColor: #00797b;

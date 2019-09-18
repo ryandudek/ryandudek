@@ -14,8 +14,8 @@
 }
 
 .rd-resume-company--aka {
-    color: $lightText;
     @include font-size(14);
+    color: $lightText;
     font-weight: normal;
     font-style: italic;
 }
@@ -50,8 +50,14 @@
 .rd-resume-skills-item {
     @include font-size(16);
     display: block;
+    font-weight: 700;
     line-height: 1.2;
     margin-bottom: 5px;
+}
+
+.rd-resume-skill-description {
+    font-weight: 400;
+    font-style: italic;
 }
 
 .rd-resume-contact-name {
@@ -137,8 +143,80 @@
     }
 }
 
-@media print {
+@media (prefers-color-scheme: dark) {
+    .rd-resume-icon {
+        &-email {
+            content: url('/img/icons-light/email.svg');
+        }
+
+        &-phone {
+            content: url('/img/icons-light/phone.svg');
+        }
+
+        &-web {
+            content: url('/img/icons-light/web.svg');
+        }
+
+        &-github {
+            content: url('/img/icons-light/github.svg');
+        }
+
+        &-linkedin {
+            content: url('/img/icons-light/linkedin.svg');
+        }
+
+        &-twitter {
+            content: url('/img/icons-light/twitter.svg');
+        }
+    }
+
     .rd-resume {
+        background-color: darken($bodyFontColor, 10);
+    }
+
+    .rd-resume-company--aka {
+        color: $resumeBGColor;
+    }
+
+    .rd-resume-highlight {
+        border-left: 2px solid $darkModeLink;
+        color: $darkModeLink;
+    }
+
+    .rd-resume-contact-link {
+        color: $darkModeLink;
+    }
+}
+
+@media print {
+    .rd-resume-icon {
+        &-email {
+            content: url('/img/icons/email.svg');
+        }
+
+        &-phone {
+            content: url('/img/icons/phone.svg');
+        }
+
+        &-web {
+            content: url('/img/icons/web.svg');
+        }
+
+        &-github {
+            content: url('/img/icons/github.svg');
+        }
+
+        &-linkedin {
+            content: url('/img/icons/linkedin.svg');
+        }
+
+        &-twitter {
+            content: url('/img/icons/twitter.svg');
+        }
+    }
+
+    .rd-resume {
+        color: $bodyFontColor;
         padding: 0;
     }
 
