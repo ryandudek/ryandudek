@@ -73,15 +73,15 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    .rd-header {
-        color: $headerFontColorDarkMode;
-    }
-
-    .rd-chemex {
-        background-image: url('/img/icons-light/chemex.svg');
-    }
-}
+// @media (prefers-color-scheme: dark) {
+//     .rd-header {
+//         color: $headerFontColorDarkMode;
+//     }
+//
+//     .rd-chemex {
+//         background-image: url('/img/icons-light/chemex.svg');
+//     }
+// }
 
 @media print {
     .rd-header {

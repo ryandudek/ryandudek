@@ -150,13 +150,6 @@ strong,
 .rd-print-only {
   display: none; }
 
-@media (prefers-color-scheme: dark) {
-  .rd {
-    background: #3c3c3c;
-    color: #fdfdfd; }
-  a {
-    color: #84adaf; } }
-
 @media print {
   .rd {
     color: #3c3c3c; }
@@ -235,12 +228,6 @@ strong,
   .rd-chemex {
     height: 80px;
     width: 65px; } }
-
-@media (prefers-color-scheme: dark) {
-  .rd-header {
-    color: #539091; }
-  .rd-chemex {
-    background-image: url("/img/icons-light/chemex.svg"); } }
 
 @media print {
   .rd-header {
@@ -341,13 +328,6 @@ strong,
   .rd-about {
     margin-top: -140px;
     padding-top: 140px; } }
-
-@media (prefers-color-scheme: dark) {
-  .rd-about {
-    background-color: #3c3c3c;
-    color: #fdfdfd; }
-    .rd-about a {
-      color: #84adaf; } }
 
 @media print {
   .rd-about {
@@ -481,29 +461,6 @@ strong,
     margin-left: auto;
     vertical-align: top;
     width: 32.5%; } }
-
-@media (prefers-color-scheme: dark) {
-  .rd-resume-icon-email {
-    content: url("/img/icons-light/email.svg"); }
-  .rd-resume-icon-phone {
-    content: url("/img/icons-light/phone.svg"); }
-  .rd-resume-icon-web {
-    content: url("/img/icons-light/web.svg"); }
-  .rd-resume-icon-github {
-    content: url("/img/icons-light/github.svg"); }
-  .rd-resume-icon-linkedin {
-    content: url("/img/icons-light/linkedin.svg"); }
-  .rd-resume-icon-twitter {
-    content: url("/img/icons-light/twitter.svg"); }
-  .rd-resume {
-    background-color: #232323; }
-  .rd-resume-company--aka {
-    color: #fcfcfc; }
-  .rd-resume-highlight {
-    border-left: 2px solid #84adaf;
-    color: #84adaf; }
-  .rd-resume-contact-link {
-    color: #84adaf; } }
 
 @media print {
   .rd-resume-icon-email {

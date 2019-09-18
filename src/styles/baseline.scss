@@ -103,16 +103,16 @@ strong,
     display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-    .rd {
-        background: $bodyFontColor;
-      	color: $bodyBGColor;
-    }
-
-    a {
-        color: $darkModeLink;
-    }
-}
+// @media (prefers-color-scheme: dark) {
+//     .rd {
+//         background: $bodyFontColor;
+//       	color: $bodyBGColor;
+//     }
+//
+//     a {
+//         color: $darkModeLink;
+//     }
+// }
 
 @media print {
     .rd {
