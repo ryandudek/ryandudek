@@ -16,15 +16,15 @@ ryandudek@gmail.com
 ## Professional Experience
 
   - **EY Design Studio PHL** _(formerly Intuitive Company)_  
-  2015 - Present [(studio.ey.com.com)](http://studio.ey.com.com)  
+  2015 - Present [(studio.ey.com)](http://studio.ey.com)  
   _UX Tech Lead_ (2018 - present)  
   _Senior UX Developer_ (2015 - 2018)  
-  Collaborated in multi-disciplinary teams to design, create, and develop usable and accessible web and mobile applications. Lead development on and launched an in-house research application to deliver research to clients in a usable, beautiful, and dynamic way. Assisted in usability research efforts. Trained coworkers from a variety of disciplines how to test for and understand accessibility. Built internal applications and assisted in the creation of internal processes. Promoted the company and our work through presentations and meetups.
+  Collaborated in multi-disciplinary teams to design, create, and develop usable and accessible web and mobile applications. Led development on and launched an in-house research application to deliver research to clients in a usable, beautiful, and dynamic way. Assisted in usability research efforts. Trained coworkers from a variety of disciplines how to test for and understand accessibility. Built internal applications and assisted in the creation of internal processes. Promoted the company and our work through presentations and meetups.
   - **EPAM Systems** _(formerly Empathy Lab)_  
   2010 - 2015 [(www.epam.com)](http://www.epam.com)  
   _Senior Software Engineer_ (2014 - 2015)  
   _Front End Web Developer_ (2010 - 2014)  
-  Collaborated with coworkers across disciplines to produce web applications for an assortment of clients across multiple business units. Provided solutions to user experience and interface design departments. Rapidly built prototypes for sales pitches and for client presentations. Provided solutions for accessible and multi-lingual issues in designs. Assisted in the development of a Responsive Web Design workflow across departments. Lead and participated in technical book discussion groups.
+  Collaborated with coworkers across disciplines to produce web applications for an assortment of clients across multiple business units. Provided solutions to user experience and interface design departments. Rapidly built prototypes for sales pitches and for client presentations. Provided solutions for accessible and multi-lingual issues in designs. Assisted in the development of a Responsive Web Design workflow across departments. Led and participated in technical book discussion groups.
   - **Home Front Communications**  
   2007 - 2010 [(www.homefrontdc.com)](http://www.homefrontdc.com)  
   _Front End Web Developer_  
@@ -32,11 +32,11 @@ ryandudek@gmail.com
   - **Screenmatter**  
   2007 [(www.screenmatter.com)](http://www.screenmatter.com)  
   _Freelance Front End Developer_  
-  Created semantic XHTML and ASP.NET markup. Worked within guidelines of excellent search engine optimization. Used strict CSS and to lay out web designs.
+  Created semantic XHTML and ASP.NET markup. Worked within guidelines of excellent search engine optimization. Used strict CSS to lay out web designs.
   - **US News & World Report**  
   2006 - 2007 [(www.usnews.com)](http://www.usnews.com)  
   _Associate Producer - New Media_  
-  Posted content to website, compressed video and audio for streaming. Recorded, edited, and mastered audio.
+  Generated HTML for news stories. Posted content to website, compressed video and audio for streaming. Recorded, edited, and mastered audio.
 
 ## Skills and Proficiencies
 
