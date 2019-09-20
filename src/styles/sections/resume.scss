@@ -84,12 +84,13 @@
 }
 
 .rd-resume-contact-info {
-    margin: 0 0 8px;
+    margin: 0 0 5px;
 }
 
 .rd-resume-contact-link {
     color: var(--body-text);
     height: 30px;
+    line-height: 24px;
     transition: color 0.5s ease;
     vertical-align: middle;
 }
