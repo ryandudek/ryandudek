@@ -4,6 +4,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/fonts');
     eleventyConfig.addPassthroughCopy('src/resources');
     eleventyConfig.addPassthroughCopy('favicon.ico');
+    eleventyConfig.addPassthroughCopy('.htaccess');
     eleventyConfig.addFilter("cssmin", function(code) {
         return new CleanCSS({}).minify(code).styles;
     });
