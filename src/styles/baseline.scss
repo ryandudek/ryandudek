@@ -20,19 +20,8 @@ html {
   max-width: 76.25em;
 }
 
-hr,
-.hr {
-    background: $module-divider;
-    border: none;
-    display: block;
-    height: 1px;
-    margin: 30px auto;
-    padding: 0;
-    width: 100%;
-}
-
 a {
-    color: $link-color;
+    color: $linkColor;
     font-family: inherit;
     text-decoration: underline;
     text-shadow: 1px 0px 5px $linkShadow;
@@ -103,16 +92,16 @@ strong,
     display: none;
 }
 
-// @media (prefers-color-scheme: dark) {
-//     .rd {
-//         background: $bodyFontColor;
-//       	color: $bodyBGColor;
-//     }
-//
-//     a {
-//         color: $darkModeLink;
-//     }
-// }
+@media (prefers-color-scheme: dark) {
+    .rd {
+        background: $bodyBGDarkMode;
+      	color: $bodyTextDarkMode;
+    }
+
+    a {
+        color: $darkModeLink;
+    }
+}
 
 @media print {
     .rd {
@@ -120,7 +109,7 @@ strong,
     }
 
     a {
-        color: darken($link-color, 15);
+        color: darken($linkColor, 15);
     }
 
     .rd-no-print {

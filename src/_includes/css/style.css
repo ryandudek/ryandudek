@@ -64,8 +64,8 @@ html {
   font-family: "Lato", "Helvetica", "Arial"; }
 
 .rd {
-  background: #fdfdfd;
-  color: #3c3c3c;
+  background: #002e2f;
+  color: #fcfcfc;
   margin: 0;
   overflow-x: hidden;
   padding: 0; }
@@ -73,16 +73,6 @@ html {
 .rd-content {
   margin: 0 auto;
   max-width: 76.25em; }
-
-hr,
-.hr {
-  background: #cccccc;
-  border: none;
-  display: block;
-  height: 1px;
-  margin: 30px auto;
-  padding: 0;
-  width: 100%; }
 
 a {
   color: #00797b;
@@ -150,9 +140,16 @@ strong,
 .rd-print-only {
   display: none; }
 
+@media (prefers-color-scheme: dark) {
+  .rd {
+    background: #fdfdfd;
+    color: #fdfdfd; }
+  a {
+    color: #e8858d; } }
+
 @media print {
   .rd {
-    color: #3c3c3c; }
+    color: #fcfcfc; }
   a {
     color: #002e2f; }
   .rd-no-print {
@@ -229,6 +226,12 @@ strong,
     height: 80px;
     width: 65px; } }
 
+@media (prefers-color-scheme: dark) {
+  .rd-header {
+    color: #e8858d; }
+  .rd-chemex {
+    background-image: url("/img/icons-light/chemex.svg"); } }
+
 @media print {
   .rd-header {
     color: #00797b;
@@ -245,8 +248,8 @@ strong,
 .rd-about {
   box-sizing: border-box;
   box-shadow: 2px 7px 30px rgba(0, 0, 0, 0.75) inset;
-  background-color: #fdfdfd;
-  color: #3c3c3c;
+  background-color: #002e2f;
+  color: #fcfcfc;
   margin-top: -60px;
   padding: 60px 0 50px;
   position: relative;
@@ -274,7 +277,7 @@ strong,
   top: 0;
   z-index: -1; }
   .rd-underlay:after {
-    background: #fdfdfd url("/img/bg/overlay.png") repeat 0 0;
+    background: #002e2f url("/img/bg/overlay.png") repeat 0 0;
     bottom: 0;
     content: "";
     display: block;
@@ -329,15 +332,22 @@ strong,
     margin-top: -140px;
     padding-top: 140px; } }
 
+@media (prefers-color-scheme: dark) {
+  .rd-about {
+    background-color: #002e2f;
+    color: #fcfcfc; }
+    .rd-about a {
+      color: #e8858d; } }
+
 @media print {
   .rd-about {
     box-shadow: none;
-    color: #3c3c3c;
+    color: #fcfcfc;
     margin: -10px 0 0;
     padding: 0;
     position: static; }
     .rd-about a {
-      color: #3c3c3c; }
+      color: #fcfcfc; }
   .rd-about-container {
     margin: 0;
     padding: 0; }
@@ -424,7 +434,7 @@ strong,
   margin: 0 0 8px; }
 
 .rd-resume-contact-link {
-  color: #3c3c3c;
+  color: #fcfcfc;
   height: 30px;
   vertical-align: middle; }
 
@@ -462,6 +472,29 @@ strong,
     vertical-align: top;
     width: 32.5%; } }
 
+@media (prefers-color-scheme: dark) {
+  .rd-resume-icon-email {
+    content: url("/img/icons-light/email.svg"); }
+  .rd-resume-icon-phone {
+    content: url("/img/icons-light/phone.svg"); }
+  .rd-resume-icon-web {
+    content: url("/img/icons-light/web.svg"); }
+  .rd-resume-icon-github {
+    content: url("/img/icons-light/github.svg"); }
+  .rd-resume-icon-linkedin {
+    content: url("/img/icons-light/linkedin.svg"); }
+  .rd-resume-icon-twitter {
+    content: url("/img/icons-light/twitter.svg"); }
+  .rd-resume {
+    background-color: #000606; }
+  .rd-resume-company--aka {
+    color: #fcfcfc; }
+  .rd-resume-highlight {
+    border-left: 2px solid #e8858d;
+    color: #e8858d; }
+  .rd-resume-contact-link {
+    color: #e8858d; } }
+
 @media print {
   .rd-resume-icon-email {
     content: url("/img/icons/email.svg"); }
@@ -476,7 +509,7 @@ strong,
   .rd-resume-icon-twitter {
     content: url("/img/icons/twitter.svg"); }
   .rd-resume {
-    color: #3c3c3c;
+    color: #fcfcfc;
     padding: 0; }
   .rd-resume-container {
     align-items: flex-start;

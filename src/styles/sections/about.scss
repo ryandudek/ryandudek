@@ -109,16 +109,16 @@
     }
 }
 
-// @media (prefers-color-scheme: dark) {
-//     .rd-about {
-//         background-color: $aboutFontColor;
-//         color: $aboutBGColor;
-//
-//         a {
-//             color: $aboutLinkDarkMode;
-//         }
-//     }
-// }
+@media (prefers-color-scheme: dark) {
+    .rd-about {
+        background-color: $aboutBGDarkMode;
+        color: $aboutTextDarkMode;
+
+        a {
+            color: $aboutLinkDarkMode;
+        }
+    }
+}
 
 @media print {
     .rd-about {

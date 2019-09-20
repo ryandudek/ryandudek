@@ -68,8 +68,8 @@
 }
 
 .rd-resume-highlight {
-    border-left: 2px solid $link-color;
-    color: $link-color;
+    border-left: 2px solid $linkColor;
+    color: $linkColor;
     display: inline-block;
     line-height: 1.1;
     margin-left: 4px;
@@ -143,50 +143,50 @@
     }
 }
 
-// @media (prefers-color-scheme: dark) {
-//     .rd-resume-icon {
-//         &-email {
-//             content: url('/img/icons-light/email.svg');
-//         }
-//
-//         &-phone {
-//             content: url('/img/icons-light/phone.svg');
-//         }
-//
-//         &-web {
-//             content: url('/img/icons-light/web.svg');
-//         }
-//
-//         &-github {
-//             content: url('/img/icons-light/github.svg');
-//         }
-//
-//         &-linkedin {
-//             content: url('/img/icons-light/linkedin.svg');
-//         }
-//
-//         &-twitter {
-//             content: url('/img/icons-light/twitter.svg');
-//         }
-//     }
-//
-//     .rd-resume {
-//         background-color: darken($bodyFontColor, 10);
-//     }
-//
-//     .rd-resume-company--aka {
-//         color: $resumeBGColor;
-//     }
-//
-//     .rd-resume-highlight {
-//         border-left: 2px solid $darkModeLink;
-//         color: $darkModeLink;
-//     }
-//
-//     .rd-resume-contact-link {
-//         color: $darkModeLink;
-//     }
-// }
+@media (prefers-color-scheme: dark) {
+    .rd-resume-icon {
+        &-email {
+            content: url('/img/icons-light/email.svg');
+        }
+
+        &-phone {
+            content: url('/img/icons-light/phone.svg');
+        }
+
+        &-web {
+            content: url('/img/icons-light/web.svg');
+        }
+
+        &-github {
+            content: url('/img/icons-light/github.svg');
+        }
+
+        &-linkedin {
+            content: url('/img/icons-light/linkedin.svg');
+        }
+
+        &-twitter {
+            content: url('/img/icons-light/twitter.svg');
+        }
+    }
+
+    .rd-resume {
+        background-color: $resumeBGDarkMode;
+    }
+
+    .rd-resume-company--aka {
+        color: $resumeTextDarkMode;
+    }
+
+    .rd-resume-highlight {
+        border-left: 2px solid $darkModeLink;
+        color: $darkModeLink;
+    }
+
+    .rd-resume-contact-link {
+        color: $darkModeLink;
+    }
+}
 
 @media print {
     .rd-resume-icon {

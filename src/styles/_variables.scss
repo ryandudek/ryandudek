@@ -2,26 +2,46 @@
     Colors
     ----------------------------------- */
 
-$bodyBGColor: #fdfdfd;
-$bodyFontColor: #3c3c3c;
-$lightText: #4d4d4d;
-$headerBGColor: transparent;
-$headerFontColor: #00797b;
-$headerFontColorDarkMode: #539091;
-$link-color: #00797b;
-$darkModeLink: #84adaf;
-$linkShadow: rgba(0,0,0,0.05);
-$module-divider: #cccccc;
+$offWhite: #fdfdfd;
+$clam: #fcfcfc;
+$charcoal: #3c3c3c;
+$grey: #4d4d4d;
+$black: #000000;
+$transparent: transparent;
+$coral: #e8858d;
+$teal: #00797b;
+$smalt: #539091;
+
+$lightText: $grey;
+$linkColor: $teal;
+$linkShadow: rgba($black, 0.05);
+
+$bodyBGColor: darken($teal, 15);
+$bodyFontColor: $clam;
+
+$bodyBGDarkMode: $offWhite;
+$bodyTextDarkMode: $offWhite;
+$darkModeLink: $coral;
 
 $aboutBGColor: $bodyBGColor;
 $aboutFontColor: $bodyFontColor;
-$aboutLinkColor: $link-color;
-$aboutLinkDarkMode: $darkModeLink;
+$aboutLinkColor: $linkColor;
 $aboutLinkShadow: $linkShadow;
 
-$resumeLinkColor: #00797b;
-$resumeBGColor: #fcfcfc;
+$aboutBGDarkMode: darken($teal, 15);
+$aboutLinkDarkMode: $darkModeLink;
+$aboutTextDarkMode: $clam;
 
+$headerBGColor: $transparent;
+$headerTextColor: $teal;
+
+$headerTextDarkMode: $coral;
+
+$resumeLinkColor: $linkColor;
+$resumeBGColor: $clam;
+
+$resumeBGDarkMode: darken($teal, 23);
+$resumeTextDarkMode: $clam;
 
 /*  -----------------------------------
     Fonts
