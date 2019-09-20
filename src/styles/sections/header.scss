@@ -21,13 +21,14 @@
 }
 
 .rd-chemex {
-    background-image: url('/img/icons/chemex.svg');
+    background-image: var(--header-image);
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
     height: 32px;
     margin: 0 4px;
     vertical-align: middle;
+    transition: background-image 0.5s ease;
     width: 30px;
 }
 
@@ -67,12 +68,6 @@
     .rd-chemex {
         height: 80px;
         width: 65px;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .rd-chemex {
-        background-image: url('/img/icons-light/chemex.svg');
     }
 }
 

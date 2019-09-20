@@ -69,7 +69,14 @@ table {
   --about-text: #3c3c3c;
   --about-link: #00797b;
   --header-text: #00797b;
-  --resume-bg: #fcfcfc; }
+  --resume-bg: #fcfcfc;
+  --header-image: url('/img/icons/chemex.svg');
+  --email-image: url('/img/icons/email.svg');
+  --phone-image: url('/img/icons/phone.svg');
+  --web-image: url('/img/icons/web.svg');
+  --github-image: url('/img/icons/github.svg');
+  --linkedin-image: url('/img/icons/linkedin.svg');
+  --twitter-image: url('/img/icons/twitter.svg'); }
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -81,7 +88,14 @@ table {
     --about-text: #3c3c3c;
     --about-link: #00797b;
     --header-text: #00797b;
-    --resume-bg: #fcfcfc; } }
+    --resume-bg: #fcfcfc;
+    --header-image: url('/img/icons/chemex.svg');
+    --email-image: url('/img/icons/email.svg');
+    --phone-image: url('/img/icons/phone.svg');
+    --web-image: url('/img/icons/web.svg');
+    --github-image: url('/img/icons/github.svg');
+    --linkedin-image: url('/img/icons/linkedin.svg');
+    --twitter-image: url('/img/icons/twitter.svg'); } }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -93,7 +107,14 @@ table {
     --about-text: #fcfcfc;
     --about-link: #e8858d;
     --header-text: #e8858d;
-    --resume-bg: #001a1a; } }
+    --resume-bg: #001a1a;
+    --header-image: url('/img/icons-light/chemex.svg');
+    --email-image: url('/img/icons-light/email.svg');
+    --phone-image: url('/img/icons-light/phone.svg');
+    --web-image: url('/img/icons-light/web.svg');
+    --github-image: url('/img/icons-light/github.svg');
+    --linkedin-image: url('/img/icons-light/linkedin.svg');
+    --twitter-image: url('/img/icons-light/twitter.svg'); } }
 
 html {
   font-family: "Lato", "Helvetica", "Arial"; }
@@ -224,7 +245,7 @@ strong,
     display: inline-block;
     height: 22px;
     line-height: 22px;
-    padding: 0 5px;
+    padding: 0 6px;
     pointer-events: none;
     vertical-align: middle; }
 
@@ -262,13 +283,14 @@ strong,
   vertical-align: middle; }
 
 .rd-chemex {
-  background-image: url("/img/icons/chemex.svg");
+  background-image: var(--header-image);
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;
   height: 32px;
   margin: 0 4px;
   vertical-align: middle;
+  transition: background-image 0.5s ease;
   width: 30px; }
 
 @media screen and (min-width: 48em) {
@@ -297,10 +319,6 @@ strong,
   .rd-chemex {
     height: 80px;
     width: 65px; } }
-
-@media (prefers-color-scheme: dark) {
-  .rd-chemex {
-    background-image: url("/img/icons-light/chemex.svg"); } }
 
 @media print {
   .rd-header {
@@ -510,17 +528,17 @@ strong,
   vertical-align: middle;
   width: 20px; }
   .rd-resume-icon-email {
-    content: url("/img/icons/email.svg"); }
+    content: var(--email-image); }
   .rd-resume-icon-phone {
-    content: url("/img/icons/phone.svg"); }
+    content: var(--phone-image); }
   .rd-resume-icon-web {
-    content: url("/img/icons/web.svg"); }
+    content: var(--web-image); }
   .rd-resume-icon-github {
-    content: url("/img/icons/github.svg"); }
+    content: var(--github-image); }
   .rd-resume-icon-linkedin {
-    content: url("/img/icons/linkedin.svg"); }
+    content: var(--linkedin-image); }
   .rd-resume-icon-twitter {
-    content: url("/img/icons/twitter.svg"); }
+    content: var(--twitter-image); }
 
 @media screen and (min-width: 48em) {
   .rd-resume-container {
@@ -536,20 +554,6 @@ strong,
     margin-left: auto;
     vertical-align: top;
     width: 32.5%; } }
-
-@media (prefers-color-scheme: dark) {
-  .rd-resume-icon-email {
-    content: url("/img/icons-light/email.svg"); }
-  .rd-resume-icon-phone {
-    content: url("/img/icons-light/phone.svg"); }
-  .rd-resume-icon-web {
-    content: url("/img/icons-light/web.svg"); }
-  .rd-resume-icon-github {
-    content: url("/img/icons-light/github.svg"); }
-  .rd-resume-icon-linkedin {
-    content: url("/img/icons-light/linkedin.svg"); }
-  .rd-resume-icon-twitter {
-    content: url("/img/icons-light/twitter.svg"); } }
 
 @media print {
   .rd-resume-icon-email {

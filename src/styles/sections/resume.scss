@@ -102,27 +102,27 @@
     width: 20px;
 
     &-email {
-        content: url('/img/icons/email.svg');
+        content: var(--email-image);
     }
 
     &-phone {
-        content: url('/img/icons/phone.svg');
+        content: var(--phone-image);
     }
 
     &-web {
-        content: url('/img/icons/web.svg');
+        content: var(--web-image);
     }
 
     &-github {
-        content: url('/img/icons/github.svg');
+        content: var(--github-image);
     }
 
     &-linkedin {
-        content: url('/img/icons/linkedin.svg');
+        content: var(--linkedin-image);
     }
 
     &-twitter {
-        content: url('/img/icons/twitter.svg');
+        content: var(--twitter-image);
     }
 }
 
@@ -144,34 +144,6 @@
         margin-left: auto;
         vertical-align: top;
         width: 32.5%;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .rd-resume-icon {
-        &-email {
-            content: url('/img/icons-light/email.svg');
-        }
-
-        &-phone {
-            content: url('/img/icons-light/phone.svg');
-        }
-
-        &-web {
-            content: url('/img/icons-light/web.svg');
-        }
-
-        &-github {
-            content: url('/img/icons-light/github.svg');
-        }
-
-        &-linkedin {
-            content: url('/img/icons-light/linkedin.svg');
-        }
-
-        &-twitter {
-            content: url('/img/icons-light/twitter.svg');
-        }
     }
 }
 

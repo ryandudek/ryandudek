@@ -14,6 +14,13 @@
     --about-link: #00797b;
     --header-text: #00797b;
     --resume-bg: #fcfcfc;
+    --header-image: url('/img/icons/chemex.svg');
+    --email-image: url('/img/icons/email.svg');
+    --phone-image: url('/img/icons/phone.svg');
+    --web-image: url('/img/icons/web.svg');
+    --github-image: url('/img/icons/github.svg');
+    --linkedin-image: url('/img/icons/linkedin.svg');
+    --twitter-image: url('/img/icons/twitter.svg');
 }
 
 @media (prefers-color-scheme: light) {
@@ -27,6 +34,13 @@
         --about-link: #00797b;
         --header-text: #00797b;
         --resume-bg: #fcfcfc;
+        --header-image: url('/img/icons/chemex.svg');
+        --email-image: url('/img/icons/email.svg');
+        --phone-image: url('/img/icons/phone.svg');
+        --web-image: url('/img/icons/web.svg');
+        --github-image: url('/img/icons/github.svg');
+        --linkedin-image: url('/img/icons/linkedin.svg');
+        --twitter-image: url('/img/icons/twitter.svg');
     }
 }
 
@@ -41,6 +55,13 @@
         --about-link: #e8858d;
         --header-text: #e8858d;
         --resume-bg: #001a1a;
+        --header-image: url('/img/icons-light/chemex.svg');
+        --email-image: url('/img/icons-light/email.svg');
+        --phone-image: url('/img/icons-light/phone.svg');
+        --web-image: url('/img/icons-light/web.svg');
+        --github-image: url('/img/icons-light/github.svg');
+        --linkedin-image: url('/img/icons-light/linkedin.svg');
+        --twitter-image: url('/img/icons-light/twitter.svg');
     }
 }
 
