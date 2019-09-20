@@ -1,0 +1,10 @@
+{
+  "name": "Ryan Dudek",
+  "short_name": "randyduke",
+  "description": "Software Engineer - Keeping It Awesome",
+  "start_url": "/?resume=1",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#003839",
+  "theme_color": "#e8858d"
+}
