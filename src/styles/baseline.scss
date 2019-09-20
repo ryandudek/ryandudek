@@ -67,6 +67,7 @@
 
 html {
     font-family: $Lato, 'Helvetica', 'Arial';
+    @include font-size(18);
 }
 
 .rd {
