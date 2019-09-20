@@ -184,7 +184,7 @@ strong,
   font-weight: normal;
   letter-spacing: -2px;
   line-height: 1;
-  margin: 0;
+  margin: 0 auto;
   padding: 12px 0 0;
   text-align: center;
   text-transform: uppercase;
@@ -311,7 +311,7 @@ strong,
     display: block;
     height: 80vh;
     left: auto;
-    margin-left: -380px;
+    margin-left: -420px;
     position: absolute;
     width: auto; }
   .rd-about-content {
