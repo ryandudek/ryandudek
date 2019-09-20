@@ -1,8 +1,9 @@
 .rd-header {
     box-sizing: border-box;
-    color: $headerTextColor;
-    height: 60px;
+    color: var(--header-text);
+    height: 110px;
     position: relative;
+    transition: color 0.5s ease;
     z-index: 50;
 }
 
@@ -13,7 +14,7 @@
   	letter-spacing: -2px;
   	line-height: 1;
   	margin: 0 auto;
-    padding: 12px 0 0;
+    padding: 60px 0 0;
   	text-align: center;
   	text-transform: uppercase;
     vertical-align: middle;
@@ -30,11 +31,7 @@
     width: 30px;
 }
 
-@media screen and (min-width: 40em) {
-    .rd-header {
-        height: 100px;
-    }
-
+@media screen and (min-width: 48em) {
     .rd-title {
         @include font-size(48);
         padding-top: 15px;
@@ -74,10 +71,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .rd-header {
-        color: $headerTextDarkMode;
-    }
-
     .rd-chemex {
         background-image: url('/img/icons-light/chemex.svg');
     }
@@ -85,7 +78,7 @@
 
 @media print {
     .rd-header {
-        color: $headerTextColor;
+        color: $teal;
         height: auto;
     }
 

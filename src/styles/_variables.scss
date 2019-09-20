@@ -11,37 +11,7 @@ $transparent: transparent;
 $coral: #e8858d;
 $teal: #00797b;
 $smalt: #539091;
-
-$lightText: $grey;
-$linkColor: $teal;
 $linkShadow: rgba($black, 0.05);
-
-$bodyBGColor: darken($teal, 15);
-$bodyFontColor: $clam;
-
-$bodyBGDarkMode: $offWhite;
-$bodyTextDarkMode: $offWhite;
-$darkModeLink: $coral;
-
-$aboutBGColor: $bodyBGColor;
-$aboutFontColor: $bodyFontColor;
-$aboutLinkColor: $linkColor;
-$aboutLinkShadow: $linkShadow;
-
-$aboutBGDarkMode: darken($teal, 15);
-$aboutLinkDarkMode: $darkModeLink;
-$aboutTextDarkMode: $clam;
-
-$headerBGColor: $transparent;
-$headerTextColor: $teal;
-
-$headerTextDarkMode: $coral;
-
-$resumeLinkColor: $linkColor;
-$resumeBGColor: $clam;
-
-$resumeBGDarkMode: darken($teal, 23);
-$resumeTextDarkMode: $clam;
 
 /*  -----------------------------------
     Fonts

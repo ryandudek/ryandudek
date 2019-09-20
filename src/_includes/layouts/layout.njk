@@ -20,5 +20,67 @@
     {% block content %}
     {% endblock %}
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        const darkPreferred = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const darkModeInput = document.getElementById('darkMode');
+        const rootElement = document.querySelector(':root')
+
+        function setDarkTheme() {
+            const darkTheme = {
+                '--light-text': '#dadada',
+                '--link-color': '#e8858d',
+                '--body-bg': '#003839',
+                '--body-text': '#fcfcfc',
+                '--about-bg': '#003839',
+                '--about-text': '#fcfcfc',
+                '--about-link': '#e8858d',
+                '--header-text': '#e8858d',
+                '--resume-bg': '#001a1a'
+            }
+            for (key in darkTheme) {
+                rootElement.style.setProperty(key, darkTheme[key])
+            }
+        }
+
+        function setLightTheme() {
+            const lightTheme = {
+                '--light-text': '#4d4d4d',
+                '--link-color': '#00797b',
+                '--body-bg': '#fdfdfd',
+                '--body-text': '#3c3c3c',
+                '--about-bg': '#fdfdfd',
+                '--about-text': '#3c3c3c',
+                '--about-link': '#00797b',
+                '--header-text': '#00797b',
+                '--resume-bg': '#fcfcfc'
+            }
+            for (key in lightTheme) {
+                rootElement.style.setProperty(key, lightTheme[key])
+            }
+        }
+
+        function setInputDark() {
+            darkModeInput.setAttribute("aria-checked", "true");
+        }
+
+        darkModeInput.addEventListener("click", toggleTheme, false);
+
+        function toggleTheme() {
+            if (darkModeInput.getAttribute("aria-checked") === "true") {
+                darkModeInput.setAttribute("aria-checked", "false");
+                setLightTheme();
+            }
+            else {
+                setInputDark();
+                setDarkTheme();
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            if (darkPreferred) {
+                setInputDark();
+            }
+        });
+    </script>
 </body>
 </html>
