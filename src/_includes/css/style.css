@@ -353,7 +353,7 @@ strong,
     background: linear-gradient(1deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 75%);
     content: '';
     display: block;
-    height: 120px;
+    height: 50px;
     left: -30%;
     position: absolute;
     right: -30%;
@@ -400,6 +400,8 @@ strong,
   .rd-about {
     box-shadow: 2px 7px 65px rgba(0, 0, 0, 0.75) inset;
     min-height: 100vh; }
+    .rd-about:after {
+      height: 120px; }
   .rd-about-container {
     align-items: baseline;
     display: flex;
