@@ -5,7 +5,7 @@ if (darkCookie.filter(function(item) {
     return item.indexOf('darkMode') >= 0
 }).length) {
     const darkMode = darkCookie.slice(-1)[0];
-    darkPreferred = darkMode.substring(10) === 'true';
+    darkPreferred = darkMode.substring(9) === 'true';
 }
 else {
     darkPreferred = window.matchMedia("(prefers-color-scheme: dark)").matches;

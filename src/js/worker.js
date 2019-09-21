@@ -5,7 +5,7 @@ const files = [
     '/index.html',
     '/img/icons/',
     '/img/icons-light/',
-    '/img/resources/',
+    '/resources/',
     '/img/bg/overlay.png',
     '/img/greetings.png'
 ];
@@ -19,6 +19,8 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(cacheName).then( function(cache) {
             return cache.addAll(files).then(function() {
+                // Forces the waiting service worker to become the active service worker
+                console.info('All files are cached');
                 return self.skipWaiting();
             }).catch(function(error) {
                 console.error('Failed to cache', error);
@@ -29,6 +31,8 @@ self.addEventListener('install', function(event) {
 
 
 self.addEventListener('fetch', function(event) {
+    console.info('Event: Fetch');
+
     const request = event.request;
     //Tell the browser to wait for newtwork request and respond with below
     event.respondWith(
@@ -52,6 +56,10 @@ self.addEventListener('fetch', function(event) {
         })
     );
 });
+
+/*
+  ACTIVATE EVENT: triggered once after registering, also used to clean up caches.
+*/
 
 //Adding `activate` event listener
 self.addEventListener('activate', function(event) {
