@@ -32,11 +32,11 @@
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/worker.js', { scope: '/' })
                 .then(function(registration) {
-                    console.log('Service Worker Registered');
+                    console.info('Service Worker Registered');
                 });
 
             navigator.serviceWorker.ready.then(function(registration) {
-                console.log('Service Worker Ready');
+                console.info('Service Worker Ready');
             });
         }
     </script>
