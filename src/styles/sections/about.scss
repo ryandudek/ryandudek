@@ -4,10 +4,23 @@
     background-color: var(--about-bg);
     color: var(--about-text);
     margin-top: -160px;
+    overflow: hidden;
     padding: 160px 0 50px;
     position: relative;
     transition: background-color 0.5s ease, color 0.5s ease;
     z-index: 10;
+
+    &:after {
+        bottom: -20px;
+        background: linear-gradient(1deg, rgba($black, 0.5) 0%, rgba($black, 0) 75%);
+        content: '';
+        display: block;
+        height: 50px;
+        left: -30%;
+        position: absolute;
+        right: -30%;
+        z-index: 2;
+    }
 
     a {
         color: var(--about-link);
@@ -57,7 +70,11 @@
 @media screen and (min-width: 48em) {
     .rd-about {
         box-shadow: 2px 7px 65px rgba(0, 0, 0, 0.75) inset;
-        height: 100vh;
+        min-height: 100vh;
+
+        &:after {
+            height: 120px;
+        }
     }
 
     .rd-about-container {
@@ -75,19 +92,24 @@
     }
 
     .rd-about-image {
+        animation: revealImage 0.666s ease-in-out;
         bottom: 0;
         display: block;
+        filter: drop-shadow(4px -3px 9px rgba($black, 0.75)), blur(0.2px);
         height: 80vh;
 	    left: auto;
         margin-left: -420px;
+        opacity: 1;
         position: absolute;
         width: auto;
+        z-index: 1;
     }
 
     .rd-about-content {
         display: block;
         margin-left: 40%;
         width: 60%;
+        z-index: 10;
     }
 }
 
@@ -130,4 +152,19 @@
     .rd-about-text {
         @include font-size(14);
     }
+}
+
+@keyframes revealImage {
+  0%   {
+      height: 85vh;
+      filter: drop-shadow(8px -4px 12px rgba($black, 0.95)), blur(1.3px);
+      margin-left: -311px;
+      opacity: 0.5;
+  }
+  100% {
+      height: 80vh;
+      filter: drop-shadow(4px -3px 9px rgba($black, 0.75)), blur(0.2px);
+      margin-left: -420px;
+      opacity: 1;
+  }
 }

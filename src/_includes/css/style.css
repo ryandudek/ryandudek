@@ -117,7 +117,9 @@ table {
     --twitter-image: url('/img/icons-light/twitter.svg'); } }
 
 html {
-  font-family: "Lato", "Helvetica", "Arial"; }
+  font-family: "Lato", "Helvetica", "Arial";
+  font-size: 18px;
+  font-size: 1.125rem; }
 
 .rd {
   background-color: var(--body-bg);
@@ -231,6 +233,7 @@ strong,
   color: var(--body-text);
   display: inline-block;
   font-size: 12px;
+  font-size: 0.75rem;
   height: 26px;
   line-height: 20px;
   margin: 0 0.25rem 0 0;
@@ -257,6 +260,7 @@ strong,
 
 .rd-switch-label {
   font-size: 16px;
+  font-size: 1rem;
   line-height: 20px;
   user-select: none;
   vertical-align: middle; }
@@ -339,10 +343,21 @@ strong,
   background-color: var(--about-bg);
   color: var(--about-text);
   margin-top: -160px;
+  overflow: hidden;
   padding: 160px 0 50px;
   position: relative;
   transition: background-color 0.5s ease, color 0.5s ease;
   z-index: 10; }
+  .rd-about:after {
+    bottom: -20px;
+    background: linear-gradient(1deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 75%);
+    content: '';
+    display: block;
+    height: 50px;
+    left: -30%;
+    position: absolute;
+    right: -30%;
+    z-index: 2; }
   .rd-about a {
     color: var(--about-link);
     font-family: inherit;
@@ -384,7 +399,9 @@ strong,
 @media screen and (min-width: 48em) {
   .rd-about {
     box-shadow: 2px 7px 65px rgba(0, 0, 0, 0.75) inset;
-    height: 100vh; }
+    min-height: 100vh; }
+    .rd-about:after {
+      height: 120px; }
   .rd-about-container {
     align-items: baseline;
     display: flex;
@@ -396,17 +413,22 @@ strong,
     font-size: 21px;
     font-size: 1.3125rem; }
   .rd-about-image {
+    animation: revealImage 0.666s ease-in-out;
     bottom: 0;
     display: block;
+    filter: drop-shadow(4px -3px 9px rgba(0, 0, 0, 0.75)), blur(0.2px);
     height: 80vh;
     left: auto;
     margin-left: -420px;
+    opacity: 1;
     position: absolute;
-    width: auto; }
+    width: auto;
+    z-index: 1; }
   .rd-about-content {
     display: block;
     margin-left: 40%;
-    width: 60%; } }
+    width: 60%;
+    z-index: 10; } }
 
 @media screen and (min-width: 64em) {
   .rd-about {
@@ -437,9 +459,21 @@ strong,
     font-size: 14px;
     font-size: 0.875rem; } }
 
+@keyframes revealImage {
+  0% {
+    height: 85vh;
+    filter: drop-shadow(8px -4px 12px rgba(0, 0, 0, 0.95)), blur(1.3px);
+    margin-left: -311px;
+    opacity: 0.5; }
+  100% {
+    height: 80vh;
+    filter: drop-shadow(4px -3px 9px rgba(0, 0, 0, 0.75)), blur(0.2px);
+    margin-left: -420px;
+    opacity: 1; } }
+
 .rd-resume {
   background-color: var(--resume-bg);
-  padding: 25px;
+  padding: 40px 25px 25px;
   position: relative;
   transition: background-color 0.5s ease; }
 

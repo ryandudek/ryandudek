@@ -3,12 +3,22 @@ title: Ryan Dudek, Software Engineer - Keeping It Awesome
 ---
 
 {% extends "layouts/layout.njk" %}
+
 {% block header %}
-    {% include "components/header.njk" %}
-    {% include "components/themeToggle.njk" %}
+{% include "components/header.njk" %}
+{% include "components/themeToggle.njk" %}
 {% endblock %}
 
 {% block content %}
-    {% include "content/about.njk" %}
-    {% include "content/resume.njk" %}
+{% include "content/about.njk" %}
+{% include "content/resume.njk" %}
+{% endblock %}
+
+{% block scripts %}
+{% set js %}
+{% include "js/themeToggle.js" %}
+{% endset %}
+<script>
+{{ js | jsmin | safe }}
+</script>
 {% endblock %}
