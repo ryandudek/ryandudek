@@ -62,14 +62,12 @@ table {
 
 :root {
   --light-text: #4d4d4d;
-  --link-color: #00797b;
+  --link-color: #006264;
   --body-bg: #fdfdfd;
   --body-text: #3c3c3c;
   --about-bg: #fdfdfd;
   --about-text: #3c3c3c;
-  --about-link: #00797b;
-  --header-text: #00797b;
-  --resume-bg: #fcfcfc;
+  --header-text: #006264;
   --header-image: url('/img/icons/chemex.svg');
   --email-image: url('/img/icons/email.svg');
   --phone-image: url('/img/icons/phone.svg');
@@ -81,14 +79,12 @@ table {
 @media (prefers-color-scheme: light) {
   :root {
     --light-text: #4d4d4d;
-    --link-color: #00797b;
+    --link-color: #006264;
     --body-bg: #fdfdfd;
     --body-text: #3c3c3c;
     --about-bg: #fdfdfd;
     --about-text: #3c3c3c;
-    --about-link: #00797b;
-    --header-text: #00797b;
-    --resume-bg: #fcfcfc;
+    --header-text: #006264;
     --header-image: url('/img/icons/chemex.svg');
     --email-image: url('/img/icons/email.svg');
     --phone-image: url('/img/icons/phone.svg');
@@ -100,14 +96,12 @@ table {
 @media (prefers-color-scheme: dark) {
   :root {
     --light-text: #dadada;
-    --link-color: #e8858d;
-    --body-bg: #003839;
+    --link-color: #fec0c5;
+    --body-bg: #001a1b;
     --body-text: #fcfcfc;
-    --about-bg: #003839;
+    --about-bg: #002e2f;
     --about-text: #fcfcfc;
-    --about-link: #e8858d;
-    --header-text: #e8858d;
-    --resume-bg: #001a1a;
+    --header-text: #fec0c5;
     --header-image: url('/img/icons-light/chemex.svg');
     --email-image: url('/img/icons-light/email.svg');
     --phone-image: url('/img/icons-light/phone.svg');
@@ -134,6 +128,7 @@ html {
   max-width: 76.25em; }
 
 a {
+  background-color: inherit;
   color: var(--link-color);
   font-family: inherit;
   text-decoration: underline;
@@ -204,7 +199,7 @@ strong,
   .rd {
     color: #3c3c3c; }
   a {
-    color: #002e2f; }
+    color: #001718; }
   .rd-no-print {
     display: none; }
   .rd-print-only {
@@ -326,7 +321,7 @@ strong,
 
 @media print {
   .rd-header {
-    color: #00797b;
+    color: #006264;
     height: auto; }
   .rd-title {
     font-size: 32px;
@@ -350,7 +345,7 @@ strong,
   z-index: 10; }
   .rd-about:after {
     bottom: -20px;
-    background: linear-gradient(1deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 75%);
+    background: linear-gradient(1.5deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0) 70%);
     content: '';
     display: block;
     height: 50px;
@@ -358,19 +353,13 @@ strong,
     position: absolute;
     right: -30%;
     z-index: 2; }
-  .rd-about a {
-    color: var(--about-link);
-    font-family: inherit;
-    text-decoration: underline;
-    text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.05);
-    transition: color 0.5s ease; }
 
 .rd-about-container {
   margin: 0 auto;
   max-width: 64em;
-  padding: 0 25px;
-  z-index: 10; }
+  padding: 0 25px; }
 
+.rd-img-container,
 .rd-about-image {
   display: none; }
 
@@ -412,6 +401,16 @@ strong,
   .rd-about-text {
     font-size: 21px;
     font-size: 1.3125rem; }
+  .rd-img-container {
+    bottom: 0;
+    display: block;
+    height: 100vh;
+    left: 50%;
+    max-width: 64em;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: -1; }
   .rd-about-image {
     animation: revealImage 0.666s ease-in-out;
     bottom: 0;
@@ -419,11 +418,12 @@ strong,
     filter: drop-shadow(4px -3px 9px rgba(0, 0, 0, 0.75)), blur(0.2px);
     height: 80vh;
     left: auto;
-    margin-left: -420px;
+    margin-left: 33%;
     opacity: 1;
     position: absolute;
+    transform: translateX(-420px);
     width: auto;
-    z-index: 1; }
+    z-index: -1; }
   .rd-about-content {
     display: block;
     margin-left: 40%;
@@ -461,18 +461,17 @@ strong,
 
 @keyframes revealImage {
   0% {
-    height: 85vh;
+    height: 81vh;
     filter: drop-shadow(8px -4px 12px rgba(0, 0, 0, 0.95)), blur(1.3px);
-    margin-left: -311px;
+    transform: translateX(-400px);
     opacity: 0.5; }
   100% {
     height: 80vh;
     filter: drop-shadow(4px -3px 9px rgba(0, 0, 0, 0.75)), blur(0.2px);
-    margin-left: -420px;
+    transform: translateX(-420px);
     opacity: 1; } }
 
 .rd-resume {
-  background-color: var(--resume-bg);
   padding: 40px 25px 25px;
   position: relative;
   transition: background-color 0.5s ease; }
