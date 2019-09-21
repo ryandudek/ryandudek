@@ -4,20 +4,21 @@
     background-color: var(--about-bg);
     color: var(--about-text);
     margin-top: -160px;
+    overflow: hidden;
     padding: 160px 0 50px;
     position: relative;
     transition: background-color 0.5s ease, color 0.5s ease;
     z-index: 10;
 
     &:after {
-        bottom: 0;
-        background: linear-gradient(1deg, rgba($black, 0.5) 0%, rgba($black, 0.35) 40%, rgba($black, 0) 85%);
+        bottom: -20px;
+        background: linear-gradient(1deg, rgba($black, 0.5) 0%, rgba($black, 0) 75%);
         content: '';
         display: block;
-        height: 65px;
-        left: 0;
+        height: 120px;
+        left: -30%;
         position: absolute;
-        right: 0;
+        right: -30%;
         z-index: 2;
     }
 
