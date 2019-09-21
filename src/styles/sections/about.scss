@@ -12,7 +12,12 @@
 
     &:after {
         bottom: -20px;
-        background: linear-gradient(1deg, rgba($black, 0.5) 0%, rgba($black, 0) 75%);
+        background: linear-gradient(
+            1.5deg,
+            rgba($black, 0.9) 0%,
+            rgba($black, 0.8) 10%,
+            rgba($black, 0) 70%
+        );
         content: '';
         display: block;
         height: 50px;
@@ -21,23 +26,15 @@
         right: -30%;
         z-index: 2;
     }
-
-    a {
-        color: var(--about-link);
-        font-family: inherit;
-        text-decoration: underline;
-        text-shadow: 1px 0px 5px $linkShadow;
-        transition: color 0.5s ease;
-    }
 }
 
 .rd-about-container {
     margin: 0 auto;
     max-width: 64em;
     padding: 0 25px;
-    z-index: 10;
 }
 
+.rd-img-container,
 .rd-about-image {
     display: none;
 }
@@ -91,6 +88,18 @@
         @include font-size(21);
     }
 
+    .rd-img-container {
+        bottom: 0;
+        display: block;
+        height: 100vh;
+        left: 50%;
+        max-width: 64em;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: -1;
+    }
+
     .rd-about-image {
         animation: revealImage 0.666s ease-in-out;
         bottom: 0;
@@ -98,11 +107,12 @@
         filter: drop-shadow(4px -3px 9px rgba($black, 0.75)), blur(0.2px);
         height: 80vh;
 	    left: auto;
-        margin-left: -420px;
+        margin-left: 33%;
         opacity: 1;
         position: absolute;
+        transform: translateX(-420px);
         width: auto;
-        z-index: 1;
+        z-index: -1;
     }
 
     .rd-about-content {
@@ -156,15 +166,15 @@
 
 @keyframes revealImage {
   0%   {
-      height: 85vh;
+      height: 81vh;
       filter: drop-shadow(8px -4px 12px rgba($black, 0.95)), blur(1.3px);
-      margin-left: -311px;
+      transform: translateX(-400px);
       opacity: 0.5;
   }
   100% {
       height: 80vh;
       filter: drop-shadow(4px -3px 9px rgba($black, 0.75)), blur(0.2px);
-      margin-left: -420px;
+      transform: translateX(-420px);
       opacity: 1;
   }
 }

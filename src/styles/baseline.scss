@@ -6,14 +6,12 @@
 
 :root {
     --light-text: #4d4d4d;
-    --link-color: #00797b;
+    --link-color: #006264;
     --body-bg: #fdfdfd;
     --body-text: #3c3c3c;
     --about-bg: #fdfdfd;
     --about-text: #3c3c3c;
-    --about-link: #00797b;
-    --header-text: #00797b;
-    --resume-bg: #fcfcfc;
+    --header-text: #006264;
     --header-image: url('/img/icons/chemex.svg');
     --email-image: url('/img/icons/email.svg');
     --phone-image: url('/img/icons/phone.svg');
@@ -26,14 +24,12 @@
 @media (prefers-color-scheme: light) {
     :root {
         --light-text: #4d4d4d;
-        --link-color: #00797b;
+        --link-color: #006264;
         --body-bg: #fdfdfd;
         --body-text: #3c3c3c;
         --about-bg: #fdfdfd;
         --about-text: #3c3c3c;
-        --about-link: #00797b;
-        --header-text: #00797b;
-        --resume-bg: #fcfcfc;
+        --header-text: #006264;
         --header-image: url('/img/icons/chemex.svg');
         --email-image: url('/img/icons/email.svg');
         --phone-image: url('/img/icons/phone.svg');
@@ -47,14 +43,12 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --light-text: #dadada;
-        --link-color: #e8858d;
-        --body-bg: #003839;
+        --link-color: #fec0c5;
+        --body-bg: #001a1b;
         --body-text: #fcfcfc;
-        --about-bg: #003839;
+        --about-bg: #002e2f;
         --about-text: #fcfcfc;
-        --about-link: #e8858d;
-        --header-text: #e8858d;
-        --resume-bg: #001a1a;
+        --header-text: #fec0c5;
         --header-image: url('/img/icons-light/chemex.svg');
         --email-image: url('/img/icons-light/email.svg');
         --phone-image: url('/img/icons-light/phone.svg');
@@ -85,6 +79,7 @@ html {
 }
 
 a {
+    background-color: inherit;
     color: var(--link-color);
     font-family: inherit;
     text-decoration: underline;
