@@ -33,6 +33,12 @@ self.addEventListener('fetch', function(event) {
     console.info('Event: Fetch');
 
     const request = event.request;
+    // if (request.url.includes("index.html")) {
+    //     event.respondWith(new Response(
+    //         ".hotel-slogan {background: green!important;} nav {display:none}",
+    //         { headers: { "Content-Type": "text/css" }}
+    //     ));
+    // }
     //Tell the browser to wait for newtwork request and respond with below
     event.respondWith(
         //If request is already in cache, return it

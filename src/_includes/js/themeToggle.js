@@ -1,10 +1,28 @@
-const darkPreferred = window.matchMedia("(prefers-color-scheme: dark)").matches;
+let darkPreferred;
+const darkCookie = document.cookie.split(';');
+
+if (darkCookie.filter(function(item) {
+    return item.indexOf('darkMode') >= 0
+}).length) {
+    const darkMode = darkCookie.slice(-1)[0];
+    darkPreferred = darkMode.substring(10) === 'true';
+}
+else {
+    darkPreferred = window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+
 const darkModeInput = document.getElementById('darkMode');
 const darkModeLabel = document.getElementById('darkLabel');
 const lightModeLabel = document.getElementById('lightLabel');
 const rootElement = document.querySelector(':root')
+document.cookie = 'darkMode=' + darkPreferred;
 
 function setDarkTheme() {
+    document.cookie = 'darkMode=true';
+    darkModeInput.setAttribute("aria-checked", "true");
+    lightModeLabel.setAttribute("aria-hidden", "true");
+    darkModeLabel.setAttribute("aria-hidden", "false");
+
     const darkTheme = {
         '--light-text': '#dadada',
         '--link-color': '#e8858d',
@@ -23,12 +41,18 @@ function setDarkTheme() {
         '--linkedin-image': "url('/img/icons-light/linkedin.svg')",
         '--twitter-image': "url('/img/icons-light/twitter.svg')"
     }
+
     for (key in darkTheme) {
         rootElement.style.setProperty(key, darkTheme[key])
     }
 }
 
 function setLightTheme() {
+    document.cookie = 'darkMode=false';
+    darkModeInput.setAttribute("aria-checked", "false");
+    lightModeLabel.setAttribute("aria-hidden", "false");
+    darkModeLabel.setAttribute("aria-hidden", "true");
+
     const lightTheme = {
         '--light-text': '#4d4d4d',
         '--link-color': '#00797b',
@@ -47,38 +71,28 @@ function setLightTheme() {
         '--linkedin-image': "url('/img/icons/linkedin.svg')",
         '--twitter-image': "url('/img/icons/twitter.svg')"
     }
+
     for (key in lightTheme) {
         rootElement.style.setProperty(key, lightTheme[key])
     }
-}
-
-function setInputLight() {
-    darkModeInput.setAttribute("aria-checked", "false");
-    lightModeLabel.setAttribute("aria-hidden", "false");
-    darkModeLabel.setAttribute("aria-hidden", "true");
-}
-
-function setInputDark() {
-    darkModeInput.setAttribute("aria-checked", "true");
-    lightModeLabel.setAttribute("aria-hidden", "true");
-    darkModeLabel.setAttribute("aria-hidden", "false");
 }
 
 darkModeInput.addEventListener("click", toggleTheme, false);
 
 function toggleTheme() {
     if (darkModeInput.getAttribute("aria-checked") === "true") {
-        setInputLight();
         setLightTheme();
     }
     else {
-        setInputDark();
         setDarkTheme();
     }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    if (darkPreferred) {
-        setInputDark();
+    if (darkPreferred === true) {
+        setDarkTheme();
+    }
+    else {
+        setLightTheme();
     }
 });
