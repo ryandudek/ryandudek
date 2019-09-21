@@ -1,5 +1,7 @@
 const darkPreferred = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const darkModeInput = document.getElementById('darkMode');
+const darkModeLabel = document.getElementById('darkLabel');
+const lightModeLabel = document.getElementById('lightLabel');
 const rootElement = document.querySelector(':root')
 
 function setDarkTheme() {
@@ -50,15 +52,23 @@ function setLightTheme() {
     }
 }
 
+function setInputLight() {
+    darkModeInput.setAttribute("aria-checked", "false");
+    lightModeLabel.setAttribute("aria-hidden", "false");
+    darkModeLabel.setAttribute("aria-hidden", "true");
+}
+
 function setInputDark() {
     darkModeInput.setAttribute("aria-checked", "true");
+    lightModeLabel.setAttribute("aria-hidden", "true");
+    darkModeLabel.setAttribute("aria-hidden", "false");
 }
 
 darkModeInput.addEventListener("click", toggleTheme, false);
 
 function toggleTheme() {
     if (darkModeInput.getAttribute("aria-checked") === "true") {
-        darkModeInput.setAttribute("aria-checked", "false");
+        setInputLight();
         setLightTheme();
     }
     else {
