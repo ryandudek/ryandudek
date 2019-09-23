@@ -76,7 +76,7 @@ table {
   --linkedin-image: url('/img/icons/linkedin.svg');
   --twitter-image: url('/img/icons/twitter.svg'); }
 
-@media (prefers-color-scheme: light) {
+@media screen and (prefers-color-scheme: light) {
   :root {
     --light-text: #4d4d4d;
     --link-color: #006264;
@@ -93,7 +93,7 @@ table {
     --linkedin-image: url('/img/icons/linkedin.svg');
     --twitter-image: url('/img/icons/twitter.svg'); } }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
   :root {
     --light-text: #dadada;
     --link-color: #fec0c5;
@@ -102,6 +102,108 @@ table {
     --about-bg: #002e2f;
     --about-text: #fcfcfc;
     --header-text: #fec0c5;
+    --header-image: url('/img/icons-light/chemex.svg');
+    --email-image: url('/img/icons-light/email.svg');
+    --phone-image: url('/img/icons-light/phone.svg');
+    --web-image: url('/img/icons-light/web.svg');
+    --github-image: url('/img/icons-light/github.svg');
+    --linkedin-image: url('/img/icons-light/linkedin.svg');
+    --twitter-image: url('/img/icons-light/twitter.svg'); } }
+
+@media screen and (prefers-contrast: high) {
+  :root {
+    --light-text: #1a1a1a;
+    --link-color: #006264;
+    --body-bg: #ffffff;
+    --body-text: #000000;
+    --about-bg: #ffffff;
+    --about-text: #000000;
+    --header-text: #1a1a1a;
+    --header-image: url('/img/icons/chemex.svg');
+    --email-image: url('/img/icons/email.svg');
+    --phone-image: url('/img/icons/phone.svg');
+    --web-image: url('/img/icons/web.svg');
+    --github-image: url('/img/icons/github.svg');
+    --linkedin-image: url('/img/icons/linkedin.svg');
+    --twitter-image: url('/img/icons/twitter.svg'); } }
+
+@media screen and (prefers-contrast: high), (prefers-color-scheme: light) {
+  :root {
+    --light-text: #1a1a1a;
+    --link-color: #006264;
+    --body-bg: #ffffff;
+    --body-text: #000000;
+    --about-bg: #ffffff;
+    --about-text: #000000;
+    --header-text: #1a1a1a;
+    --header-image: url('/img/icons/chemex.svg');
+    --email-image: url('/img/icons/email.svg');
+    --phone-image: url('/img/icons/phone.svg');
+    --web-image: url('/img/icons/web.svg');
+    --github-image: url('/img/icons/github.svg');
+    --linkedin-image: url('/img/icons/linkedin.svg');
+    --twitter-image: url('/img/icons/twitter.svg'); } }
+
+@media screen and (-ms-high-contrast: active) {
+  :root {
+    --light-text: #1a1a1a;
+    --link-color: #006264;
+    --body-bg: #ffffff;
+    --body-text: #000000;
+    --about-bg: #ffffff;
+    --about-text: #000000;
+    --header-text: #1a1a1a;
+    --header-image: url('/img/icons/chemex.svg');
+    --email-image: url('/img/icons/email.svg');
+    --phone-image: url('/img/icons/phone.svg');
+    --web-image: url('/img/icons/web.svg');
+    --github-image: url('/img/icons/github.svg');
+    --linkedin-image: url('/img/icons/linkedin.svg');
+    --twitter-image: url('/img/icons/twitter.svg'); } }
+
+@media screen and (-ms-high-contrast: white-on-black) {
+  :root {
+    --light-text: #1a1a1a;
+    --link-color: #006264;
+    --body-bg: #ffffff;
+    --body-text: #000000;
+    --about-bg: #ffffff;
+    --about-text: #000000;
+    --header-text: #1a1a1a;
+    --header-image: url('/img/icons/chemex.svg');
+    --email-image: url('/img/icons/email.svg');
+    --phone-image: url('/img/icons/phone.svg');
+    --web-image: url('/img/icons/web.svg');
+    --github-image: url('/img/icons/github.svg');
+    --linkedin-image: url('/img/icons/linkedin.svg');
+    --twitter-image: url('/img/icons/twitter.svg'); } }
+
+@media screen and (prefers-contrast: high), (prefers-color-scheme: dark) {
+  :root {
+    --light-text: #fafafa;
+    --link-color: #e8858d;
+    --body-bg: #000000;
+    --body-text: #ffffff;
+    --about-bg: #000000;
+    --about-text: #ffffff;
+    --header-text: #ffffff;
+    --header-image: url('/img/icons-light/chemex.svg');
+    --email-image: url('/img/icons-light/email.svg');
+    --phone-image: url('/img/icons-light/phone.svg');
+    --web-image: url('/img/icons-light/web.svg');
+    --github-image: url('/img/icons-light/github.svg');
+    --linkedin-image: url('/img/icons-light/linkedin.svg');
+    --twitter-image: url('/img/icons-light/twitter.svg'); } }
+
+@media screen and (-ms-high-contrast: black-on-white) {
+  :root {
+    --light-text: #fafafa;
+    --link-color: #e8858d;
+    --body-bg: #000000;
+    --body-text: #ffffff;
+    --about-bg: #000000;
+    --about-text: #ffffff;
+    --header-text: #ffffff;
     --header-image: url('/img/icons-light/chemex.svg');
     --email-image: url('/img/icons-light/email.svg');
     --phone-image: url('/img/icons-light/phone.svg');
@@ -215,11 +317,43 @@ strong,
     font-size: 13px;
     font-size: 0.8125rem; } }
 
-.rd-theme-toggle {
+.rd-settings-button {
+  background-color: var(--body-bg);
+  border: 1px solid var(--link-color);
+  border-radius: 20px;
+  color: var(--link-color);
+  display: inline-block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 10px;
   position: absolute;
   right: 15px;
+  text-align: center;
   top: 20px;
+  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+  vertical-align: middle;
   z-index: 99; }
+
+.rd-settings-panel {
+  background-color: var(--body-bg);
+  border: 1px solid var(--body-text);
+  opacity: 1;
+  padding: 25px;
+  position: absolute;
+  right: 15px;
+  top: 45px;
+  transition: opacity .5s ease;
+  visibility: hidden;
+  z-index: 99; }
+  .rd-settings-panel.rd-visible {
+    opacity: 1;
+    visibility: visible; }
+
+.rd-theme-toggle {
+  display: block;
+  margin: 0 0 10px; }
 
 .rd-switch {
   background-color: var(--body-bg);

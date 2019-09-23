@@ -3,61 +3,11 @@
 @import '_reset';
 @import '_fonts';
 
-
-:root {
-    --light-text: #4d4d4d;
-    --link-color: #006264;
-    --body-bg: #fdfdfd;
-    --body-text: #3c3c3c;
-    --about-bg: #fdfdfd;
-    --about-text: #3c3c3c;
-    --header-text: #006264;
-    --header-image: url('/img/icons/chemex.svg');
-    --email-image: url('/img/icons/email.svg');
-    --phone-image: url('/img/icons/phone.svg');
-    --web-image: url('/img/icons/web.svg');
-    --github-image: url('/img/icons/github.svg');
-    --linkedin-image: url('/img/icons/linkedin.svg');
-    --twitter-image: url('/img/icons/twitter.svg');
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --light-text: #4d4d4d;
-        --link-color: #006264;
-        --body-bg: #fdfdfd;
-        --body-text: #3c3c3c;
-        --about-bg: #fdfdfd;
-        --about-text: #3c3c3c;
-        --header-text: #006264;
-        --header-image: url('/img/icons/chemex.svg');
-        --email-image: url('/img/icons/email.svg');
-        --phone-image: url('/img/icons/phone.svg');
-        --web-image: url('/img/icons/web.svg');
-        --github-image: url('/img/icons/github.svg');
-        --linkedin-image: url('/img/icons/linkedin.svg');
-        --twitter-image: url('/img/icons/twitter.svg');
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --light-text: #dadada;
-        --link-color: #fec0c5;
-        --body-bg: #001a1b;
-        --body-text: #fcfcfc;
-        --about-bg: #002e2f;
-        --about-text: #fcfcfc;
-        --header-text: #fec0c5;
-        --header-image: url('/img/icons-light/chemex.svg');
-        --email-image: url('/img/icons-light/email.svg');
-        --phone-image: url('/img/icons-light/phone.svg');
-        --web-image: url('/img/icons-light/web.svg');
-        --github-image: url('/img/icons-light/github.svg');
-        --linkedin-image: url('/img/icons-light/linkedin.svg');
-        --twitter-image: url('/img/icons-light/twitter.svg');
-    }
-}
+@import 'themes/default';
+@import 'themes/dark';
+@import 'themes/high-contrast';
+@import 'themes/high-contrast-dark';
+// @import 'themes/user';
 
 html {
     font-family: $Lato, 'Helvetica', 'Arial';

@@ -1,8 +1,43 @@
-.rd-theme-toggle {
+.rd-settings-button {
+    background-color: var(--body-bg);
+    border: 1px solid var(--link-color);
+    border-radius: 20px;
+    color: var(--link-color);
+    display: inline-block;
+    @include font-size(14);
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
     position: absolute;
     right: 15px;
+    text-align: center;
     top: 20px;
+    transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+    vertical-align: middle;
     z-index: 99;
+}
+
+.rd-settings-panel {
+    background-color: var(--body-bg);
+    border: 1px solid var(--body-text);
+    opacity: 1;
+    padding: 25px;
+    position: absolute;
+    right: 15px;
+    top: 45px;
+    transition: opacity .5s ease;
+    visibility: hidden;
+    z-index: 99;
+
+    &.rd-visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.rd-theme-toggle {
+    display: block;
+    margin: 0 0 10px;
 }
 
 .rd-switch {
