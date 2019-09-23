@@ -14,22 +14,19 @@ function toggleSettingsPanel() {
 
 let darkPreferred, contrastPreferred;
 const themeCookie = document.cookie.split(';');
+const cookieSetting = themeCookie.slice(-1)[0];
 
-if (themeCookie.filter(function(item) {
-    return item.indexOf('darkMode') >= 0
-}).length) {
-    const darkMode = themeCookie.slice(-1)[0];
-    darkPreferred = darkMode.substring(9) === 'true';
+if (cookieSetting.indexOf('darkMode=') >= 0) {
+    const darkMode = cookieSetting.split('darkMode=')[1];
+    darkPreferred = darkMode.substring(0, 4) === 'true';
 }
 else {
     darkPreferred = window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
 
-if (themeCookie.filter(function(item) {
-    return item.indexOf('highContrast') >= 0
-}).length) {
-    const highContrast = themeCookie.slice(-1)[0];
-    contrastPreferred = highContrast.substring(9) === 'true';
+if (cookieSetting.indexOf('highContrast=') >= 0) {
+    const contrastMode = cookieSetting.split('highContrast=')[1];
+    contrastPreferred = contrastMode.substring(0, 4) === 'true';
 }
 else if (window.matchMedia("(prefers-contrast: high)").matches) {
     contrastPreferred = true;
