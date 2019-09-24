@@ -214,11 +214,6 @@ table {
     --linkedin-image: url('/img/icons-light/linkedin.svg');
     --twitter-image: url('/img/icons-light/twitter.svg'); } }
 
-@media screen and (prefers-reduced-motion: reduce) {
-  :root {
-    --animation: 0s ease-in-out;
-    --transition: 0.2s ease-in-out; } }
-
 html {
   font-family: "Lato", "Helvetica", "Arial";
   font-size: 18px;
@@ -664,7 +659,7 @@ strong,
   0% {
     height: 81vh;
     filter: drop-shadow(8px -4px 12px rgba(0, 0, 0, 0.95)), blur(1.3px);
-    transform: translate(-500px, 80px);
+    transform: translate(-500px, 25px);
     opacity: 0.5; }
   100% {
     height: 80vh;
