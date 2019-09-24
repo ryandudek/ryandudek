@@ -6,14 +6,13 @@
     cursor: pointer;
     display: inline-block;
     @include font-size(14);
-    height: 48px;
-    padding: 0;
+    height: 40px;
+    padding: 3px 8px;
     position: absolute;
     right: 15px;
     text-align: center;
     top: 15px;
-    transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
-    width: 48px;
+    transition: background-color var(--transition), border-color var(--transition), color var(--transition);
     vertical-align: middle;
     z-index: 99;
 
@@ -28,11 +27,18 @@
         color: var(--body-bg);
     }
 
+    .rd-button-text {
+        display: inline-block;
+        margin: 0;
+        vertical-align: middle;
+    }
+
     svg {
-        display: block;
+        display: inline-block;
         height: auto;
-        margin: 0 auto;
-        width: 30px;
+        margin: 0 5px 0 0;
+        vertical-align: middle;
+        width: 16px;
     }
 }
 
@@ -40,14 +46,15 @@
     background-color: var(--body-bg);
     bottom: 0;
     left: 0;
+    max-width: 60em;
     opacity: 1;
-    padding: 25px;
+    overflow-x: hidden;
+    padding: 60px 25px 25px;
     position: fixed;
     right: 0;
     top: 0;
-    transition: opacity .5s ease;
+    transition: opacity var(--transition);
     visibility: hidden;
-    width: 100%;
     z-index: 101;
 
     &.rd-visible {
@@ -58,7 +65,7 @@
 
 .rd-settings-bg {
     opacity: 0;
-    transition: opacity .5s ease;
+    transition: opacity var(--transition);
     visibility: hidden;
 }
 
@@ -81,7 +88,7 @@
     padding: 0;
     vertical-align: middle;
     text-align: center;
-    transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+    transition: background-color var(--transition), border-color var(--transition), color var(--transition);
     width: 70px;
 
     &:focus {
@@ -98,7 +105,7 @@
         line-height: 22px;
         padding: 0 6px;
         pointer-events: none;
-        transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+        transition: background-color var(--transition), border-color var(--transition), color var(--transition);
         vertical-align: middle;
     }
 }
@@ -123,6 +130,7 @@
         border: 1px solid var(--body-text);
         border-radius: 5px;
         left: 50%;
+        min-height: 60vh;
         padding: 40px;
         top: 50%;
         transform: translate(-50%, -50%);

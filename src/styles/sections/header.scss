@@ -3,7 +3,7 @@
     color: var(--header-text);
     height: 110px;
     position: relative;
-    transition: color 0.5s ease;
+    transition: color var(--transition);
     z-index: 50;
 }
 
@@ -28,7 +28,7 @@
     height: 32px;
     margin: 0 4px;
     vertical-align: middle;
-    transition: background-image 0.5s ease;
+    transition: background-image var(--transition);
     width: 30px;
 }
 

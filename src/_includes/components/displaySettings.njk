@@ -2,21 +2,22 @@
     <header class="rd-settings-header">
         <h1>Edit Display Settings</h1>
         <button class="rd-icon-button" id="closeSettings">
-            <span class="rd-sr-only">Close Display Settings Panel</span>
-            <svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+            <svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64" aria-hidden="true" focusable="false">
                 <g>
                     <path fill="currentColor" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
                 </g>
             </svg>
+            <span class="rd-button-text">Close <span class="rd-sr-only">Display Settings Panel</span></span>
         </button>
     </header>
-    <p>I do my best to check for your operating system preferences. You can use the inputs below to edit your preferences for the site display and your settings should persist.</p>
+    <p>I do my best to check for your operating system preferences. You can use the switches below to edit your preferences for the site display and your settings should persist. This website does not have a lot of motion, a sliding animation of the photo of me and some transitions when toggling these switches.</p>
     <div class="rd-theme-toggle">
         <button role="switch" aria-checked="false" id="darkMode" class="rd-switch">
             <span aria-hidden="false" id="lightLabel">off</span>
             <span aria-hidden="true" id="darkLabel">on</span>
         </button>
         <label for="darkMode" class="rd-switch-label">Dark Mode</label>
+        {# <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme" class="rd-related-info" target="_blank">More Information</a> #}
     </div>
 
     <div class="rd-theme-toggle">
@@ -25,6 +26,17 @@
             <span aria-hidden="true" id="contrastOn">on</span>
         </button>
         <label for="highContrast" class="rd-switch-label">High Contrast Mode</label>
+        {# <a href="https://msdn.microsoft.com/library/Hh771830" class="rd-related-info" target="_blank">More Information</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast" class="rd-related-info" target="_blank">Future State Information</a> #}
+    </div>
+
+    <div class="rd-theme-toggle">
+        <button role="switch" aria-checked="false" id="reducedMotion" class="rd-switch">
+            <span aria-hidden="false" id="reducedMotionOff">off</span>
+            <span aria-hidden="true" id="reducedMotionOn">on</span>
+        </button>
+        <label for="reducedMotion" class="rd-switch-label">Reduced Motion</label>
+        {# <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion" class="rd-related-info" target="_blank">More Information</a> #}
     </div>
 </aside>
 <div class="rd-settings-bg"></div>

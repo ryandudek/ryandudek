@@ -1,0 +1,6 @@
+@media screen and (prefers-reduced-motion: reduce) {
+    :root {
+        --animation: 0s ease-in-out;
+        --transition: 0.2s ease-in-out;
+    }
+}

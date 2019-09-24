@@ -74,7 +74,9 @@ table {
   --web-image: url('/img/icons/web.svg');
   --github-image: url('/img/icons/github.svg');
   --linkedin-image: url('/img/icons/linkedin.svg');
-  --twitter-image: url('/img/icons/twitter.svg'); }
+  --twitter-image: url('/img/icons/twitter.svg');
+  --animation: 0.666s ease-in-out;
+  --transition: 0.5s ease-in-out; }
 
 @media screen and (prefers-color-scheme: light) {
   :root {
@@ -212,6 +214,11 @@ table {
     --linkedin-image: url('/img/icons-light/linkedin.svg');
     --twitter-image: url('/img/icons-light/twitter.svg'); } }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  :root {
+    --animation: 0s ease-in-out;
+    --transition: 0.2s ease-in-out; } }
+
 html {
   font-family: "Lato", "Helvetica", "Arial";
   font-size: 18px;
@@ -223,7 +230,7 @@ html {
   margin: 0;
   overflow-x: hidden;
   padding: 0;
-  transition: background-color 0.5s ease, color 0.5s ease; }
+  transition: background-color var(--transition), color var(--transition); }
 
 .rd-content {
   margin: 0 auto;
@@ -235,7 +242,7 @@ a {
   font-family: inherit;
   text-decoration: underline;
   text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.05);
-  transition: color 0.5s ease; }
+  transition: color var(--transition); }
 
 img {
   border: none;
@@ -326,14 +333,13 @@ strong,
   display: inline-block;
   font-size: 14px;
   font-size: 0.875rem;
-  height: 48px;
-  padding: 0;
+  height: 40px;
+  padding: 3px 8px;
   position: absolute;
   right: 15px;
   text-align: center;
   top: 15px;
-  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
-  width: 48px;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition);
   vertical-align: middle;
   z-index: 99; }
   .rd-icon-button:focus {
@@ -343,24 +349,30 @@ strong,
   .rd-icon-button:hover {
     background-color: var(--link-color);
     color: var(--body-bg); }
+  .rd-icon-button .rd-button-text {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle; }
   .rd-icon-button svg {
-    display: block;
+    display: inline-block;
     height: auto;
-    margin: 0 auto;
-    width: 30px; }
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+    width: 16px; }
 
 .rd-settings-panel {
   background-color: var(--body-bg);
   bottom: 0;
   left: 0;
+  max-width: 60em;
   opacity: 1;
-  padding: 25px;
+  overflow-x: hidden;
+  padding: 60px 25px 25px;
   position: fixed;
   right: 0;
   top: 0;
-  transition: opacity .5s ease;
+  transition: opacity var(--transition);
   visibility: hidden;
-  width: 100%;
   z-index: 101; }
   .rd-settings-panel.rd-visible {
     opacity: 1;
@@ -368,7 +380,7 @@ strong,
 
 .rd-settings-bg {
   opacity: 0;
-  transition: opacity .5s ease;
+  transition: opacity var(--transition);
   visibility: hidden; }
 
 .rd-theme-toggle {
@@ -390,7 +402,7 @@ strong,
   padding: 0;
   vertical-align: middle;
   text-align: center;
-  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition);
   width: 70px; }
   .rd-switch:focus {
     outline-color: var(--link-color); }
@@ -402,7 +414,7 @@ strong,
     line-height: 22px;
     padding: 0 6px;
     pointer-events: none;
-    transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+    transition: background-color var(--transition), border-color var(--transition), color var(--transition);
     vertical-align: middle; }
 
 [role="switch"][aria-checked="false"] :first-child,
@@ -424,6 +436,7 @@ strong,
     border: 1px solid var(--body-text);
     border-radius: 5px;
     left: 50%;
+    min-height: 60vh;
     padding: 40px;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -453,7 +466,7 @@ strong,
   color: var(--header-text);
   height: 110px;
   position: relative;
-  transition: color 0.5s ease;
+  transition: color var(--transition);
   z-index: 50; }
 
 .rd-title {
@@ -477,7 +490,7 @@ strong,
   height: 32px;
   margin: 0 4px;
   vertical-align: middle;
-  transition: background-image 0.5s ease;
+  transition: background-image var(--transition);
   width: 30px; }
 
 @media screen and (min-width: 48em) {
@@ -525,11 +538,11 @@ strong,
   box-shadow: 2px 7px 30px rgba(0, 0, 0, 0.75) inset;
   background-color: var(--about-bg);
   color: var(--about-text);
-  margin-top: -60px;
+  margin-top: -110px;
   overflow: hidden;
-  padding: 60px 0 50px;
+  padding: 110px 0 50px;
   position: relative;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color var(--transition), color var(--transition);
   z-index: 10; }
   .rd-about:after {
     bottom: -20px;
@@ -569,7 +582,7 @@ strong,
     position: absolute;
     right: 0;
     top: 0;
-    transition: background-color 0.5s ease;
+    transition: background-color var(--transition);
     width: 100%;
     z-index: 1; }
 
@@ -600,7 +613,7 @@ strong,
     width: 100%;
     z-index: -1; }
   .rd-about-image {
-    animation: revealImage 0.666s ease-in-out;
+    animation: revealImage var(--animation);
     bottom: 0;
     display: block;
     filter: drop-shadow(4px -3px 9px rgba(0, 0, 0, 0.75)), blur(0.2px);
@@ -651,18 +664,18 @@ strong,
   0% {
     height: 81vh;
     filter: drop-shadow(8px -4px 12px rgba(0, 0, 0, 0.95)), blur(1.3px);
-    transform: translateX(-400px);
+    transform: translate(-500px, 80px);
     opacity: 0.5; }
   100% {
     height: 80vh;
     filter: drop-shadow(4px -3px 9px rgba(0, 0, 0, 0.75)), blur(0.2px);
-    transform: translateX(-420px);
+    transform: translateX(-420px, 0);
     opacity: 1; } }
 
 .rd-resume {
   padding: 40px 25px 25px;
   position: relative;
-  transition: background-color 0.5s ease; }
+  transition: background-color var(--transition); }
 
 .rd-resume-job {
   margin-bottom: 24px;
@@ -678,7 +691,7 @@ strong,
   color: var(--light-text);
   font-weight: normal;
   font-style: italic;
-  transition: color 0.5s ease; }
+  transition: color var(--transition); }
 
 .rd-resume-job-title {
   font-weight: 700; }
@@ -728,7 +741,7 @@ strong,
   line-height: 1.1;
   margin-left: 4px;
   padding-left: 5px;
-  transition: border-color 0.5s ease, color 0.5s ease; }
+  transition: border-color var(--transition), color var(--transition); }
 
 .rd-resume-contact-list {
   margin-top: 10px; }
@@ -740,7 +753,7 @@ strong,
   color: var(--body-text);
   height: 30px;
   line-height: 24px;
-  transition: color 0.5s ease;
+  transition: color var(--transition);
   vertical-align: middle; }
 
 .rd-resume-icon {

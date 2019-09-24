@@ -7,6 +7,7 @@
 @import 'themes/dark';
 @import 'themes/high-contrast';
 @import 'themes/high-contrast-dark';
+@import 'themes/reduced-motion';
 // @import 'themes/user';
 
 html {
@@ -20,7 +21,7 @@ html {
     margin: 0;
   	overflow-x: hidden;
     padding: 0;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color var(--transition), color var(--transition);
 }
 
 .rd-content {
@@ -34,7 +35,7 @@ a {
     font-family: inherit;
     text-decoration: underline;
     text-shadow: 1px 0px 5px $linkShadow;
-    transition: color 0.5s ease;
+    transition: color var(--transition);
 }
 
 img {

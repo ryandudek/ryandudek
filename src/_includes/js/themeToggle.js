@@ -19,7 +19,7 @@ function toggleSettingsPanel() {
     }
 }
 
-let darkPreferred, contrastPreferred;
+let darkPreferred, contrastPreferred, reducedMotionPreffered;
 const themeCookie = document.cookie.split(';');
 const cookieSetting = themeCookie.slice(-1)[0];
 
@@ -52,6 +52,28 @@ if (window.matchMedia("(-ms-high-contrast: black-on-white)").matches) {
     darkPreferred = true;
 }
 
+if (cookieSetting.indexOf('reducedMotion=') >= 0) {
+    const reducedMotion = cookieSetting.split('reducedMotion=')[1];
+    reducedMotionPreffered = reducedMotion.substring(0, 4) === 'true';
+}
+else {
+    reducedMotionPreffered = window.matchMedia("(prefes-reduced-motion: reduced)").matches;
+}
+
+function defaultMotionVariables() {
+    return {
+        "--animation": "0.666s ease-in-out",
+        "--transition": "0.5s ease-in-out"
+    };
+}
+
+function reduceMotionVariables() {
+    return {
+        "--animation": "0s ease-in-out",
+        "--transition": "0.2s ease-in-out"
+    };
+}
+
 const darkModeInput = document.getElementById('darkMode');
 const darkModeLabel = document.getElementById('darkLabel');
 const lightModeLabel = document.getElementById('lightLabel');
@@ -62,9 +84,11 @@ const defaultContrastLabel = document.getElementById('defaultContrast');
 
 const rootElement = document.querySelector(':root');
 
-function setDarkContrastTheme() {
-    document.cookie = 'darkMode=true&highContrast=true';
+function setCookie() {
+    return 'darkMode=' + darkPreferred + '&highContrast=' + contrastPreferred + '&reducedMotion=' + reducedMotionPreffered;
+}
 
+function setDarkContrastTheme() {
     const darkContrastTheme = {
         "--light-text": "#fafafa",
         "--link-color": "#e8858d",
@@ -85,11 +109,11 @@ function setDarkContrastTheme() {
     for (key in darkContrastTheme) {
         rootElement.style.setProperty(key, darkContrastTheme[key])
     }
+
+    document.cookie = setCookie();
 }
 
 function setDarkTheme() {
-    document.cookie = 'darkMode=true';
-
     const darkTheme = {
         '--light-text': '#dadada',
         '--link-color': '#fec0c5',
@@ -105,16 +129,16 @@ function setDarkTheme() {
         '--github-image': "url('/img/icons-light/github.svg')",
         '--linkedin-image': "url('/img/icons-light/linkedin.svg')",
         '--twitter-image': "url('/img/icons-light/twitter.svg')"
-    }
+    };
 
     for (key in darkTheme) {
         rootElement.style.setProperty(key, darkTheme[key])
     }
+
+    document.cookie = setCookie();
 }
 
 function setHighContrast() {
-    document.cookie = 'darkMode=false&highContrast=true';
-
     const highContrastTheme = {
         "--light-text": "#1a1a1a",
         "--link-color": "#006264",
@@ -130,16 +154,16 @@ function setHighContrast() {
         "--github-image": "url('/img/icons/github.svg')",
         "--linkedin-image": "url('/img/icons/linkedin.svg')",
         "--twitter-image": "url('/img/icons/twitter.svg')"
-    }
+    };
 
     for (key in highContrastTheme) {
         rootElement.style.setProperty(key, highContrastTheme[key])
     }
+
+    document.cookie = setCookie();
 }
 
 function setLightTheme() {
-    document.cookie = 'darkMode=false';
-
     const lightTheme = {
         '--light-text': '#4d4d4d',
         '--link-color': '#006264',
@@ -160,6 +184,8 @@ function setLightTheme() {
     for (key in lightTheme) {
         rootElement.style.setProperty(key, lightTheme[key])
     }
+
+    document.cookie = setCookie();
 }
 
 darkModeInput.addEventListener("click", toggleDarkMode, false);
@@ -212,6 +238,35 @@ function toggleContrastMode() {
     }
 }
 
+const reducedMotionInput = document.getElementById('reducedMotion');
+const reducedMotionOnLabel = document.getElementById('reducedMotionOn');
+const reducedMotionOffLabel = document.getElementById('reducedMotionOff');
+
+reducedMotionInput.addEventListener("click", setReducedMotionPreference, false);
+
+function setReducedMotionPreference() {
+    if (reducedMotionInput.getAttribute("aria-checked") === "true") {
+        reducedMotionInput.setAttribute("aria-checked", "false");
+        reducedMotionOffLabel.setAttribute("aria-hidden", "false");
+        reducedMotionOnLabel.setAttribute("aria-hidden", "true");
+        reducedMotionPreffered = false;
+        reducedMotionKeys = defaultMotionVariables();
+    }
+    else {
+        reducedMotionInput.setAttribute("aria-checked", "true");
+        reducedMotionOffLabel.setAttribute("aria-hidden", "true");
+        reducedMotionOnLabel.setAttribute("aria-hidden", "false");
+        reducedMotionPreffered = true;
+        reducedMotionKeys = reduceMotionVariables();
+    }
+
+    for (key in reducedMotionKeys) {
+        rootElement.style.setProperty(key, reducedMotionKeys[key])
+    }
+
+    document.cookie = setCookie();
+};
+
 function toggleTheme() {
     if (darkModeInput.getAttribute("aria-checked") === "true" && highContrastInput.getAttribute("aria-checked") === "true") {
         setDarkContrastTheme();
@@ -228,7 +283,11 @@ function toggleTheme() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.cookie = 'darkMode=' + darkPreferred + '&highContrast=' + contrastPreferred;
+    document.cookie = setCookie()
+
+    if (reducedMotionPreffered) {
+        setReducedMotionPreference();
+    }
 
     if (darkPreferred === true && contrastPreferred) {
         setDarkPreference();
