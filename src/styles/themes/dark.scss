@@ -1,0 +1,18 @@
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --light-text: #dadada;
+        --link-color: #fec0c5;
+        --body-bg: #001a1b;
+        --body-text: #fcfcfc;
+        --about-bg: #002e2f;
+        --about-text: #fcfcfc;
+        --header-text: #fec0c5;
+        --header-image: url('/img/icons-light/chemex.svg');
+        --email-image: url('/img/icons-light/email.svg');
+        --phone-image: url('/img/icons-light/phone.svg');
+        --web-image: url('/img/icons-light/web.svg');
+        --github-image: url('/img/icons-light/github.svg');
+        --linkedin-image: url('/img/icons-light/linkedin.svg');
+        --twitter-image: url('/img/icons-light/twitter.svg');
+    }
+}

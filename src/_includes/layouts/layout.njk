@@ -16,13 +16,19 @@
         {{ css | cssmin | safe }}
     </style>
     <script src='/pwacompat.min.js' async></script>
+    <script src='/inert.min.js' async></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap" rel="stylesheet">
 </head>
 <body class="rd">
+    <main id="rd-main">
     {% block header %}
     {% endblock %}
 
     {% block content %}
+    {% endblock %}
+    </main>
+
+    {% block settings %}
     {% endblock %}
 
     {% block scripts %}

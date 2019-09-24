@@ -1,0 +1,37 @@
+:root {
+    --light-text: #4d4d4d;
+    --link-color: #006264;
+    --body-bg: #fdfdfd;
+    --body-text: #3c3c3c;
+    --about-bg: #fdfdfd;
+    --about-text: #3c3c3c;
+    --header-text: #006264;
+    --header-image: url('/img/icons/chemex.svg');
+    --email-image: url('/img/icons/email.svg');
+    --phone-image: url('/img/icons/phone.svg');
+    --web-image: url('/img/icons/web.svg');
+    --github-image: url('/img/icons/github.svg');
+    --linkedin-image: url('/img/icons/linkedin.svg');
+    --twitter-image: url('/img/icons/twitter.svg');
+    --animation: 0.666s ease-in-out;
+    --transition: 0.5s ease-in-out;
+}
+
+@media screen and (prefers-color-scheme: light) {
+    :root {
+        --light-text: #4d4d4d;
+        --link-color: #006264;
+        --body-bg: #fdfdfd;
+        --body-text: #3c3c3c;
+        --about-bg: #fdfdfd;
+        --about-text: #3c3c3c;
+        --header-text: #006264;
+        --header-image: url('/img/icons/chemex.svg');
+        --email-image: url('/img/icons/email.svg');
+        --phone-image: url('/img/icons/phone.svg');
+        --web-image: url('/img/icons/web.svg');
+        --github-image: url('/img/icons/github.svg');
+        --linkedin-image: url('/img/icons/linkedin.svg');
+        --twitter-image: url('/img/icons/twitter.svg');
+    }
+}

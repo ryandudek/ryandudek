@@ -6,12 +6,15 @@ title: Ryan Dudek, Software Engineer - Keeping It Awesome
 
 {% block header %}
 {% include "components/header.njk" %}
-{% include "components/themeToggle.njk" %}
 {% endblock %}
 
 {% block content %}
 {% include "content/about.njk" %}
 {% include "content/resume.njk" %}
+{% endblock %}
+
+{% block settings %}
+{% include "components/displaySettings.njk" %}
 {% endblock %}
 
 {% block scripts %}

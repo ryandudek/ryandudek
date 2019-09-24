@@ -7,7 +7,8 @@ const files = [
     '/img/icons-light/',
     '/resources/',
     '/img/bg/overlay.png',
-    '/img/greetings.png'
+    '/img/greetings.png',
+    '/inert.min.js'
 ];
 
 const version = "4.2.0";
