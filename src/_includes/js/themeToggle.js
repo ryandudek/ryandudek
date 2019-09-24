@@ -57,7 +57,7 @@ if (cookieSetting.indexOf('reducedMotion=') >= 0) {
     reducedMotionPreffered = reducedMotion.substring(0, 4) === 'true';
 }
 else {
-    reducedMotionPreffered = window.matchMedia("(prefes-reduced-motion: reduced)").matches;
+    reducedMotionPreffered = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
 function defaultMotionVariables() {
@@ -196,12 +196,14 @@ function setLightPreference() {
     darkModeInput.setAttribute("aria-checked", "false");
     lightModeLabel.setAttribute("aria-hidden", "false");
     darkModeLabel.setAttribute("aria-hidden", "true");
+    darkPreferred = false;
 }
 
 function setDarkPreference() {
     darkModeInput.setAttribute("aria-checked", "true");
     lightModeLabel.setAttribute("aria-hidden", "true");
     darkModeLabel.setAttribute("aria-hidden", "false");
+    darkPreferred = true;
 }
 
 function toggleDarkMode() {
@@ -219,12 +221,14 @@ function setDefaultContrastPreference() {
     highContrastInput.setAttribute("aria-checked", "false");
     defaultContrastLabel.setAttribute("aria-hidden", "false");
     highContrastLabel.setAttribute("aria-hidden", "true");
+    contrastPreferred = false;
 }
 
 function setHighContrastPreference() {
     highContrastInput.setAttribute("aria-checked", "true");
     defaultContrastLabel.setAttribute("aria-hidden", "true");
     highContrastLabel.setAttribute("aria-hidden", "false");
+    contrastPreferred = true;
 }
 
 function toggleContrastMode() {
