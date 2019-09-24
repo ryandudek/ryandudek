@@ -1,39 +1,65 @@
-.rd-settings-button {
+.rd-icon-button {
     background-color: var(--body-bg);
     border: 1px solid var(--link-color);
-    border-radius: 20px;
+    border-radius: 50px;
     color: var(--link-color);
+    cursor: pointer;
     display: inline-block;
     @include font-size(14);
-    height: 26px;
-    line-height: 26px;
-    padding: 0 10px;
+    height: 48px;
+    padding: 0;
     position: absolute;
     right: 15px;
     text-align: center;
-    top: 20px;
+    top: 15px;
     transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+    width: 48px;
     vertical-align: middle;
     z-index: 99;
+
+    &:focus {
+        outline-color: var(--link-color);
+        background-color: var(--link-color);
+        color: var(--body-bg);
+    }
+
+    &:hover {
+        background-color: var(--link-color);
+        color: var(--body-bg);
+    }
+
+    svg {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        width: 30px;
+    }
 }
 
 .rd-settings-panel {
     background-color: var(--body-bg);
-    border: 1px solid var(--body-text);
-    border-radius: 5px;
+    bottom: 0;
+    left: 0;
     opacity: 1;
     padding: 25px;
-    position: absolute;
-    right: 15px;
-    top: 45px;
+    position: fixed;
+    right: 0;
+    top: 0;
     transition: opacity .5s ease;
     visibility: hidden;
-    z-index: 99;
+    width: 100%;
+    z-index: 101;
 
     &.rd-visible {
         opacity: 1;
         visibility: visible;
     }
+}
+
+.rd-settings-bg {
+    opacity: 0;
+    transition: opacity .5s ease;
+    visibility: hidden;
 }
 
 .rd-theme-toggle {
@@ -46,6 +72,7 @@
     border: 1px solid var(--body-text);
     border-radius: 20px;
     color: var(--body-text);
+    cursor: pointer;
     display: inline-block;
     @include font-size(12);
     height: 26px;
@@ -61,12 +88,17 @@
         outline-color: var(--link-color);
     }
 
+    &:hover ~ .rd-switch-label {
+        text-decoration: underline;
+    }
+
     span {
         display: inline-block;
         height: 22px;
         line-height: 22px;
         padding: 0 6px;
         pointer-events: none;
+        transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
         vertical-align: middle;
     }
 }
@@ -79,8 +111,44 @@
 }
 
 .rd-switch-label {
+    cursor: pointer;
     @include font-size(16);
     line-height: 20px;
     user-select: none;
     vertical-align: middle;
+}
+
+@media screen and (min-width: 48em) {
+    .rd-settings-panel {
+        border: 1px solid var(--body-text);
+        border-radius: 5px;
+        left: 50%;
+        padding: 40px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+
+        &.rd-visible ~ .rd-settings-bg {
+            background-color: var(--body-bg);
+            bottom: 0;
+            content: "";
+            display: block;
+            left: 0;
+            opacity: 0.4;
+            position: fixed;
+            right: 0;
+            top: 0;
+            visibility: visible;
+            z-index: 100;
+        }
+    }
+}
+
+@media print {
+    .rd-icon-button,
+    .rd-settings-panel,
+    .rd-theme-toggle,
+    .rd-switch {
+        display: none;
+    }
 }

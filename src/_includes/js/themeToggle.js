@@ -1,14 +1,21 @@
 const settingsButton = document.getElementById('settings');
+const closeSettings = document.getElementById('closeSettings');
 const settingsPanel = document.getElementById('settingsPanel');
+const mainContent = document.getElementById('rd-main');
 
 settingsButton.addEventListener("click", toggleSettingsPanel, false);
+closeSettings.addEventListener("click", toggleSettingsPanel, false);
 
 function toggleSettingsPanel() {
     if (settingsPanel.classList.contains('rd-visible')) {
         settingsPanel.classList.remove('rd-visible');
+        settingsPanel.setAttribute("aria-hidden", "true");
+        mainContent.inert = false;
     }
     else {
         settingsPanel.classList.add('rd-visible');
+        settingsPanel.setAttribute("aria-hidden", "false");
+        mainContent.inert = true;
     }
 }
 

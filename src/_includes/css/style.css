@@ -317,40 +317,59 @@ strong,
     font-size: 13px;
     font-size: 0.8125rem; } }
 
-.rd-settings-button {
+.rd-icon-button {
   background-color: var(--body-bg);
   border: 1px solid var(--link-color);
-  border-radius: 20px;
+  border-radius: 50px;
   color: var(--link-color);
+  cursor: pointer;
   display: inline-block;
   font-size: 14px;
   font-size: 0.875rem;
-  height: 26px;
-  line-height: 26px;
-  padding: 0 10px;
+  height: 48px;
+  padding: 0;
   position: absolute;
   right: 15px;
   text-align: center;
-  top: 20px;
+  top: 15px;
   transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+  width: 48px;
   vertical-align: middle;
   z-index: 99; }
+  .rd-icon-button:focus {
+    outline-color: var(--link-color);
+    background-color: var(--link-color);
+    color: var(--body-bg); }
+  .rd-icon-button:hover {
+    background-color: var(--link-color);
+    color: var(--body-bg); }
+  .rd-icon-button svg {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 30px; }
 
 .rd-settings-panel {
   background-color: var(--body-bg);
-  border: 1px solid var(--body-text);
-  border-radius: 5px;
+  bottom: 0;
+  left: 0;
   opacity: 1;
   padding: 25px;
-  position: absolute;
-  right: 15px;
-  top: 45px;
+  position: fixed;
+  right: 0;
+  top: 0;
   transition: opacity .5s ease;
   visibility: hidden;
-  z-index: 99; }
+  width: 100%;
+  z-index: 101; }
   .rd-settings-panel.rd-visible {
     opacity: 1;
     visibility: visible; }
+
+.rd-settings-bg {
+  opacity: 0;
+  transition: opacity .5s ease;
+  visibility: hidden; }
 
 .rd-theme-toggle {
   display: block;
@@ -361,6 +380,7 @@ strong,
   border: 1px solid var(--body-text);
   border-radius: 20px;
   color: var(--body-text);
+  cursor: pointer;
   display: inline-block;
   font-size: 12px;
   font-size: 0.75rem;
@@ -374,12 +394,15 @@ strong,
   width: 70px; }
   .rd-switch:focus {
     outline-color: var(--link-color); }
+  .rd-switch:hover ~ .rd-switch-label {
+    text-decoration: underline; }
   .rd-switch span {
     display: inline-block;
     height: 22px;
     line-height: 22px;
     padding: 0 6px;
     pointer-events: none;
+    transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
     vertical-align: middle; }
 
 [role="switch"][aria-checked="false"] :first-child,
@@ -389,11 +412,41 @@ strong,
   color: var(--body-bg); }
 
 .rd-switch-label {
+  cursor: pointer;
   font-size: 16px;
   font-size: 1rem;
   line-height: 20px;
   user-select: none;
   vertical-align: middle; }
+
+@media screen and (min-width: 48em) {
+  .rd-settings-panel {
+    border: 1px solid var(--body-text);
+    border-radius: 5px;
+    left: 50%;
+    padding: 40px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; }
+    .rd-settings-panel.rd-visible ~ .rd-settings-bg {
+      background-color: var(--body-bg);
+      bottom: 0;
+      content: "";
+      display: block;
+      left: 0;
+      opacity: 0.4;
+      position: fixed;
+      right: 0;
+      top: 0;
+      visibility: visible;
+      z-index: 100; } }
+
+@media print {
+  .rd-icon-button,
+  .rd-settings-panel,
+  .rd-theme-toggle,
+  .rd-switch {
+    display: none; } }
 
 .rd-header {
   box-sizing: border-box;
@@ -472,9 +525,9 @@ strong,
   box-shadow: 2px 7px 30px rgba(0, 0, 0, 0.75) inset;
   background-color: var(--about-bg);
   color: var(--about-text);
-  margin-top: -160px;
+  margin-top: -60px;
   overflow: hidden;
-  padding: 160px 0 50px;
+  padding: 60px 0 50px;
   position: relative;
   transition: background-color 0.5s ease, color 0.5s ease;
   z-index: 10; }
