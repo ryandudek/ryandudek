@@ -4,7 +4,7 @@
 
 I am Ryan Dudek, a software engineer based out of (not always) sunny Philadelphia. I am passionate about building awesome and accessible user experiences. I consider myself to be framework agnostic, but have experience with many different development platforms.
 
-Currently, I am a UX Tech Lead (aka _Vice President of Keeping it Awesome_) at [EY Design Studio PHL](http://studio.ey.com/) in Philadelphia, PA. If you are interested in learning more about me, check out my [resume](https://raw.githubusercontent.com/ryandudek/ryandudek.github.io/develop/resources/Ryan_Dudek-resume.pdf). When I am not online, I enjoy the great outdoors, coffee, art, photography, cooking, baking, reading, and being active. Ask me about my many fake business ventures that are run by my pseudonym - Randy Duke.
+Currently, I am a Senior Software Engineer (aka _Vice President of Keeping it Awesome_) on the Design System and Accessibility team at [MURAL](https://www.mural.co) based out of Philadelphia, PA. If you are interested in learning more about me, check out my [resume](https://raw.githubusercontent.com/ryandudek/ryandudek.github.io/develop/resources/Ryan_Dudek-resume.pdf). When I am not online, I enjoy the great outdoors, coffee, art, photography, cooking, baking, reading, and being active. Ask me about my many fake business ventures that are run by my pseudonym - Randy Duke.
 
 So long, and thanks for all the fish,  
 Ryan Dudek  
@@ -16,8 +16,8 @@ ryandudek@gmail.com
 ## Professional Experience
 
   - **EY Design Studio PHL** _(formerly Intuitive Company)_  
-  2015 - Present [(studio.ey.com)](http://studio.ey.com)  
-  _UX Tech Lead_ (2018 - present)  
+  2015 - 2021 [(studio.ey.com)](http://studio.ey.com)  
+  _UX Tech Lead_ (2018 - 2021)  
   _Senior UX Developer_ (2015 - 2018)  
   Collaborated in multi-disciplinary teams to design, create, and develop usable and accessible web and mobile applications. Led development on and launched an in-house research application to deliver research to clients in a usable, beautiful, and dynamic way. Assisted in usability research efforts. Trained coworkers from a variety of disciplines how to test for and understand accessibility. Built internal applications and assisted in the creation of internal processes. Promoted the company and our work through presentations and meetups.
   - **EPAM Systems** _(formerly Empathy Lab)_  
