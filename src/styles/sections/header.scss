@@ -9,14 +9,15 @@
 
 .rd-title {
     @include font-size(36);
-  	font-family: $Homestead, 'Helvetica', 'Arial';
+
+    font-family: $Homestead, Helvetica, Arial;
     font-weight: normal;
-  	letter-spacing: -2px;
-  	line-height: 1;
-  	margin: 0 auto;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin: 0 auto;
     padding: 60px 0 0;
-  	text-align: center;
-  	text-transform: uppercase;
+    text-align: center;
+    text-transform: uppercase;
     vertical-align: middle;
 }
 
@@ -35,6 +36,7 @@
 @media screen and (min-width: 48em) {
     .rd-title {
         @include font-size(48);
+
         padding-top: 15px;
     }
 
@@ -51,6 +53,7 @@
 
     .rd-title {
         @include font-size(64);
+
         padding-top: 20px;
     }
 
@@ -79,6 +82,7 @@
 
     .rd-title {
         @include font-size(32);
+
         padding: 0;
     }
 

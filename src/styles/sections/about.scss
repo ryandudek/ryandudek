@@ -12,12 +12,7 @@
 
     &:after {
         bottom: -20px;
-        background: linear-gradient(
-            1.5deg,
-            rgba($black, 0.9) 0%,
-            rgba($black, 0.8) 10%,
-            rgba($black, 0) 70%
-        );
+        background: linear-gradient(1.5deg, rgba($black, 0.9) 0%, rgba($black, 0.8) 10%, rgba($black, 0) 70%);
         content: '';
         display: block;
         height: 50px;
@@ -40,28 +35,28 @@
 }
 
 .rd-underlay {
-	bottom: 0;
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-	z-index: -1;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
 
-	&:after {
-		background: var(--about-bg) url('/img/bg/overlay.png') repeat 0 0;
-		bottom: 0;
-		content: "";
-		display: block;
-		height: 100%;
-		left: 0;
-		opacity: 0.1;
-		position: absolute;
-		right: 0;
-		top: 0;
+    &:after {
+        background: var(--about-bg) url('/img/bg/overlay.png') repeat 0 0;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        opacity: 0.1;
+        position: absolute;
+        right: 0;
+        top: 0;
         transition: background-color var(--transition);
-		width: 100%;
-		z-index: 1;
-  }
+        width: 100%;
+        z-index: 1;
+    }
 }
 
 @media screen and (min-width: 48em) {
@@ -106,7 +101,7 @@
         display: block;
         filter: drop-shadow(4px -3px 9px rgba($black, 0.75)), blur(0.2px);
         height: 80vh;
-	    left: auto;
+        left: auto;
         margin-left: 33%;
         opacity: 1;
         position: absolute;
@@ -165,16 +160,17 @@
 }
 
 @keyframes revealImage {
-  0%   {
-      height: 81vh;
-      filter: drop-shadow(8px -4px 12px rgba($black, 0.95)), blur(1.3px);
-      transform: translate(-500px, 25px);
-      opacity: 0.5;
-  }
-  100% {
-      height: 80vh;
-      filter: drop-shadow(4px -3px 9px rgba($black, 0.75)), blur(0.2px);
-      transform: translateX(-420px, 0);
-      opacity: 1;
-  }
+    0% {
+        height: 81vh;
+        filter: drop-shadow(8px -4px 12px rgba($black, 0.95)), blur(1.3px);
+        transform: translate(-500px, 25px);
+        opacity: 0.5;
+    }
+
+    100% {
+        height: 80vh;
+        filter: drop-shadow(4px -3px 9px rgba($black, 0.75)), blur(0.2px);
+        transform: translateX(-420px, 0);
+        opacity: 1;
+    }
 }
