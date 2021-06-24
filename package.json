@@ -3,6 +3,8 @@
   "version": "6.6.6",
   "description": "Ryan Dudek - Keeping it Awesome",
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "clean-css": "4.2.1",
     "eslint": "^7.29.0",
     "husky": "^6.0.0",

@@ -1,24 +1,5 @@
 #!/bin/sh
-set -uo pipefail
-IFS=$'\n\t'
+. "$(dirname "$0")/_/husky.sh"
 
-#
-# Improvements from dahjelle/pre-commit.sh:
-# - does not lint deleted files,
-# - lints all staged files before exiting with an error code,
-# - handles spaces and other unusual chars in file names.
-#
-# Based also on @jancimajek's one liner in that Gist.
-#
-
-# Stylelint staged changes only
-git diff --diff-filter=d --cached --name-only -z -- '*.css' '*.scss' '*.sass' \
-  | xargs -0 -I % sh -c 'git show ":%" | ./node_modules/.bin/stylelint --stdin --stdin-filename "%";'
-stylelint_exit=$?
-
-if [ ${stylelint_exit} -eq 0 ]; then
-  echo "✓ Stylelint passed"
-else
-  echo "✘ Stylelint failed!" 1>&2
-  exit ${stylelint_exit}
-fi
+npm run lint
+npm run lint:commit
