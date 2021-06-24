@@ -36,7 +36,7 @@
     "dev:css": "npm run scss",
     "dev:img": "npm run imagemin",
     "imagemin": "imagemin --out-dir=dist/img src/assets/img/**/*.{png,jpg,gif}",
-    "lint": "npm run lint:styles",
+    "lint": "npm run lint:js && npm run lint:styles",
     "lint:js": "eslint . --ext js",
     "lint:styles": "stylelint \"./**/*.scss\"",
     "scss": "node-sass -o src/_includes/css src/styles/style.scss",
