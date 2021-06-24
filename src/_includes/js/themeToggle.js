@@ -25,11 +25,13 @@ let darkPreferred = false;
 let contrastPreferred = false;
 let reducedMotionPreffered = false;
 const themeCookie = document.cookie.split(';');
-const cookieSetting = themeCookie.slice(-1)[0];
+const cookieTrim = -1;
+const cookieSetting = themeCookie.slice(cookieTrim)[0];
+const booleanTrim = 4;
 
 if (cookieSetting.indexOf('darkMode=') >= 0) {
     const darkMode = cookieSetting.split('darkMode=')[1];
-    darkPreferred = darkMode.substring(0, 4) === 'true';
+    darkPreferred = darkMode.substring(0, booleanTrim) === 'true';
 }
 else {
     darkPreferred = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -37,7 +39,7 @@ else {
 
 if (cookieSetting.indexOf('highContrast=') >= 0) {
     const contrastMode = cookieSetting.split('highContrast=')[1];
-    contrastPreferred = contrastMode.substring(0, 4) === 'true';
+    contrastPreferred = contrastMode.substring(0, booleanTrim) === 'true';
 }
 else if (window.matchMedia('(prefers-contrast: high)').matches) {
     contrastPreferred = true;
@@ -58,7 +60,7 @@ if (window.matchMedia('(-ms-high-contrast: black-on-white)').matches) {
 
 if (cookieSetting.indexOf('reducedMotion=') >= 0) {
     const reducedMotion = cookieSetting.split('reducedMotion=')[1];
-    reducedMotionPreffered = reducedMotion.substring(0, 4) === 'true';
+    reducedMotionPreffered = reducedMotion.substring(0, booleanTrim) === 'true';
 }
 else {
     reducedMotionPreffered = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
