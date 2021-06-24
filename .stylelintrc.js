@@ -117,7 +117,7 @@ module.exports = {
         "length-zero-no-unit": true,
         "max-empty-lines": 2,
         "max-line-length": [
-            100,
+            150,
             {
                 "ignore": [
                     "comments"
@@ -130,7 +130,14 @@ module.exports = {
         "media-feature-colon-space-before": "never",
         "media-feature-name-disallowed-list": [],
         "media-feature-name-case": "lower",
-        "media-feature-name-no-unknown": true,
+        "media-feature-name-no-unknown": [
+          true,
+          {
+            ignoreMediaFeatureNames: [
+              "prefers-contrast"
+            ]
+          }
+        ],
         "media-feature-name-no-vendor-prefix": true,
         "media-feature-parentheses-space-inside": "never",
         "media-feature-range-operator-space-after": "always",
@@ -185,7 +192,7 @@ module.exports = {
         "selector-list-comma-newline-before": "never-multi-line",
         "selector-list-comma-space-after": "always-single-line",
         "selector-list-comma-space-before": "never",
-        "selector-max-attribute": 1,
+        "selector-max-attribute": 2,
         "selector-max-class": 4,
         "selector-max-combinators": 4,
         "selector-max-compound-selectors": 5,
