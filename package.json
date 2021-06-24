@@ -4,6 +4,7 @@
   "description": "Ryan Dudek - Keeping it Awesome",
   "devDependencies": {
     "clean-css": "4.2.1",
+    "eslint": "^7.29.0",
     "husky": "^6.0.0",
     "imagemin-cli": "5.0.0",
     "markdown-it": "9.1.0",
@@ -36,6 +37,7 @@
     "dev:img": "npm run imagemin",
     "imagemin": "imagemin --out-dir=dist/img src/assets/img/**/*.{png,jpg,gif}",
     "lint": "npm run lint:styles",
+    "lint:js": "eslint . --ext js",
     "lint:styles": "stylelint \"./**/*.scss\"",
     "scss": "node-sass -o src/_includes/css src/styles/style.scss",
     "watch": "npm-run-all --parallel watch:*",
