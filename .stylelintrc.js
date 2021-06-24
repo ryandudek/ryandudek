@@ -2,7 +2,7 @@
 
 module.exports = {
     "rules": {
-        "at-rule-blacklist": [],
+        "at-rule-disallowed-list": [],
         "at-rule-empty-line-before": [
             "always",
             {
@@ -51,7 +51,7 @@ module.exports = {
         "comment-empty-line-before": "always",
         "comment-no-empty": true,
         "comment-whitespace-inside": "always",
-        "comment-word-blacklist": [],
+        "comment-word-disallowed-list": [],
         "custom-media-pattern": "",
         "custom-property-empty-line-before": "always",
         "custom-property-pattern": "",
@@ -86,11 +86,11 @@ module.exports = {
             }
         ],
         "declaration-no-important": true,
-        "declaration-property-unit-blacklist": {},
-        "declaration-property-value-blacklist": {},
+        "declaration-property-unit-disallowed-list": {},
+        "declaration-property-value-disallowed-list": {},
         "font-family-name-quotes": "always-where-recommended",
         "font-family-no-duplicate-names": true,
-        "function-blacklist": [],
+        "function-disallowed-list": [],
         "function-calc-no-unspaced-operator": true,
         "function-comma-newline-after": "always-multi-line",
         "function-comma-newline-before": "never-multi-line",
@@ -103,11 +103,11 @@ module.exports = {
         "function-parentheses-space-inside": "never",
         "function-url-no-scheme-relative": true,
         "function-url-quotes": "always",
-        "function-url-scheme-blacklist": [
+        "function-url-scheme-disallowed-list": [
           "ftp",
           "http"
         ],
-        "function-url-scheme-whitelist": [
+        "function-url-scheme-allowed-list": [
           "data",
           "https"
         ],
@@ -128,7 +128,7 @@ module.exports = {
         "max-nesting-depth": 3,
         "media-feature-colon-space-after": "always",
         "media-feature-colon-space-before": "never",
-        "media-feature-name-blacklist": [],
+        "media-feature-name-disallowed-list": [],
         "media-feature-name-case": "lower",
         "media-feature-name-no-unknown": true,
         "media-feature-name-no-vendor-prefix": true,
@@ -150,7 +150,7 @@ module.exports = {
         "number-leading-zero": "always",
         "number-max-precision": 3,
         "number-no-trailing-zeros": true,
-        "property-blacklist": [],
+        "property-disallowed-list": [],
         "property-case": "lower",
         "property-no-unknown": [
             true,
@@ -172,7 +172,7 @@ module.exports = {
             }
         ],
         "selector-attribute-brackets-space-inside": "never",
-        "selector-attribute-operator-blacklist": [],
+        "selector-attribute-operator-disallowed-list": [],
         "selector-attribute-operator-space-after": "never",
         "selector-attribute-operator-space-before": "never",
         "selector-attribute-quotes": "always",
@@ -213,7 +213,7 @@ module.exports = {
                 ]
             }
         ],
-        "selector-pseudo-class-blacklist": [],
+        "selector-pseudo-class-disallowed-list": [],
         "selector-pseudo-class-case": "lower",
         "selector-pseudo-class-no-unknown": true,
         "selector-pseudo-class-parentheses-space-inside": "never",
@@ -241,7 +241,7 @@ module.exports = {
         "string-no-newline": true,
         "string-quotes": "single",
         "time-min-milliseconds": 100,
-        "unit-blacklist": [],
+        "unit-disallowed-list": [],
         "unit-case": "lower",
         "unit-no-unknown": true,
         "value-keyword-case": "lower",

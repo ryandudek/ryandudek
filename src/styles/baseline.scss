@@ -2,29 +2,29 @@
 @import '_mixins';
 @import '_reset';
 @import '_fonts';
-
 @import 'themes/default';
 @import 'themes/dark';
 @import 'themes/high-contrast';
 @import 'themes/high-contrast-dark';
 
 html {
-    font-family: $Lato, 'Helvetica', 'Arial';
+    font-family: $Lato, Helvetica, Arial;
+
     @include font-size(18);
 }
 
 .rd {
-  	background-color: var(--body-bg);
-  	color: var(--body-text);
+    background-color: var(--body-bg);
+    color: var(--body-text);
     margin: 0;
-  	overflow-x: hidden;
+    overflow-x: hidden;
     padding: 0;
     transition: background-color var(--transition), color var(--transition);
 }
 
 .rd-content {
-  margin: 0 auto;
-  max-width: 76.25em;
+    margin: 0 auto;
+    max-width: 76.25em;
 }
 
 a {
@@ -32,7 +32,7 @@ a {
     color: var(--link-color);
     font-family: inherit;
     text-decoration: underline;
-    text-shadow: 1px 0px 5px $linkShadow;
+    text-shadow: 1px 0 5px $linkShadow;
     transition: color var(--transition);
 }
 
@@ -45,24 +45,28 @@ img {
 
 h1 {
     @include font-size(32);
+
     font-weight: 700;
     margin-bottom: 0.5em;
 }
 
 h2 {
     @include font-size(32);
+
     font-weight: 700;
     margin-bottom: 0.5em;
 }
 
 h3 {
     @include font-size(24);
+
     font-weight: 700;
     margin-bottom: 0.3em;
 }
 
 h4 {
     @include font-size(21);
+
     font-weight: 700;
     margin-bottom: 0.3em;
 }
@@ -70,6 +74,7 @@ h4 {
 p,
 li {
     @include font-size(18);
+
     line-height: 1.2;
     margin-bottom: 16px;
     margin-bottom: 1rem;
