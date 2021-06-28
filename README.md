@@ -15,6 +15,10 @@ ryandudek@gmail.com
 
 ## Professional Experience
 
+  - **MURAL**
+  2021 - Present [(mural.co)](https://www.mural.co)  
+  _Senior Software Engineer: Design System and Accessibility_ (2021 - Present)  
+
   - **EY Design Studio PHL** _(formerly Intuitive Company)_  
   2015 - 2021 [(studio.ey.com)](http://studio.ey.com)  
   _UX Tech Lead_ (2018 - 2021)  
