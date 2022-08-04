@@ -5,7 +5,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/fonts');
     eleventyConfig.addPassthroughCopy('src/resources');
     eleventyConfig.addPassthroughCopy('src/pwa');
-    eleventyConfig.addPassthroughCopy('.htaccess');
     eleventyConfig.addPassthroughCopy({
         "src/js": "/",
         "src/icons/favicons": "/"
