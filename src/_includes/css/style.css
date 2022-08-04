@@ -4,6 +4,7 @@
 /*  -----------------------------------
     Fonts
     ----------------------------------- */
+/* stylelint-disable */
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -55,18 +56,18 @@ table {
     Custom Fonts
     ----------------------------------- */
 @font-face {
-  font-family: 'Homestead';
+  font-family: Homestead;
   src: url("../fonts/Homestead/Homestead-Display.ttf") format("truetype");
   font-weight: normal;
   font-display: swap; }
 
 :root {
-  --light-text: #4d4d4d;
+  --light-text: #4D4D4D;
   --link-color: #006264;
-  --body-bg: #fdfdfd;
-  --body-text: #3c3c3c;
-  --about-bg: #fdfdfd;
-  --about-text: #3c3c3c;
+  --body-bg: #FDFDFD;
+  --body-text: #3C3C3C;
+  --about-bg: #FDFDFD;
+  --about-text: #3C3C3C;
   --header-text: #006264;
   --header-image: url('/img/icons/chemex.svg');
   --email-image: url('/img/icons/email.svg');
@@ -80,12 +81,12 @@ table {
 
 @media screen and (prefers-color-scheme: light) {
   :root {
-    --light-text: #4d4d4d;
+    --light-text: #4D4D4D;
     --link-color: #006264;
-    --body-bg: #fdfdfd;
-    --body-text: #3c3c3c;
-    --about-bg: #fdfdfd;
-    --about-text: #3c3c3c;
+    --body-bg: #FDFDFD;
+    --body-text: #3C3C3C;
+    --about-bg: #FDFDFD;
+    --about-text: #3C3C3C;
     --header-text: #006264;
     --header-image: url('/img/icons/chemex.svg');
     --email-image: url('/img/icons/email.svg');
@@ -97,13 +98,13 @@ table {
 
 @media screen and (prefers-color-scheme: dark) {
   :root {
-    --light-text: #dadada;
-    --link-color: #fec0c5;
-    --body-bg: #001a1b;
-    --body-text: #fcfcfc;
-    --about-bg: #002e2f;
-    --about-text: #fcfcfc;
-    --header-text: #fec0c5;
+    --light-text: #DADADA;
+    --link-color: #FEC0C5;
+    --body-bg: #001A1B;
+    --body-text: #FCFCFC;
+    --about-bg: #002E2F;
+    --about-text: #FCFCFC;
+    --header-text: #FEC0C5;
     --header-image: url('/img/icons-light/chemex.svg');
     --email-image: url('/img/icons-light/email.svg');
     --phone-image: url('/img/icons-light/phone.svg');
@@ -114,13 +115,13 @@ table {
 
 @media screen and (prefers-contrast: high) {
   :root {
-    --light-text: #1a1a1a;
+    --light-text: #1A1A1A;
     --link-color: #006264;
-    --body-bg: #ffffff;
-    --body-text: #000000;
-    --about-bg: #ffffff;
-    --about-text: #000000;
-    --header-text: #1a1a1a;
+    --body-bg: #FFF;
+    --body-text: #000;
+    --about-bg: #FFF;
+    --about-text: #000;
+    --header-text: #1A1A1A;
     --header-image: url('/img/icons/chemex.svg');
     --email-image: url('/img/icons/email.svg');
     --phone-image: url('/img/icons/phone.svg');
@@ -131,13 +132,13 @@ table {
 
 @media screen and (prefers-contrast: high), (prefers-color-scheme: light) {
   :root {
-    --light-text: #1a1a1a;
+    --light-text: #1A1A1A;
     --link-color: #006264;
-    --body-bg: #ffffff;
-    --body-text: #000000;
-    --about-bg: #ffffff;
-    --about-text: #000000;
-    --header-text: #1a1a1a;
+    --body-bg: #FFF;
+    --body-text: #000;
+    --about-bg: #FFF;
+    --about-text: #000;
+    --header-text: #1A1A1A;
     --header-image: url('/img/icons/chemex.svg');
     --email-image: url('/img/icons/email.svg');
     --phone-image: url('/img/icons/phone.svg');
@@ -148,13 +149,13 @@ table {
 
 @media screen and (-ms-high-contrast: active) {
   :root {
-    --light-text: #1a1a1a;
+    --light-text: #1A1A1A;
     --link-color: #006264;
-    --body-bg: #ffffff;
-    --body-text: #000000;
-    --about-bg: #ffffff;
-    --about-text: #000000;
-    --header-text: #1a1a1a;
+    --body-bg: #FFF;
+    --body-text: #000;
+    --about-bg: #FFF;
+    --about-text: #000;
+    --header-text: #1A1A1A;
     --header-image: url('/img/icons/chemex.svg');
     --email-image: url('/img/icons/email.svg');
     --phone-image: url('/img/icons/phone.svg');
@@ -165,13 +166,13 @@ table {
 
 @media screen and (-ms-high-contrast: white-on-black) {
   :root {
-    --light-text: #1a1a1a;
+    --light-text: #1A1A1A;
     --link-color: #006264;
-    --body-bg: #ffffff;
-    --body-text: #000000;
-    --about-bg: #ffffff;
-    --about-text: #000000;
-    --header-text: #1a1a1a;
+    --body-bg: #FFF;
+    --body-text: #000;
+    --about-bg: #FFF;
+    --about-text: #000;
+    --header-text: #1A1A1A;
     --header-image: url('/img/icons/chemex.svg');
     --email-image: url('/img/icons/email.svg');
     --phone-image: url('/img/icons/phone.svg');
@@ -182,13 +183,13 @@ table {
 
 @media screen and (prefers-contrast: high), (prefers-color-scheme: dark) {
   :root {
-    --light-text: #fafafa;
-    --link-color: #e8858d;
-    --body-bg: #000000;
-    --body-text: #ffffff;
-    --about-bg: #000000;
-    --about-text: #ffffff;
-    --header-text: #ffffff;
+    --light-text: #FAFAFA;
+    --link-color: #E8858D;
+    --body-bg: #000;
+    --body-text: #FFF;
+    --about-bg: #000;
+    --about-text: #FFF;
+    --header-text: #FFF;
     --header-image: url('/img/icons-light/chemex.svg');
     --email-image: url('/img/icons-light/email.svg');
     --phone-image: url('/img/icons-light/phone.svg');
@@ -199,13 +200,13 @@ table {
 
 @media screen and (-ms-high-contrast: black-on-white) {
   :root {
-    --light-text: #fafafa;
-    --link-color: #e8858d;
-    --body-bg: #000000;
-    --body-text: #ffffff;
-    --about-bg: #000000;
-    --about-text: #ffffff;
-    --header-text: #ffffff;
+    --light-text: #FAFAFA;
+    --link-color: #E8858D;
+    --body-bg: #000;
+    --body-text: #FFF;
+    --about-bg: #000;
+    --about-text: #FFF;
+    --header-text: #FFF;
     --header-image: url('/img/icons-light/chemex.svg');
     --email-image: url('/img/icons-light/email.svg');
     --phone-image: url('/img/icons-light/phone.svg');
@@ -215,7 +216,7 @@ table {
     --twitter-image: url('/img/icons-light/twitter.svg'); } }
 
 html {
-  font-family: "Lato", "Helvetica", "Arial";
+  font-family: "Lato", Helvetica, Arial;
   font-size: 18px;
   font-size: 1.125rem; }
 
@@ -236,7 +237,7 @@ a {
   color: var(--link-color);
   font-family: inherit;
   text-decoration: underline;
-  text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.05);
+  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.05);
   transition: color var(--transition); }
 
 img {
@@ -301,7 +302,7 @@ strong,
 
 @media print {
   .rd {
-    color: #3c3c3c; }
+    color: #3C3C3C; }
   a {
     color: #001718; }
   .rd-no-print {
@@ -320,14 +321,14 @@ strong,
     font-size: 0.8125rem; } }
 
 .rd-icon-button {
+  font-size: 14px;
+  font-size: 0.875rem;
   background-color: var(--body-bg);
   border: 1px solid var(--link-color);
   border-radius: 50px;
   color: var(--link-color);
   cursor: pointer;
   display: inline-block;
-  font-size: 14px;
-  font-size: 0.875rem;
   height: 40px;
   padding: 3px 8px;
   position: absolute;
@@ -382,15 +383,23 @@ strong,
   display: block;
   margin: 0 0 10px; }
 
+.rd-switch-label {
+  font-size: 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 20px;
+  user-select: none;
+  vertical-align: middle; }
+
 .rd-switch {
+  font-size: 12px;
+  font-size: 0.75rem;
   background-color: var(--body-bg);
   border: 1px solid var(--body-text);
   border-radius: 20px;
   color: var(--body-text);
   cursor: pointer;
   display: inline-block;
-  font-size: 12px;
-  font-size: 0.75rem;
   height: 26px;
   line-height: 20px;
   margin: 0 0.25rem 0 0;
@@ -412,19 +421,11 @@ strong,
     transition: background-color var(--transition), border-color var(--transition), color var(--transition);
     vertical-align: middle; }
 
-[role="switch"][aria-checked="false"] :first-child,
-[role="switch"][aria-checked="true"] :last-child {
+[role='switch'][aria-checked='false'] :first-child,
+[role='switch'][aria-checked='true'] :last-child {
   background-color: var(--link-color);
   border-radius: 15px;
   color: var(--body-bg); }
-
-.rd-switch-label {
-  cursor: pointer;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 20px;
-  user-select: none;
-  vertical-align: middle; }
 
 @media screen and (min-width: 48em) {
   .rd-settings-panel {
@@ -439,7 +440,7 @@ strong,
     .rd-settings-panel.rd-visible ~ .rd-settings-bg {
       background-color: var(--body-bg);
       bottom: 0;
-      content: "";
+      content: '';
       display: block;
       left: 0;
       opacity: 0.4;
@@ -467,7 +468,7 @@ strong,
 .rd-title {
   font-size: 36px;
   font-size: 2.25rem;
-  font-family: "Homestead", "Helvetica", "Arial";
+  font-family: "Homestead", Helvetica, Arial;
   font-weight: normal;
   letter-spacing: -2px;
   line-height: 1;
@@ -569,7 +570,7 @@ strong,
   .rd-underlay:after {
     background: var(--about-bg) url("/img/bg/overlay.png") repeat 0 0;
     bottom: 0;
-    content: "";
+    content: '';
     display: block;
     height: 100%;
     left: 0;
@@ -639,12 +640,12 @@ strong,
 @media print {
   .rd-about {
     box-shadow: none;
-    color: #3c3c3c;
+    color: #3C3C3C;
     margin: -10px 0 0;
     padding: 0;
     position: static; }
     .rd-about a {
-      color: #3c3c3c; }
+      color: #3C3C3C; }
   .rd-about-container {
     margin: 0;
     padding: 0; }
@@ -799,7 +800,7 @@ strong,
   .rd-resume-icon-twitter {
     content: url("/img/icons/twitter.svg"); }
   .rd-resume {
-    color: #3c3c3c;
+    color: #3C3C3C;
     padding: 0; }
   .rd-resume-container {
     align-items: flex-start;
