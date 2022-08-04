@@ -18,7 +18,7 @@ ryandudek@gmail.com
   - **MURAL**
   2021 - Present [(mural.co)](https://www.mural.co)  
   _Senior Software Engineer: Design System and Accessibility_ (2021 - Present)  
-  Collaborate with designers and engineers to build a robust, framework agnostic design system. Set up an extensible testing framework that can additionally be used by other teams at MURAL to run HTML validation test, automated accessibility scans, and visual regression tests in addition to the standard functional tests it enabled. Assist other teams with design system integration into the MURAL product. Incorporate feedback from users, designers, and engineers to ensure our design system is accessible, usable, and seamless.
+  Collaborate with designers and engineers to build a robust, framework agnostic design system. Set up an extensible testing framework that can additionally be used by other teams at MURAL to run HTML validation test, automated accessibility scans, and visual regression tests in addition to the standard functional tests it enabled. Assist other teams with design system integration into the MURAL product. Incorporate feedback from users, designers, and engineers to ensure our design system is accessible, usable, and seamless. Set up a true CI/CD pipeline, including publishing design system packages on merge.
 
   - **EY Design Studio PHL** _(formerly Intuitive Company)_  
   2015 - 2021 [(studio.ey.com)](http://studio.ey.com)  
@@ -45,7 +45,7 @@ ryandudek@gmail.com
 
 ## Skills and Proficiencies
 
-  - HTML, CSS, Javascript
+  - HTML, CSS, Javascript/Typescript
   - API Development
   - Accessibility
   - User Experience
@@ -54,6 +54,7 @@ ryandudek@gmail.com
   - Code Review
   - Collaboration
   - Build Tools
+  - CI/CD
 
 ## Get In Touch
 
