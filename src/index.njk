@@ -13,15 +13,4 @@ title: Ryan Dudek, Software Engineer - Keeping It Awesome
 {% include "content/resume.njk" %}
 {% endblock %}
 
-{% block settings %}
-{% include "components/displaySettings.njk" %}
-{% endblock %}
-
-{% block scripts %}
-{% set js %}
-{% include "js/themeToggle.js" %}
-{% endset %}
-<script>
-{{ js | jsmin | safe }}
-</script>
 {% endblock %}
