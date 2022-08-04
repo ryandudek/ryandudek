@@ -3,8 +3,6 @@
   "version": "6.6.6",
   "description": "Ryan Dudek - Keeping it Awesome",
   "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
     "clean-css": "4.2.1",
     "eslint": "^7.29.0",
     "husky": "^6.0.0",
@@ -28,8 +26,8 @@
   "homepage": "https://github.com/ryandudek/ryandudek.github.io#readme",
   "dependencies": {
     "@11ty/eleventy": "0.9.0",
-    "node-sass": "4.13.1",
-    "nunjucks": "3.2.0",
+    "node-sass": "5.0.0",
+    "nunjucks": "3.2.2",
     "wicg-inert": "3.0.0"
   },
   "scripts": {
