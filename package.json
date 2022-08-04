@@ -16,13 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ryandudek/ryandudek.github.io.git"
+    "url": "git+ssh://git@github.com/ryandudek/ryandudek.git"
   },
   "author": "Ryan Dudek",
   "bugs": {
-    "url": "https://github.com/ryandudek/ryandudek.github.io/issues"
+    "url": "https://github.com/ryandudek/ryandudek/issues"
   },
-  "homepage": "https://github.com/ryandudek/ryandudek.github.io#readme",
+  "homepage": "https://github.com/ryandudek/ryandudek#readme",
   "dependencies": {
     "@11ty/eleventy": "0.9.0",
     "node-sass": "5.0.0",
