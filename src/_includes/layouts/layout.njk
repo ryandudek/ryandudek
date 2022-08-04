@@ -15,8 +15,6 @@
     <style>
         {{ css | cssmin | safe }}
     </style>
-    <script src='/pwacompat.min.js' async></script>
-    <script src='/inert.min.js' async></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap" rel="stylesheet">
 </head>
 <body class="rd">
@@ -27,24 +25,5 @@
     {% block content %}
     {% endblock %}
     </main>
-
-    {% block settings %}
-    {% endblock %}
-
-    {% block scripts %}
-    {% endblock %}
-
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/worker.js', { scope: '/' })
-                .then(function(registration) {
-                    console.info('Service Worker Registered');
-                });
-
-            navigator.serviceWorker.ready.then(function(registration) {
-                console.info('Service Worker Ready');
-            });
-        }
-    </script>
 </body>
 </html>
