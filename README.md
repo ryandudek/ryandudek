@@ -1,8 +1,8 @@
 # About Me
 
-## Greetings
+## Hello!
 
-I am Ryan Dudek, a software engineer based out of Ithaca, NY. I am passionate about building awesome and accessible user experiences. I consider myself to be framework agnostic, but have experience with many different development platforms.
+My name is Ryan Dudek, I’m a software engineer based out of Ithaca, New York. I love building accessible user experiences using design systems to ensure reusability and to scale quickly, efficiently, and consistently.
 
 Currently, I am a Senior Software Engineer (aka _Vice President of Keeping it Awesome_) on the Design System and Accessibility team at [Mural](https://www.mural.co). If you are interested in learning more about me, check out my [resume](https://github.com/ryandudek/ryandudek/raw/develop/src/resources/RyanDudek-Resume.pdf). When I am not online, I enjoy the great outdoors, coffee, art, photography, cooking, baking, reading, and being active. Ask me about my many fake business ventures that are run by my pseudonym - Randy Duke.
 
@@ -18,8 +18,7 @@ ryandudek@gmail.com
   - **Mural**
   2021 - Present [(mural.co)](https://www.mural.co)  
   _Senior Software Engineer: Design System and Accessibility_ (2021 - Present)  
-  Collaborate with designers and engineers to build a robust, framework agnostic design system. Set up an extensible testing framework that can additionally be used by other teams at Mural to run HTML validation test, automated accessibility scans, and visual regression tests in addition to the standard functional tests it enabled. Assist other teams with design system integration into the MURAL product. Incorporate feedback from users, designers, and engineers to ensure our design system is accessible, usable, and seamless. Set up a true CI/CD pipeline, including publishing design system packages on merge.
-
+  Collaborated with designers and engineers to build a robust design system. Set up an extensible testing framework that can additionally be used by other teams to run HTML validation tests, automated accessibility scans, and visual regression tests in addition to the standard functional tests. Assisted other teams with design system integration into the Mural product. Incorporated feedback from users, designers, and engineers to ensure our design system is accessible, usable, and developer friendly. Set up a true CI/CD pipeline, including publishing design system packages on merge.
   - **EY Design Studio PHL** _(formerly Intuitive Company)_  
   2015 - 2021 [(studio.ey.com)](http://studio.ey.com)  
   _UX Tech Lead_ (2018 - 2021)  
