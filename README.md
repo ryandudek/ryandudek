@@ -4,7 +4,7 @@
 
 My name is Ryan Dudek, I’m a software engineer based out of Ithaca, New York. I love building accessible user experiences using design systems to ensure reusability and to scale quickly, efficiently, and consistently.
 
-Currently, I am a Senior Software Engineer (aka _Vice President of Keeping it Awesome_) on the Design System and Accessibility team at [Mural](https://www.mural.co). If you are interested in learning more about me, check out my [resume](https://github.com/ryandudek/ryandudek/raw/develop/src/resources/RyanDudek-Resume.pdf). When I am not online, I enjoy the great outdoors, coffee, art, photography, cooking, baking, reading, and being active. Ask me about my many fake business ventures that are run by my pseudonym - Randy Duke.
+Currently, I am a Staff Software Engineer (aka _Vice President of Keeping it Awesome_) at [BarnTools]([https://www.mural.co](https://barntools.com/)). If you are interested in learning more about me, check out my [resume](https://github.com/ryandudek/ryandudek/raw/develop/src/resources/RyanDudek-Resume.pdf). When I am not online, I enjoy the great outdoors, coffee, art, photography, cooking, baking, reading, and being active. Ask me about my many fake business ventures that are run by my pseudonym - Randy Duke.
 
 So long, and thanks for all the fish,  
 Ryan Dudek  
@@ -15,9 +15,14 @@ ryandudek@gmail.com
 
 ## Professional Experience
 
+  - **BarnTools**
+  2025 - Present [(barntools.com)](https://www.barntools.com)
+  Staff Software Engineer_
   - **Mural**
-  2021 - Present [(mural.co)](https://www.mural.co)  
-  _Senior Software Engineer: Design System and Accessibility_ (2021 - Present)  
+  2021 - 2025 [(mural.co)](https://www.mural.co)
+  _Senior Software Engineer: Frontend Platform_ (2023 - 2025) 
+  Built a robust suite of tools and processes to enable engineering at Mural to be faster, easier, and more consistent. Worked with other teams to ensure our platform supported their needs. Made product updates to the entire Mural application to remove legacy code, increase performance metrics, and ensure consistent component usage throughout. 
+  _Senior Software Engineer: Design System and Accessibility_ (2021 - 2023)  
   Collaborated with designers and engineers to build a robust design system. Set up an extensible testing framework that can additionally be used by other teams to run HTML validation tests, automated accessibility scans, and visual regression tests in addition to the standard functional tests. Assisted other teams with design system integration into the Mural product. Incorporated feedback from users, designers, and engineers to ensure our design system is accessible, usable, and developer friendly. Set up a true CI/CD pipeline, including publishing design system packages on merge.
   - **EY Design Studio PHL** _(formerly Intuitive Company)_  
   2015 - 2021 [(studio.ey.com)](http://studio.ey.com)  
