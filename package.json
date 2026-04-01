@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/ryandudek/ryandudek#readme",
   "dependencies": {
-    "@11ty/eleventy": "0.9.0",
+    "@11ty/eleventy": "1.0.2",
     "node-sass": "^7.0.1",
     "nunjucks": "3.2.2",
     "wicg-inert": "3.0.0"
